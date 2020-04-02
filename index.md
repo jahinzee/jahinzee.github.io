@@ -18,6 +18,4 @@
       Copyright (c) 2020 Jahin Z.<br>
       All Rights Reserved.
     </p>
-</html>
-
 
