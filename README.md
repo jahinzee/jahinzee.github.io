@@ -1,1 +1,1 @@
-[Link](jahinzee.github.io)
+[Link](https://jahinzee.github.io)
