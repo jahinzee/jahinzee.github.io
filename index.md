@@ -1,1 +1,1 @@
-![Logo](https://github.com/jahinzee/jahinzee.github.io/blob/master/vector.svg)
+<img src="title.png" alt="Home" height="=32px" width="32px">
