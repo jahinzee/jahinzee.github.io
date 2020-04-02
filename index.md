@@ -1,1 +1,1 @@
-<img src="title.png" alt="Home" height="=32px" width="32px">
+<img src="vector.svg" alt="Home" height="=36px" width="36px">
