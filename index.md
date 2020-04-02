@@ -1,10 +1,11 @@
 <html>
   <header>
     <title>Jahin Z.</title>
-    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
     <div class="header">
-      <a href="index.html"><img src="title.png" alt="Home" height="=32px" width="32px"></a><br>
+      <a href="http://jahinzee.github.io"><img src="vector" alt="Home" height="=32px" width="32px"></a><br>
     </div>
+    <br>
   </header>
   <body>
     <div class="splashes">
@@ -54,6 +55,7 @@
   </body>
   <footer>
     <p>
+      <br>
       Copyright (c) 2020 Jahin Z.<br>
       All Rights Reserved.
     </p>
