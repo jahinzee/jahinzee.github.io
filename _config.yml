@@ -1,3 +1,9 @@
-
-
 theme: jekyll-theme-minimal
+defaults:
+    values:
+      layout: single
+      author_profile: false
+      read_time: false
+      comments: false
+      share: false
+      related: false
