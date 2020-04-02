@@ -8,7 +8,6 @@
     <br>
   </header>
   <body>
-    <br>
     <a href="http://twitter.com/jahinzee">→ Twitter</a><br>
     <a href="http://instagram.com/jahinzee">→ Instagram<a><br>
     <a href="http://tumblr.com/blog/jahinzee">→ Tumblr <br>
