@@ -6,7 +6,6 @@
     <div class="header">
       <a href="http://jahinzee.github.io"><img src="title.png" alt="Home" height="=32px" width="32px" hspace="10"></a><br>
     </div>
-    <br>
   </header>
   <body>
     <p>
