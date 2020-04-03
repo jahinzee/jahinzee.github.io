@@ -1,6 +1,6 @@
 <html>
   <header>
-    <title>Jahin Z.</title>
+    <link rel="shortcut icon" type="image/x-icon" href="title.ico">
     <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
     <div class="header">
       <a href="http://jahinzee.github.io"><img src="title.png" alt="Home" height="=32px" width="32px"></a><br>
