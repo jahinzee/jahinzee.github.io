@@ -1,9 +1,9 @@
 @charset "UTF-8";
 
 body{
-  background-color: #000000;
+  background-color: #2c3850;
   font-family: monospace;
-  font-size: 16px;
+  font-size: 14px;
   color: #ffffff;
   text-align: center;
 } a:link{
