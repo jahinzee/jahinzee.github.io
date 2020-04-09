@@ -1,23 +1,21 @@
 @charset "UTF-8";
 
 body{
-  background-color: #000000;
-  font-family: "Consolas", monospace;
-  font-size: 14px;
-  color: #ffffff;
-  text-align: left;
-  margin: 5;
-  padding: 15px;
+  background-color: #ffffff;
+  font-family: monospace;
+  font-size: 16px;
+  color: #000000;
+  text-align: center;
 } a:link{
-  color: #ffffff;
+  color: #000000;
   text-decoration: none;
 } a:visited{
-  color: #ffffff;
+  color: #000000;
   text-decoration: none;
 } a:hover{
-  color: #ffffff;
-  text-decoration: underline;
+  color: #000000;
+  text-decoration: none;
 } a:active{
-  color: #ffffff;
+  color: #000000;
   text-decoration: underline;
 }
