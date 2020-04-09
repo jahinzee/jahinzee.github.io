@@ -6,7 +6,7 @@
   ⫶ 
   <a href="http://twitter.com/jahinzee">Twitter</a> ⫶ 
   <a href="http://instagram.com/jahinzee">Instagram</a> ⫶ 
-  <a href="https://www.youtube.com/channel/UCqUP8fHRx8jvJTjrhY0Pxag"> YouTube </a> ⫶ 
+  <a href="https://www.youtube.com/channel/UCqUP8fHRx8jvJTjrhY0Pxag"> YouTube</a> ⫶ 
   <a href="mailto:jahinongoogol@gmail.com">Email</a> ⫶
 </b>
 <br>
