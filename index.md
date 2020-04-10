@@ -1,6 +1,9 @@
 <link rel="shortcut icon" type="image/x-icon" href="title.ico">
 <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
 <br>
+<head>
+  <meta name="theme-colour" content=#2c3850">
+</head>
 <a href="http://jahinzee.github.io"><img src="title.png" alt="Home" height="=40px" width="40px" hspace="0"></a><br>
 <br>
 <b>
@@ -15,4 +18,3 @@
 <br>
 Copyright (c) 2020 Jahin Z.<br>
 All Rights Reserved.
-
