@@ -1,5 +1,5 @@
 <head>
-  <meta name="theme-colour" content=#2c3850"></meta>
+  <meta name="theme-colour" content=#2c3850" />
   <link rel="shortcut icon" type="image/x-icon" href="title.ico">
   <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
 </head>
