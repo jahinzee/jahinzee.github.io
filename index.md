@@ -13,8 +13,9 @@
   <a href="https://www.youtube.com/channel/UCqUP8fHRx8jvJTjrhY0Pxag"> YouTube</a> ⫶ 
   <a href="mailto:jahinongoogol@gmail.com">E-mail</a> ⫶
   <a href="https://github.com/jahinzee">GitHub</a> ⫶
-</marquee></b>
+</b>
 <br>
 <br>
+</marquee>
 Copyright (c) 2020 Jahin Z.<br>
 All Rights Reserved.
