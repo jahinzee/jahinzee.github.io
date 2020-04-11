@@ -5,7 +5,7 @@
 </head>
 <br>
 <a href="http://jahinzee.github.io"><img src="title.png" alt="Home" height="=40px" width="40px" hspace="0"></a>
-<font size="3"><br>🏡 stay home <br></font>
+<font size="3">🏡 stay home <br></font>
 <marquee>
    ⫶ 
   <b><a href="http://twitter.com/jahinzee">Twitter</a></b> ⫶ 
