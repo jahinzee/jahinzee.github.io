@@ -15,7 +15,7 @@
   <b><a href="https://github.com/jahinzee">GitHub</a></b> ⫶
 <font size="3"><br></font>
 </marquee>
-<font size="2"><br>
+<font size="2">
 Copyright (c) 2020 Jahin Z.
 All Rights Reserved.
 </font>
