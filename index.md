@@ -16,7 +16,7 @@
 <br>
 <br>
 </marquee>
-<font size="1">
-Copyright (c) 2020 Jahin Z.<br>
+<font size="2">
+Copyright (c) 2020 Jahin Z.
 All Rights Reserved.
 </font>
