@@ -5,18 +5,17 @@
 </head>
 <br>
 <a href="http://jahinzee.github.io"><img src="title.png" alt="Home" height="=40px" width="40px" hspace="0"></a><br>
-<br>
+<font size="3"><br></font>🏡 stay home
 <marquee>
-   ⫶ 🏡 stay home ⫶ 
+   ⫶ 
   <b><a href="http://twitter.com/jahinzee">Twitter</a></b> ⫶ 
   <b><a href="http://instagram.com/jahinzee">Instagram</a></b> ⫶ 
   <b><a href="https://www.youtube.com/channel/UCqUP8fHRx8jvJTjrhY0Pxag">YouTube</a></b> ⫶ 
   <b><a href="mailto:jahinongoogol@gmail.com">E-mail</a></b> ⫶
   <b><a href="https://github.com/jahinzee">GitHub</a></b> ⫶
-<br>
-<br>
+<font size="3"><br></font>
 </marquee>
-<font size="2">
+<font size="2"><br>
 Copyright (c) 2020 Jahin Z.
 All Rights Reserved.
 </font>
