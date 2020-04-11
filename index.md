@@ -5,7 +5,8 @@
 </head>
 <br>
   <a href="http://jahinzee.github.io"><img src="title.png" alt="Home" height="=40px" width="40px" hspace="0"></a>
-<br><br>
+<font size="4">
+<br>
   🏡 stay home
 <br>
    ⫶ 
@@ -17,3 +18,4 @@
 <br>
   Copyright (c) 2020 Jahin Z.
   All Rights Reserved.
+</font>
