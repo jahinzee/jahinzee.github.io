@@ -15,6 +15,7 @@
   <b><a href="mailto:jahinongoogol@gmail.com">E-mail</a></b> ⫶
   <b><a href="https://github.com/jahinzee">GitHub</a></b> ⫶
   <b><a href="https://soundcloud.com/jahinzee">SoundCloud</a></b> ⫶
+  <b><a href="https://jahinzee.tumblr.com">Tumblr</a></b> ⫶
 <br>
   Copyright (c) 2020 Jahin Z.
   All Rights Reserved.
