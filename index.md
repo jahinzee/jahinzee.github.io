@@ -9,15 +9,15 @@
   🏡 stay home
 <br>
    ⫶ 
-  <b><a href="http://twitter.com/jahinzee">Twitter</a></b> ⫶ 
-  <b><a href="http://instagram.com/jahinzee">Instagram</a></b> ⫶ 
+  <b><a href="https://twitter.com/jahinzee">Twitter</a></b> ⫶ 
+  <b><a href="https://instagram.com/jahinzee">Instagram</a></b> ⫶ 
   <b><a href="https://www.youtube.com/channel/UCqUP8fHRx8jvJTjrhY0Pxag">YouTube</a></b> ⫶ 
   <b><a href="mailto:jahinongoogol@gmail.com">E-mail</a></b> ⫶
   <b><a href="https://github.com/jahinzee">GitHub</a></b> ⫶
   <b><a href="https://soundcloud.com/jahinzee">SoundCloud</a></b> ⫶
   <b><a href="https://jahinzee.tumblr.com/about-me">Tumblr</a></b> ⫶
   <b><a href="https://www.twitch.tv/jahinzee">Twitch</a></b> ⫶
-  <b><a href="discord.txt">Discord Tag</a></b> ⫶
+  <b><a href="https://discord.gg/QNWJJnf">Discord Server</a></b> ⫶
 <br>
   Copyright (c) 2020 Jahin Z.
   All Rights Reserved.
