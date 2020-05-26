@@ -17,7 +17,7 @@
   <b><a href="https://soundcloud.com/angloverde">SoundCloud [angloverde]</a></b> ⫶ <br> ⫶ 
   <b><a href="https://jahinzee.tumblr.com/about-me">Tumblr</a></b> ⫶ <br> ⫶ 
   <b><a href="https://www.twitch.tv/jahinzee">Twitch</a></b> ⫶ <br> ⫶ 
-  <b><a href="https://discord.gg/QNWJJnf">Discord Server [ParaSkeet]</a></b> ⫶ <br> ⫶ 
+  <b><a href="https://discord.gg/QNWJJnf">Discord Server [ParaSkeet]</a></b> ⫶ <br>
 <br>
   Copyright (c) 2020 Jahin Z.
   All Rights Reserved.
