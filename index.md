@@ -8,15 +8,15 @@
 <font size="3">
   🏡 stay home
 <br>
-  <b><a href="https://twitter.com/jahinzee">Twitter</a></b><br>
-  <b><a href="https://instagram.com/jahinzee">Instagram</a></b><br>
-  <b><a href="https://www.youtube.com/channel/UCqUP8fHRx8jvJTjrhY0Pxag">YouTube</a></b><br>
-  <b><a href="mailto:jahinongoogol@gmail.com">E-mail</a></b><br>
-  <b><a href="https://github.com/jahinzee">GitHub</a></b><br> 
-  <b><a href="https://soundcloud.com/angloverde">SoundCloud [angloverde]</a></b><br>
-  <b><a href="https://jahinzee.tumblr.com/about-me">Tumblr</a></b><br>
-  <b><a href="https://www.twitch.tv/jahinzee">Twitch</a></b><br>
-  <b><a href="https://discord.gg/QNWJJnf">Discord Server [ParaSkeet]</a></b><br>
+  <a href="https://twitter.com/jahinzee">Twitter</a><br>
+  <a href="https://instagram.com/jahinzee">Instagram</a><br>
+  <a href="https://www.youtube.com/channel/UCqUP8fHRx8jvJTjrhY0Pxag">YouTube</a><br>
+  <a href="mailto:jahinongoogol@gmail.com">E-mail</a><br>
+  <a href="https://github.com/jahinzee">GitHub</a><br> 
+  <a href="https://soundcloud.com/angloverde">SoundCloud [angloverde]</a><br>
+  <a href="https://jahinzee.tumblr.com/about-me">Tumblr</a><br>
+  <a href="https://www.twitch.tv/jahinzee">Twitch</a><br>
+  <a href="https://discord.gg/QNWJJnf">Discord Server [ParaSkeet]</a><br>
 <br>
   Copyright (c) 2020 Jahin Z.
   All Rights Reserved.
