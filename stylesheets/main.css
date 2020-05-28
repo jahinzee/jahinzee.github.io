@@ -5,15 +5,16 @@ body{
   font-family: monospace;
   font-size: 14px;
   color: #ffffff;
+  text-align: center;
 } a:link{
   color: #ffffff;
-  text-decoration: none;
+  text-decoration: underline;
 } a:visited{
   color: #ffffff;
-  text-decoration: none;
+  text-decoration: underline;
 } a:hover{
   color: #ffffff;
-  text-decoration: none;
+  text-decoration: underline, bold;
 } a:active{
   color: #ffffff;
   text-decoration: underline;
