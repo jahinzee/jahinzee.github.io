@@ -8,14 +8,14 @@ body{
   text-align: center;
 } a:link{
   color: #ffffff;
-  text-decoration: underline;
+  text-decoration: bold;
 } a:visited{
   color: #ffffff;
-  text-decoration: underline;
+  text-decoration: bold;
 } a:hover{
   color: #ffffff;
-  text-decoration: underline, bold;
+  text-decoration: bold, underline;
 } a:active{
   color: #ffffff;
-  text-decoration: underline;
+  text-decoration: bold, underline;
 }
