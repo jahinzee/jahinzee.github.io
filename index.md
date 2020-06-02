@@ -3,10 +3,8 @@
   <link rel="shortcut icon" type="image/x-icon" href="title.ico">
   <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
 </head>
-<br>
-<a href="http://jahinzee.github.io"><img src="title.png" alt="Home" height="=40px" width="40px" hspace="0"></a>
-<br>
-<br> ⁞ 
+<br><a href="http://jahinzee.github.io"><img src="title.png" alt="Home" height="=40px" width="40px" hspace="0"></a>
+<br><br> ⁞ 
 <a href="https://twitter.com/jahinzee">Twitter</a> ⁞ 
 <a href="https://instagram.com/jahinzee">Instagram</a> ⁞ 
 <a href="https://www.youtube.com/channel/UCqUP8fHRx8jvJTjrhY0Pxag">YouTube</a> ⁞ 
@@ -16,6 +14,6 @@
 <a href="https://jahinzee.tumblr.com/about-me">Tumblr</a> ⁞ 
 <a href="https://www.twitch.tv/jahinzee">Twitch</a> ⁞ 
 <a href="https://discord.gg/QNWJJnf">Discord Server [ParaSkeet]</a> ⁞ 
-<br>
-  Copyright (c) 2020 Jahin Z.
-  All Rights Reserved.
+<br><br>
+Copyright (c) 2020 Jahin Z.
+All Rights Reserved.
