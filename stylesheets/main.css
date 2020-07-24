@@ -4,18 +4,18 @@ body{
   background-color: #000000;
   font-family: monospace;
   font-size: 14px;
-  color: #ffffff;
+  color: #FDF171;
   text-align: center;
 } a:link{
-  color: #ffffff;
+  color: #FDF171;
   text-decoration: bold;
 } a:visited{
-  color: #ffffff;
+  color: #FDF171;
   text-decoration: bold;
 } a:hover{
-  color: #ffffff;
+  color: #FDF171;
   text-decoration: bold, underline;
 } a:active{
-  color: #ffffff;
+  color: #FDF171;
   text-decoration: bold, underline;
 }
