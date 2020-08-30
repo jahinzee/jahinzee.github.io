@@ -10,7 +10,7 @@
 <a href="https://www.youtube.com/channel/UCqUP8fHRx8jvJTjrhY0Pxag">YouTube</a> • <br> • 
 <a href="mailto:jahinongoogol@gmail.com">E-mail</a> • <br> • 
 <a href="https://github.com/jahinzee">GitHub</a> • <br> • 
-<a href="https://soundcloud.com/angloverde">SoundCloud</a> • <br> • 
+<a href="https://soundcloud.com/jahinzee">SoundCloud</a> • <br> • 
 <a href="https://jahinzee.tumblr.com/about-me">Tumblr</a> • <br> • 
 <a href="https://www.twitch.tv/jahinzee">Twitch</a> • 
 <br><br>
