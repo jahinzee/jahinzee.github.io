@@ -1,6 +1,6 @@
 <head>
   <meta name="theme-color" content="#2c3850" />
-  <link rel="shortcut icon" type="image/x-icon" href="title.ico">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
 </head>
 <br><a href="http://jahinzee.github.io"><img src="self_monochrome.png" alt="Home" height="=40px" width="40px" hspace="0"></a>
