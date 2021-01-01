@@ -14,5 +14,5 @@
 <a href="https://jahinzee.tumblr.com/about-me">Tumblr</a> • 
 <a href="https://www.twitch.tv/jahinzee">Twitch</a> • 
 <br><br>
-Copyright (c) 2020 Jahin Z.<br>
+Copyright (c) 2021 Jahin Z.<br>
 All Rights Reserved.
