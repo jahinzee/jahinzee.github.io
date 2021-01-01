@@ -1,21 +1,21 @@
 @charset "UTF-8";
 
 body{
-  background-color: #000000;
+  background-color: #715b81;
   font-family: monospace;
   font-size: 14px;
-  color: #FDF171;
+  color: #FFFFF;
   text-align: center;
 } a:link{
-  color: #FDF171;
+  color: #FFFFFF;
   text-decoration: bold;
 } a:visited{
-  color: #FDF171;
+  color: #FFFFFF;
   text-decoration: bold;
 } a:hover{
-  color: #FDF171;
+  color: #FFFFFF;
   text-decoration: bold, underline;
 } a:active{
-  color: #FDF171;
+  color: #FFFFFF;
   text-decoration: bold, underline;
 }
