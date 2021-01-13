@@ -4,7 +4,7 @@
   <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
 </head>
 <br><a href="http://jahinzee.github.io"><img src="self_monochrome.png" alt="Home" height="=40px" width="40px" hspace="0"></a>
-<br><b>SOCIALS</b><br> • 
+<br><br><b>SOCIALS</b><br> • 
 <a href="https://twitter.com/jahinzee">Twitter</a> • <br> • 
 <a href="https://instagram.com/jahinzee">Instagram</a> • <br> • 
 <a href="https://www.youtube.com/channel/UCqUP8fHRx8jvJTjrhY0Pxag">YouTube</a> • <br> • 
