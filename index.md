@@ -4,7 +4,7 @@
   <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
 </head>
 <br><a href="http://jahinzee.github.io"><img src="self_monochrome.png" alt="Home" height="=40px" width="40px" hspace="0"></a>
-<br><br> • 
+<br><b>SOCIALS</b><br> • 
 <a href="https://twitter.com/jahinzee">Twitter</a> • <br> • 
 <a href="https://instagram.com/jahinzee">Instagram</a> • <br> • 
 <a href="https://www.youtube.com/channel/UCqUP8fHRx8jvJTjrhY0Pxag">YouTube</a> • <br> • 
@@ -12,7 +12,9 @@
 <a href="https://github.com/jahinzee">GitHub</a> • <br> • 
 <a href="https://soundcloud.com/jahinzee">SoundCloud</a> • <br> • 
 <a href="https://jahinzee.tumblr.com/about-me">Tumblr</a> • <br> • 
-<a href="https://www.twitch.tv/jahinzee">Twitch</a> • <br> • 
+<a href="https://www.twitch.tv/jahinzee">Twitch</a> • <br><br>
+<b>LINKS</b><br> • 
+<a href="https://github.com/jahinzee/photos">My Photos</a> • <br>
 <br><br>
 Copyright (c) 2021 Jahin Z.<br>
 All Rights Reserved.
