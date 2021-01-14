@@ -1,6 +1,6 @@
-<a href="https://jahinzee.github.io"><img src="https://raw.githubusercontent.com/jahinzee/jahinzee.github.io/master/emblem-black.png" height=24 width=24></a><br>**Home**
-# Home
+<a href="https://jahinzee.github.io"><img src="https://raw.githubusercontent.com/jahinzee/jahinzee.github.io/master/emblem-black.png" height=24 width=24></a><br>
 
+# Welcome!
 ### Socials
 ▸ [Twitter](https://twitter.com/jahinzee)<br>
 ▸ [Instagram](https://instagram.com/jahinzee)<br>
