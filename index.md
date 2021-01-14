@@ -2,11 +2,11 @@
 # Home
 
 ### Socials
-▸ [Twitter](https://twitter.com/jahinzee)
-▸ [Instagram](https://instagram.com/jahinzee)
-▸ [YouTube](https://www.youtube.com/channel/UCqUP8fHRx8jvJTjrhY0Pxag)
-▸ [Twitch](https://twitch.tv/jahinzee)
-▸ [SoundCloud](https://soundcloud.com/jahinzee)
+▸ [Twitter](https://twitter.com/jahinzee)<br>
+▸ [Instagram](https://instagram.com/jahinzee)<br>
+▸ [YouTube](https://www.youtube.com/channel/UCqUP8fHRx8jvJTjrhY0Pxag)<br>
+▸ [Twitch](https://twitch.tv/jahinzee)<br>
+▸ [SoundCloud](https://soundcloud.com/jahinzee)<br>
 
 ### Repos
-▸ [My Photos](photos.md)
+▸ [My Photos](photos.md)<br>
