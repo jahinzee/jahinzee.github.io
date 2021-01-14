@@ -8,4 +8,4 @@
 - [SoundCloud](https://soundcloud.com/jahinzee)
 
 ## Repos
-- [My Photos](https://github.com/jahinzee/photos)
+- [My Photos](photos.md)
