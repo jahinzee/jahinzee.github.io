@@ -1,4 +1,4 @@
-<a href="https://jahinzee.github.io"><img src="https://raw.githubusercontent.com/jahinzee/jahinzee.github.io/master/emblem-black.png" height=11 width=11></a>      [Home](https://jahinzee.github.io) ▸ **Photos**
+<a href="https://jahinzee.github.io"><img src="https://raw.githubusercontent.com/jahinzee/jahinzee.github.io/master/emblem-black.png" height=11 width=11></a>&nbsp;&nbsp;&nbsp;[Home](https://jahinzee.github.io) ▸ **Photos**
 # My Photos
 This is a collection of all public photographs taken by me.
 
