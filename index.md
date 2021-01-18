@@ -12,3 +12,6 @@ The name's Jahin Z. Check out my stuff here!
 
 ### Collections
 ▸ [My Photos](photos.md)<br>
+
+
+© Jahin Z. 2021 • Hosted on GitHub Pages
