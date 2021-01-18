@@ -4,7 +4,7 @@
 This is a collection of all public photographs taken by me.
 
 ## Best of the Best
-<img src="https://raw.githubusercontent.com/jahinzee/photos/main/evening%40sea-cliff-bge.jpg" height=128 width=128>  <img src="https://raw.githubusercontent.com/jahinzee/photos/main/afternoon%40stanwell-pk.jpg" height=128 width=128>
+<img src="https://raw.githubusercontent.com/jahinzee/photos/main/evening%40sea-cliff-bge.jpg" height=128 width=128>  <img src="https://raw.githubusercontent.com/jahinzee/photos/main/sunset%40kelso-pk.jpeg" height=128 width=128>  <img src="https://raw.githubusercontent.com/jahinzee/photos/main/trees%40kelso-pk.jpeg" height=128 width=128>
 
 [**See all photos →**](https://github.com/jahinzee/photos)
 
