@@ -25,4 +25,4 @@ Attribution can be as simple as linking my website or any of my social medias. I
 
 Attribution of the specific photo(s) used is not required.
 
-<hr><br>© Jahin Z. 2021 • Hosted on GitHub Pages
+<sup>© Jahin Z. 2021 • Hosted on [GitHub Pages](https://pages.github.com/)</sup>
