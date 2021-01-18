@@ -24,3 +24,5 @@ You may **not**:
 Attribution can be as simple as linking my website or any of my social medias. If you would like to link my social media, I recommend linking my [Twitter](https://www.twitter.com/jahinzee) or my [Instagram](https://www.instagram.com/jahinzee).
 
 Attribution of the specific photo(s) used is not required.
+
+<hr>© Jahin Z. 2021 • Hosted on GitHub Pages
