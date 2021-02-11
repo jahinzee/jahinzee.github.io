@@ -1,7 +1,7 @@
 <a href="https://jahinzee.github.io"><img src="https://raw.githubusercontent.com/jahinzee/jahinzee.github.io/master/emblem-black.png" height=24 width=24></a><br>
 [Home](https://jahinzee.github.io) ▸ **My Photos**
 # My Photos
-This is a collection of all public photographs taken by me.
+Sometimes I travel. Sometimes I take pictures when I travel. Sometimes I'll even remember to put them here, but only the best of the best.
 
 ## Best of the Best
 <img src="https://raw.githubusercontent.com/jahinzee/photos/main/evening%40sea-cliff-bge.jpg" height=128 width=128>  <img src="https://raw.githubusercontent.com/jahinzee/photos/main/sunset%40kelso-pk.jpeg" height=128 width=128>  <img src="https://raw.githubusercontent.com/jahinzee/photos/main/trees%40kelso-pk.jpeg" height=128 width=128><br><img src="https://raw.githubusercontent.com/jahinzee/photos/main/footbridge%40bulli-beach.jpeg" height=128 width=128>
