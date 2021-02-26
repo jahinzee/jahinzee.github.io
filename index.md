@@ -3,7 +3,7 @@
 # Welcome!
 The name's Jahin Z. Check out my stuff here!
 
-▸ **My Photos (temporarily offline)**<br>
+▸ [Photos](photos.md)<br>
 ▸ [Posts](posts.md)<br>
 
 ▸ [Twitter](https://twitter.com/jahinzee)<br>
