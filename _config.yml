@@ -1,1 +1,2 @@
 theme: jekyll-theme-minimal
+geometry: left=50mm, right=50mm, top=25mm, bottom=25mm, asymmetric

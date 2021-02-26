@@ -1,1 +1,1 @@
-[Link](https://jahinzee.github.io)
+This is my website; access it at https://jahinzee.github.io.
