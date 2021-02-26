@@ -13,4 +13,4 @@ The name's Jahin Z. Check out my stuff here!
 ▸ [SoundCloud](https://soundcloud.com/jahinzee)<br>
 ▸ [Discord Server (**ROMΛ**)](https://discord.gg/8StM3UmkNb)<br>
 
-<br><sup>© Jahin Z. • Hosted on [GitHub Pages](https://pages.github.com/)</sup>
+<br><sup>© Jahin Z. 2021 • Hosted on [GitHub Pages](https://pages.github.com/)</sup>

@@ -3,4 +3,4 @@
 # Posts
 ▸ [Tweetpastas Archive](posts/tweetpastas.md)
 
-<br><sup>© Jahin Z. • Hosted on [GitHub Pages](https://pages.github.com/)</sup>
+<br><sup>View copyright info on [homepage](https://jahinzee.github.io) • Hosted on [GitHub Pages](https://pages.github.com/)</sup>

@@ -2,4 +2,4 @@
 [Home](https://jahinzee.github.io) ▸ [Posts](../posts.md) ▸ **Tweetpastas Archive**
 # Tweetpastas Archive
 
-<br><sup>© Jahin Z. • Hosted on [GitHub Pages](https://pages.github.com/)</sup>
+<br><sup>View copyright info on [homepage](https://jahinzee.github.io) • Hosted on [GitHub Pages](https://pages.github.com/)</sup>
