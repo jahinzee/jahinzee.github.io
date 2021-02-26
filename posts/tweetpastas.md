@@ -1,4 +1,5 @@
 <link rel="shortcut icon" type="image/x-icon" href="https://raw.githubusercontent.com/jahinzee/jahinzee.github.io/master/favicon.ico">
+<title>Tweetpastas Archive • Jahin Z.</title>
 <a href="https://jahinzee.github.io"><img src="https://raw.githubusercontent.com/jahinzee/jahinzee.github.io/master/emblem-black.png" height=24 width=24></a><br>
 [Home](https://jahinzee.github.io) ▸ [Posts](https://jahinzee.github.io/posts.html) ▸ **Tweetpastas Archive**
 # Tweetpastas Archive

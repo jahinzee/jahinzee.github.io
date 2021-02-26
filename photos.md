@@ -1,4 +1,6 @@
 <link rel="shortcut icon" type="image/x-icon" href="https://raw.githubusercontent.com/jahinzee/jahinzee.github.io/master/favicon.ico">
+<title>Photos • Jahin Z.</title>
+
 <a href="https://jahinzee.github.io"><img src="https://raw.githubusercontent.com/jahinzee/jahinzee.github.io/master/emblem-black.png" height=24 width=24></a><br>
 [Home](https://jahinzee.github.io) ▸ **Photos**
 # Photos
@@ -22,6 +24,7 @@ You may **not**:
 
 ### Attribution
 Attribution can be as simple as linking my website or any of my social medias. If you would like to link my social media, I recommend linking my [Twitter](https://www.twitter.com/jahinzee) or my [Instagram](https://www.instagram.com/jahinzee).
+Attribution of the specific photo(s) used is not required.
 
 ### Photos
 <img src="https://raw.githubusercontent.com/jahinzee/jahinzee.github.io/master/photos/afternoon@stanwell-pk.jpg"><br>
@@ -32,4 +35,4 @@ Attribution can be as simple as linking my website or any of my social medias. I
 <img src="https://raw.githubusercontent.com/jahinzee/jahinzee.github.io/master/photos/trees@kelso-pk.jpeg"><br>
 
 
-Attribution of the specific photo(s) used is not required.<br><sup>View copyright info on [homepage](https://jahinzee.github.io) • Hosted on [GitHub Pages](https://pages.github.com/)</sup>
+<br><sup>View copyright info on [homepage](https://jahinzee.github.io) • Hosted on [GitHub Pages](https://pages.github.com/)</sup>
