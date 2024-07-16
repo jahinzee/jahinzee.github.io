@@ -9,5 +9,6 @@ export default defineConfig({
     shikiConfig: {
       theme: 'light-plus'
     }
-  }
+  },
+  site: 'https://jahinzee.github.io'
 });
