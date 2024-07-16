@@ -1,0 +1,14 @@
+---
+interface Props {
+    license: string;
+}
+const { license } = Astro.props;
+const licenseLink = license ? `https://creativecommons.org/licenses/${license.toLowerCase()}/4.0/` : '#';
+const licenseName = license ? `CC ${license.toUpperCase()} 4.0` : 'No license found'
+---
+
+<a
+    href={licenseLink}
+    target="_blank"
+    rel="noopener noreferrer">{licenseName}</a
+>

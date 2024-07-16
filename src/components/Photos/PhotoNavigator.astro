@@ -1,0 +1,49 @@
+---
+import Remixicon from "../Remixicon.astro";
+
+interface Props {
+    next: (string | number | undefined)[];
+    prev: (string | number | undefined)[];
+}
+
+const { next, prev } = Astro.props;
+const prevRiClass = 'ri-arrow-left-line'
+const nextRiClass = 'ri-arrow-right-line'
+const prevPage = prev === undefined ? undefined : prev[1];
+const nextPage = next === undefined ? undefined : next[1];
+---
+<style>
+    span.photo-navigation {
+        display: inline-flex;
+        gap: 1em;
+        padding-right: 1em;
+    }
+    span.disabled {
+        opacity: 50%;
+    }
+</style>
+
+<span class="photo-navigation">
+    {
+        prevPage != undefined ? (
+            <a href={`${prevPage}`}>
+                <Remixicon iconReference={prevRiClass} />
+            </a>
+        ) : (
+            <span class="disabled">
+                <Remixicon iconReference={prevRiClass} />
+            </span>
+        )
+    }
+    {
+        nextPage !== undefined ? (
+            <a href={`${nextPage}`}>
+                <Remixicon iconReference={nextRiClass} />
+            </a>
+        ) : (
+            <span class="disabled">
+                <Remixicon iconReference={nextRiClass} />
+            </span>
+        )
+    }
+</span>

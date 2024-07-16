@@ -1,0 +1,24 @@
+---
+import GraphicLink from "./GraphicLink.astro";
+
+const graphics = await Astro.glob("/src/pages/graphics/*.mdx");
+---
+
+<style>
+    div.graphic-ul {
+        padding-top: 1.25em;
+        display: flex;
+        flex-direction: column;
+        gap: 1.25em;
+    }
+</style>
+
+<div class="graphic-ul">
+    {
+        graphics
+            .sort((a, b) => (a.frontmatter.date - b.frontmatter.date))
+            .map((art) => (
+                <GraphicLink ref={art.url} frontmatter={art.frontmatter} />
+            ))
+    }
+</div>

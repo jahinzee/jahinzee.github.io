@@ -1,0 +1,32 @@
+---
+import Remixicon from "../Remixicon.astro";
+import PhotoDetail from "./PhotoDetail.astro";
+
+interface Props {
+    ref?: string;
+    frontmatter: Record<string, any>;
+}
+
+const { ref, frontmatter } = Astro.props;
+---
+
+<style>
+    h3.photo-li-header {
+        font-weight: normal;
+        line-height: 0;
+    }
+    span.featured-icon {
+        font-size: smaller;
+        margin-left: 0.5em;
+        cursor: help;
+    }
+</style>
+
+<div class="photo-li">
+    <div class="photo-info">
+        <h3 class="photo-li-header">
+            <a href={ref}>{frontmatter.title}</a>
+        </h3>
+        <PhotoDetail frontmatter={frontmatter} />
+    </div>
+</div>

@@ -1,0 +1,70 @@
+---
+import Main from "./Root.astro";
+import Remixicon from "../components/Remixicon.astro";
+import PhotoDetail from "../components/Photos/PhotoDetail.astro";
+import PhotoNavigator from "../components/Photos/PhotoNavigator.astro";
+import { Picture } from "astro:assets";
+import type { ImageMetadata } from "astro";
+
+const { frontmatter } = Astro.props;
+
+const imagePath = `/src/assets/photos/${frontmatter.title.replaceAll(" ", "-").toLowerCase()}.jpg`;
+const images = import.meta.glob<{ default: ImageMetadata }>(
+    "/src/assets/photos/*.jpg"
+);
+const thisImage = images[imagePath];
+if (!thisImage) throw new Error("Cannot find image!");
+
+const mdURLs = (await Astro.glob("/src/pages/photos/*.mdx")).map(
+    (page, idx, elem) => [idx, page.url],
+);
+const currPageIdx = Number(mdURLs.filter((p) => p[1] == frontmatter.url)[0][0]);
+const nextPage = mdURLs[currPageIdx + 1];
+const prevPage = mdURLs[currPageIdx - 1];
+---
+
+<Main title={`Photo: ${frontmatter.title}`} , no_h1={true}>
+    <style>
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 1.25em;
+            margin-bottom: 1.25em;
+        }
+        div.infobar {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1em;
+        }
+        h1 {
+            margin-top: 0.25em;
+            margin-bottom: 0em;
+            /* font-weight: normal; */
+        }
+        span.up-button {
+            font-weight: 550;
+        }
+    </style>
+    
+    <span class="up-button">
+        <a href="/photos">
+            <Remixicon iconReference="ri-arrow-up-line" /> Photos
+        </a>
+    </span>
+    <h1>
+        {frontmatter.title}
+    </h1>
+    <div class="infobar">
+        <PhotoDetail frontmatter={frontmatter} />
+        <PhotoNavigator next={nextPage} prev={prevPage} />
+    </div>
+    <div>
+        <Picture    
+            src={thisImage()}
+            formats={["webp", "jpg"]}
+            alt={frontmatter.title}
+            loading="eager"
+        />
+    </div>
+    <slot />
+</Main>

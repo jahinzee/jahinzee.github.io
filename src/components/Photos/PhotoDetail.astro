@@ -1,0 +1,46 @@
+---
+import WikipediaLink from "../WikipediaLink.astro";
+import Decor from "../Decor.astro";
+import Date from "../Date.astro";
+import LicenseLink from "../LicenseLink.astro";
+import Remixicon from "../Remixicon.astro";
+
+interface Props {
+    frontmatter: Record<string, any>;
+}
+
+const { frontmatter } = Astro.props;
+---
+
+<style>
+    div.photo-detail {
+        opacity: 70%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5em;
+    }
+    span.featured-icon {
+        /* font-size: smaller; */
+        cursor: help;
+    }
+</style>
+<div class="photo-detail">
+    {
+        frontmatter.location != null ? (
+            <WikipediaLink article={frontmatter.location} />
+        ) : (
+            <em>Location unknown</em>
+        )
+    }
+    <Decor>∙</Decor>
+    <Date date={frontmatter.date} />
+    <Decor>∙</Decor>
+    <LicenseLink license={frontmatter.license} />
+    {
+        frontmatter.featured ? (
+            <span title="This is a featured photo." class="featured-icon">
+                <Remixicon iconReference="ri-star-line" />
+            </span>
+        ) : null
+    }
+</div>

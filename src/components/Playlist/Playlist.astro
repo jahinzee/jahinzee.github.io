@@ -1,0 +1,13 @@
+---
+import PlaylistItem from "./PlaylistItem.astro";
+
+const albums = await Astro.glob("/src/pages/playlist/*.mdx");
+---
+<style>
+    div.playlist {
+        margin-top: 3em;
+    }
+</style>
+<div class="playlist">
+    {albums.sort((a, b) => b.frontmatter.year - a.frontmatter.year).map((al) => <PlaylistItem frontmatter={al.frontmatter} />)}
+</div>

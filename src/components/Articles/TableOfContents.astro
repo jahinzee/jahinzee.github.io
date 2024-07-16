@@ -1,0 +1,46 @@
+---
+import type { MarkdownLayoutProps } from "astro";
+
+interface Props {
+    headings: {
+        depth: number;
+        text: string;
+        slug: string;
+    }[];
+}
+
+const { headings } = Astro.props;
+---
+
+<style>
+    p {
+        line-height: 0.75em;
+    }
+    p.level-0 {
+        margin-left: 0em;
+    }
+    p.level-1 {
+        margin-left: 1.5em;
+    }
+    p.level-2 {
+        margin-left: 3em;
+    }
+    p.level-3 {
+        margin-left: 4.5em;
+    }
+</style>
+
+<div class="table-of-contents">
+    <details>
+        <summary>Table of Contents</summary>
+        {
+            headings
+                .filter((h) => h.text !== "Footnotes")
+                .map((h) => (
+                    <p class={`level-${h.depth - 2}`}>
+                        <a href={`#${h.slug}`}>{h.text}</a>
+                    </p>
+                ))
+        }
+    </details>
+</div>

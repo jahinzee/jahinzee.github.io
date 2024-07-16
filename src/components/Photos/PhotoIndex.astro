@@ -1,0 +1,23 @@
+---
+import PhotoLink from "./PhotoLink.astro";
+
+const photos = await Astro.glob("/src/pages/photos/*.mdx");
+---
+
+<style>
+    div.photo-ul {
+        padding-top: 1.25em;
+        display: flex;
+        flex-direction: column;
+        gap: 1.25em;
+    }
+</style>
+
+<div class="photo-ul">
+    {
+        photos
+            .map((img) => (
+                <PhotoLink ref={img.url} frontmatter={img.frontmatter} />
+            ))
+    }
+</div>

@@ -1,0 +1,13 @@
+---
+import 'remixicon/fonts/remixicon.css';
+import Decor from './Decor.astro';
+
+interface Props {
+    iconReference: string
+}
+
+const { iconReference } = Astro.props;
+
+---
+
+<Decor><i class={iconReference}></i></Decor>

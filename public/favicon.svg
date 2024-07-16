@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="500px" height="500px" viewBox="0 0 500 500" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient gradientUnits="objectBoundingBox" x1="0" y1="0" x2="1" y2="1" id="gradient_1">
+      <stop offset="0%" stop-color="#2D1E46" />
+      <stop offset="49.4382%" stop-color="#9256F6" />
+      <stop offset="100%" stop-color="#4E327B" />
+    </linearGradient>
+    <path d="M500 0L500 0L500 500L0 500L0 0L500 0Z" id="path_1" />
+    <path d="M250 0C111.929 0 0 111.929 0 250C0 388.071 111.929 500 250 500C388.071 500 500 388.071 500 250C500 111.929 388.071 0 250 0ZM152 250.5C152 304.9 196.1 349 250.5 349C304.9 349 349 304.9 349 250.5C349 196.1 304.9 152 250.5 152C196.1 152 152 196.1 152 250.5ZM30 250C30 275.405 50.5949 296 76 296C101.405 296 122 275.405 122 250C122 224.595 101.405 204 76 204C50.5949 204 30 224.595 30 250ZM379 250C379 275.405 399.595 296 425 296C450.405 296 471 275.405 471 250C471 224.595 450.405 204 425 204C399.595 204 379 224.595 379 250Z" id="path_2" />
+    <clipPath id="clip_1">
+      <use xlink:href="#path_1" clip-rule="evenodd" fill-rule="evenodd" />
+    </clipPath>
+  </defs>
+  <g id="favicon">
+    <path d="M500 0L500 0L500 500L0 500L0 0L500 0Z" id="favicon" fill="none" stroke="none" />
+    <g id="Oval-Subtract" clip-path="url(#clip_1)">
+      <use stroke="none" fill="#D1C4E9" xlink:href="#path_2" fill-rule="evenodd" />
+      <use stroke="none" fill="url(#gradient_1)" xlink:href="#path_2" fill-rule="evenodd" />
+    </g>
+  </g>
+</svg>

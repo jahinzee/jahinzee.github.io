@@ -1,0 +1,13 @@
+---
+interface Props {
+    article: string;
+}
+const { article } = Astro.props;
+---
+
+<a
+    class="wikipedia"
+    href={"https://en.wikipedia.org/wiki/" + encodeURIComponent(article)}
+    target="_blank"
+    rel="noopener noreferrer">{article}</a
+>

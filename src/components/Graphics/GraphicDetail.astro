@@ -1,0 +1,28 @@
+---
+import Date from "../Date.astro";
+import Decor from "@components/Decor.astro";
+import LicenseLink from "@components/LicenseLink.astro";
+
+interface Props {
+    frontmatter: Record<string, any>;
+}
+
+const { frontmatter } = Astro.props;
+---
+
+<style>
+    div.graphic-detail {
+        opacity: 70%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5em;
+    }
+    span.pinned-icon {
+        cursor: help;
+    }
+</style>
+<div class="graphic-detail">
+    <Date date={frontmatter.date} />
+    <Decor>·</Decor>
+    <LicenseLink license={frontmatter.license}></LicenseLink>
+</div>

@@ -1,0 +1,28 @@
+---
+interface Props {
+    ref?: string;
+    def?: string;
+    means?: string;
+}
+
+const { ref, def, means } = Astro.props;
+const makeRefLink = (ref: string): string => `#reference-${ref}`;
+const makeDefId = (def: string): string => `reference-${def}`;
+---
+
+{
+    ref && (
+        <span class="footnote-def">
+            <sup>
+                <a href={makeRefLink(ref)}>[{ref}]</a>
+            </sup>
+        </span>
+    )
+}
+{
+    def && means && (
+        <span class="footnote-ref" id={makeDefId(def)}>
+            [{def}]: <span class="footnote-means">{means}</span>
+        </span>
+    )
+}

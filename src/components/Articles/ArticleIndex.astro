@@ -1,0 +1,25 @@
+---
+import ArticleLink from "./ArticleLink.astro";
+
+const articles = await Astro.glob("/src/pages/articles/*.mdx");
+---
+
+<style>
+    div.article-ul {
+        padding-top: 1.25em;
+        display: flex;
+        flex-direction: column;
+        gap: 1.25em;
+    }
+</style>
+
+<div class="article-ul">
+    {
+        articles
+            .sort((a, b) => (a.frontmatter.date - b.frontmatter.date))
+            .sort((a, b) => ((a.frontmatter.pinned === b.frontmatter.pinned) ? 0 : a.frontmatter.pinned ? -1 : 1))
+            .map((art) => (
+                <ArticleLink ref={art.url} frontmatter={art.frontmatter} />
+            ))
+    }
+</div>

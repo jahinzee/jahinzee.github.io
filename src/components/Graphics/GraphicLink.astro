@@ -1,0 +1,27 @@
+---
+import GraphicDetail from './GraphicDetail.astro';
+
+interface Props {
+    ref?: string;
+    frontmatter: Record<string, any>;
+}
+
+const { ref, frontmatter } = Astro.props;
+---
+
+<style>
+    h3.graphic-li-header {
+        font-weight: normal;
+        line-height: 0;
+        border-bottom: none;
+    }
+</style>
+
+<div class="graphic-li">
+    <div class="graphic-info">
+        <h3 class="graphic-li-header">
+            <a href={ref}>{frontmatter.title}</a>
+        </h3>
+        <GraphicDetail frontmatter={frontmatter} />
+    </div>
+</div>

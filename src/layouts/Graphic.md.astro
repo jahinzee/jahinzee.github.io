@@ -1,0 +1,41 @@
+---
+import Main from "./Root.astro";
+import Remixicon from "../components/Remixicon.astro";
+import GraphicDetail from "../components/Graphics/GraphicDetail.astro";
+
+const { frontmatter } = Astro.props;
+---
+
+<Main title={frontmatter.title}, no_h1={true}>
+    <style>
+        div.infobar {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1em;
+            margin-bottom: 1em;
+        }
+        h1 {
+            margin-top: 0.25em;
+            margin-bottom: 0em;
+            /* font-weight: normal; */
+        }
+        span.up-button {
+            font-weight: 550;
+        }
+    </style>
+    
+    <span class="up-button">
+        <a href="/graphics">
+            <Remixicon iconReference="ri-arrow-up-line" /> Graphics
+        </a>
+    </span>
+    <h1>
+        {frontmatter.title}
+    </h1>
+    <div class="infobar">
+        <GraphicDetail frontmatter={frontmatter} />
+    </div>
+    <article>
+        <slot />
+    </article>
+</Main>

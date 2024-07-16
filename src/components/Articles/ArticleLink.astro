@@ -1,0 +1,27 @@
+---
+import ArticleDetail from './ArticleDetail.astro';
+
+interface Props {
+    ref?: string;
+    frontmatter: Record<string, any>;
+}
+
+const { ref, frontmatter } = Astro.props;
+---
+
+<style>
+    h3.photo-li-header {
+        font-weight: normal;
+        line-height: 0;
+        border-bottom: none;
+    }
+</style>
+
+<div class="photo-li">
+    <div class="photo-info">
+        <h3 class="photo-li-header">
+            <a href={ref}>{frontmatter.title}</a>
+        </h3>
+        <ArticleDetail frontmatter={frontmatter} />
+    </div>
+</div>

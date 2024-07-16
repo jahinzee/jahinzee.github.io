@@ -1,0 +1,47 @@
+---
+import Main from "./Root.astro";
+import Remixicon from "../components/Remixicon.astro";
+import ArticleDetail from "../components/Articles/ArticleDetail.astro";
+import TableOfContents from "../components/Articles/TableOfContents.astro";
+
+const { headings, frontmatter } = Astro.props;
+---
+
+<Main title={frontmatter.title}, no_h1={true}>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css"
+    integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ" crossorigin="anonymous">
+    <style>
+        div.infobar {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1em;
+            margin-bottom: 1em;
+        }
+        h1 {
+            margin-top: 0.25em;
+            margin-bottom: 0em;
+            /* font-weight: normal; */
+        }
+        span.up-button {
+            font-weight: 550;
+        }
+    </style>
+    
+    <span class="up-button">
+        <a href="/articles">
+            <Remixicon iconReference="ri-arrow-up-line" /> Articles
+        </a>
+    </span>
+    <h1>
+        {frontmatter.title}
+    </h1>
+    <div class="infobar">
+        <ArticleDetail frontmatter={frontmatter} />
+    </div>
+    {
+        (frontmatter.notoc ?? false) ? null : <TableOfContents headings={headings} />
+    }
+    <article>
+        <slot />
+    </article>
+</Main>

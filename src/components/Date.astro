@@ -1,0 +1,13 @@
+---
+interface Props {
+    date: string;
+}
+const { date } = Astro.props;
+const fmt_date: Date = new (Date as any)(date).toLocaleDateString("en-AU", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+    })
+---
+
+{fmt_date}

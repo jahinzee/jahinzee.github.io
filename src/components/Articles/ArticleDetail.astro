@@ -1,0 +1,43 @@
+---
+import Decor from "../Decor.astro";
+import Date from "../Date.astro";
+import Remixicon from "@components/Remixicon.astro";
+
+interface Props {
+    frontmatter: Record<string, any>;
+}
+
+const { frontmatter } = Astro.props;
+---
+
+<style>
+    div.article-detail {
+        opacity: 70%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5em;
+    }
+    span.pinned-icon {
+        cursor: help;
+    }
+</style>
+<div class="article-detail">
+    <span class="category">
+        #{frontmatter.category.toLowerCase()}
+    </span>
+    <Decor>∙</Decor>
+    <Date date={frontmatter.date} />
+    {
+        frontmatter.updated ?
+            <Decor>∙</Decor>
+            <span class="update">Updated on <Date date={frontmatter.updated}/></span>
+            : null
+    }
+    {
+        frontmatter.pinned ?
+        <span title="This is a pinned article." class="pinned-icon">
+                <Remixicon iconReference="ri-pushpin-line" />
+            </span>
+        : null
+    }
+</div>
