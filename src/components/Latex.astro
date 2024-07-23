@@ -1,17 +1,16 @@
 ---
 // based off code from: https://danidiaztech.com/create-astro-latex-component/
 
-import katex from 'katex';
+import katex from "katex";
 
 interface Props {
     formula?: string;
 }
 
-const { formula } = Astro.props
-const source = await Astro.slots.render('default')
-const displayedTex = katex.renderToString(source, {throwOnError: false})
-
+const source = await Astro.slots.render("default");
+const displayedTex = katex.renderToString(source, { throwOnError: false });
 ---
+
 <style>
     span.base {
         display: none;
@@ -19,4 +18,3 @@ const displayedTex = katex.renderToString(source, {throwOnError: false})
 </style>
 
 <span class="katex-html" set:html={displayedTex} />
-

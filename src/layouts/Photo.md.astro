@@ -10,13 +10,13 @@ const { frontmatter } = Astro.props;
 
 const imagePath = `/src/assets/photos/${frontmatter.title.replaceAll(" ", "-").toLowerCase()}.jpg`;
 const images = import.meta.glob<{ default: ImageMetadata }>(
-    "/src/assets/photos/*.jpg"
+    "/src/assets/photos/*.jpg",
 );
 const thisImage = images[imagePath];
 if (!thisImage) throw new Error("Cannot find image!");
 
 const mdURLs = (await Astro.glob("/src/pages/photos/*.mdx")).map(
-    (page, idx, elem) => [idx, page.url],
+    (page, idx, _) => [idx, page.url],
 );
 const currPageIdx = Number(mdURLs.filter((p) => p[1] == frontmatter.url)[0][0]);
 const nextPage = mdURLs[currPageIdx + 1];
@@ -45,7 +45,7 @@ const prevPage = mdURLs[currPageIdx - 1];
             font-weight: 550;
         }
     </style>
-    
+
     <span class="up-button">
         <a href="/photos">
             <Remixicon iconReference="ri-arrow-up-line" /> Photos
@@ -59,7 +59,7 @@ const prevPage = mdURLs[currPageIdx - 1];
         <PhotoNavigator next={nextPage} prev={prevPage} />
     </div>
     <div>
-        <Picture    
+        <Picture
             src={thisImage()}
             formats={["webp", "jpg"]}
             alt={frontmatter.title}

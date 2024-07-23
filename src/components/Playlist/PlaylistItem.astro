@@ -33,26 +33,26 @@ const { frontmatter } = Astro.props;
 <div class="playlist-li">
     <details>
         <summary>
-        <h3>
-            <span class="year">{frontmatter.year}</span>
-            {frontmatter.artist} – {frontmatter.album}
-        </h3>
+            <h3>
+                <span class="year">{frontmatter.year}</span>
+                {frontmatter.artist} – {frontmatter.album}
+            </h3>
         </summary>
         <div class="album-info">
-        <h4>Links</h4>
-        <ul>
-            {
-                frontmatter.links.map((l: any) => (
-                    <li>
-                        <a href={l}>{l.split("/")[2]}</a>
-                    </li>
-                ))
-            }
-        </ul>
-        <h4>Favourites:</h4>
-        <ul>
-            {frontmatter.favourites.map((f: any) => <li>{f}</li>)}
-        </ul>
+            <h4>Links</h4>
+            <ul>
+                {
+                    frontmatter.links.map((l: any) => (
+                        <li>
+                            <a href={l}>{l.split("/")[2]}</a>
+                        </li>
+                    ))
+                }
+            </ul>
+            <h4>Favourites:</h4>
+            <ul>
+                {frontmatter.favourites.map((f: any) => <li>{f}</li>)}
+            </ul>
         </div>
     </details>
 </div>
