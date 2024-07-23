@@ -3,7 +3,11 @@ import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import BackgroundEmblem from "@components/BackgroundEmblem.astro";
 import "@fontsource-variable/noto-sans";
-import "@fontsource-variable/noto-sans-mono";
+import "@fontsource-variable/noto-sans/wght-italic.css";
+import "@fontsource/dejavu-mono/400.css";
+import "@fontsource/dejavu-mono/700.css";
+import "@fontsource/dejavu-mono/400-italic.css";
+import "@fontsource/dejavu-mono/700-italic.css";
 
 interface Props {
     title: string;
@@ -21,6 +25,12 @@ const { title, no_h1, emblem } = Astro.props;
         <meta name="description" content="jahinzee" />
         <meta name="viewport" content="width=device-width" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link
+            rel="alternate"
+            type="application/rss+xml"
+            title="jahinzee"
+            href={new URL("rss.xml", Astro.site)}
+        />
         <meta name="generator" content={Astro.generator} />
         <title>{title} - jahinzee</title>
     </head>
@@ -37,9 +47,9 @@ const { title, no_h1, emblem } = Astro.props;
         }
 
         tt,
-        pre {
-            font-size: larger;
-            font-family: "Noto Sans Mono Variable", monospace;
+        pre,
+        code {
+            font-family: "DejaVu Mono", monospace;
         }
 
         body {
@@ -53,6 +63,12 @@ const { title, no_h1, emblem } = Astro.props;
         }
 
         @media only screen and (max-width: 960px) {
+            body {
+                width: 100%;
+            }
+        }
+
+        @media only print {
             body {
                 width: 100%;
             }
@@ -170,13 +186,6 @@ const { title, no_h1, emblem } = Astro.props;
             margin-left: 1.25em;
         }
     </style>
-
-    <link
-        rel="alternate"
-        type="application/rss+xml"
-        title="Your Site's Title"
-        href={new URL("rss.xml", Astro.site)}
-    />
 
     <body>
         <Fragment>

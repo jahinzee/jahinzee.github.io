@@ -3,12 +3,24 @@ interface Props {
     license: string;
 }
 const { license } = Astro.props;
-const licenseLink = license ? `https://creativecommons.org/licenses/${license.toLowerCase()}/4.0/` : '#';
-const licenseName = license ? `CC ${license.toUpperCase()} 4.0` : 'No license found'
+const licenseLink = license
+    ? `https://creativecommons.org/licenses/${license.toLowerCase()}/4.0/`
+    : "#";
+const licenseName = license
+    ? `CC ${license.toUpperCase()} 4.0`
+    : "No license found";
+
+const fullLicenseName = `Creative Commons ${license
+    .toLowerCase()
+    .replaceAll("by", "Attribution")
+    .replaceAll("nd", "NoDerivatives")
+    .replaceAll("nc", "NonCommercial")
+    .replaceAll("sa", "ShareAlike")} 4.0 International`;
 ---
 
 <a
     href={licenseLink}
     target="_blank"
+    title={`Licensed under ${fullLicenseName}.`}
     rel="noopener noreferrer">{licenseName}</a
 >

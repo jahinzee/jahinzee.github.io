@@ -7,11 +7,14 @@ interface Props {
 }
 
 const { next, prev } = Astro.props;
-const prevRiClass = 'ri-arrow-left-line'
-const nextRiClass = 'ri-arrow-right-line'
+const prevRiClass = "ri-arrow-left-line";
+const nextRiClass = "ri-arrow-right-line";
 const prevPage = prev === undefined ? undefined : prev[1];
 const nextPage = next === undefined ? undefined : next[1];
+
+const hintText = "Tip: use the arrow keys to go through the images.";
 ---
+
 <style>
     span.photo-navigation {
         display: inline-flex;
@@ -20,13 +23,18 @@ const nextPage = next === undefined ? undefined : next[1];
     }
     span.disabled {
         opacity: 50%;
+        cursor: not-allowed;
     }
 </style>
 
 <span class="photo-navigation">
     {
         prevPage != undefined ? (
-            <a href={`${prevPage}`}>
+            <a
+                href={`${prevPage}`}
+                id="previous"
+                title={`Go to previous image\n${hintText}`}
+            >
                 <Remixicon iconReference={prevRiClass} />
             </a>
         ) : (
@@ -37,7 +45,11 @@ const nextPage = next === undefined ? undefined : next[1];
     }
     {
         nextPage !== undefined ? (
-            <a href={`${nextPage}`}>
+            <a
+                href={`${nextPage}`}
+                id="next"
+                title={`Go to next image\n${hintText}`}
+            >
                 <Remixicon iconReference={nextRiClass} />
             </a>
         ) : (
@@ -47,3 +59,19 @@ const nextPage = next === undefined ? undefined : next[1];
         )
     }
 </span>
+
+<script>
+    document.addEventListener("keydown", (event) => {
+        const key = event.key;
+        switch (key) {
+            case "ArrowLeft":
+                document.getElementById("previous")?.click();
+                break;
+            case "ArrowRight":
+                document.getElementById("next")?.click();
+                break;
+            default:
+                break;
+        }
+    });
+</script>

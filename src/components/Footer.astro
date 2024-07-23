@@ -1,3 +1,8 @@
+---
+import Decor from "./Decor.astro";
+import Remixicon from "./Remixicon.astro";
+---
+
 <style>
     footer p {
         margin: O !important;
@@ -5,10 +10,20 @@
     footer {
         padding: 1em 1em 1em 2.5em;
         font-size: smaller;
-        opacity: 60%;
+        opacity: 70%;
     }
 </style>
 <footer>
-    <div id="copyright">&copy; jahinzee 2020-{new Date().getFullYear()}. All rights reserved.</div>
-    <div id="note">Built with Astro.</div>
+    <div id="copyright">
+        &copy; jahinzee 2020-{new Date().getFullYear()}. All rights reserved.
+    </div>
+    <div id="note">
+        <span id="rss">
+            Subscribe with <a href="/rss.xml"
+                >RSS <Remixicon iconReference="ri-rss-line" /></a
+            > (<a href="https://aboutfeeds.com">What's this?</a>)
+        </span>
+        <Decor>·</Decor>
+        <span id="credits"><a href="/credits">Website credits</a></span>
+    </div>
 </footer>

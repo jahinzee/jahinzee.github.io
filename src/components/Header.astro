@@ -11,6 +11,12 @@ const topLinks = await Astro.glob("/src/pages/*.mdx");
         margin: 0em;
     }
 
+    @media only print {
+        header {
+            display: none;
+        }
+    }
+
     /* header nav {
         display: flex;
         flex-wrap: wrap;
@@ -44,7 +50,12 @@ const topLinks = await Astro.glob("/src/pages/*.mdx");
             <li><Decor>⠿</Decor></li>
             {
                 topLinks
-                    .filter((l) => l.url !== "/contact" && l.url !== "")
+                    .filter(
+                        (l) =>
+                            l.url !== "/contact" &&
+                            l.url !== "" &&
+                            l.url !== "/credits",
+                    )
                     .map((l) => (
                         <li>
                             <a href={l.url}>{l.frontmatter.title}</a>
