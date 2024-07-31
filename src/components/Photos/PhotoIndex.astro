@@ -5,7 +5,8 @@ const photos = await Astro.glob("/src/pages/photos/*.mdx");
 ---
 
 <style>
-    div.photo-ul {
+    ul.photo-ul {
+        padding-left: 0;
         padding-top: 1.25em;
         display: flex;
         flex-direction: column;
@@ -13,11 +14,12 @@ const photos = await Astro.glob("/src/pages/photos/*.mdx");
     }
 </style>
 
-<div class="photo-ul">
-    {
-        photos
-            .map((img) => (
+<div>
+    <ul class="photo-ul">
+        {
+            photos.map((img) => (
                 <PhotoLink ref={img.url} frontmatter={img.frontmatter} />
             ))
-    }
+        }
+    </ul>
 </div>

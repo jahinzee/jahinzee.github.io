@@ -54,7 +54,8 @@ const topLinks = await Astro.glob("/src/pages/*.mdx");
                         (l) =>
                             l.url !== "/contact" &&
                             l.url !== "" &&
-                            l.url !== "/credits",
+                            l.url !== "/credits" &&
+                            l.url !== "/404",
                     )
                     .map((l) => (
                         <li>

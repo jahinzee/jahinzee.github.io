@@ -36,14 +36,18 @@ const { title, no_h1, emblem } = Astro.props;
     </head>
     <style is:global>
         :root {
-            --main-bg: white;
-            --main-fg: black;
-            --accent: #694c9a;
+            --main-bg: #191919;
+            --main-fg: #ffffff;
+            --accent: #c6a5ff;
             font-family: "Noto Sans Variable", sans-serif;
         }
 
         ::selection {
-            background-color: color-mix(in srgb, var(--accent) 50%, white 50%);
+            background-color: color-mix(
+                in srgb,
+                var(--accent) 50%,
+                var(--main-bg) 50%
+            );
         }
 
         tt,
@@ -53,6 +57,8 @@ const { title, no_h1, emblem } = Astro.props;
         }
 
         body {
+            background: var(--main-bg);
+            color: var(--main-fg);
             display: flex;
             flex-flow: column nowrap;
             margin-left: auto;
@@ -61,7 +67,11 @@ const { title, no_h1, emblem } = Astro.props;
             width: 70%;
             line-height: 1.5em;
         }
-
+        hr {
+            color: var(--main-fg);
+            opacity: 25%;
+            width: 100%;
+        }
         @media only screen and (max-width: 960px) {
             body {
                 width: 100%;
@@ -122,7 +132,7 @@ const { title, no_h1, emblem } = Astro.props;
             font-weight: 550;
             width: 100%;
             /* background-color: red; */
-            border-bottom: 0.05em solid lightgray;
+            border-bottom: 0.05em solid rgba(255, 255, 255, 0.25);
             padding-bottom: 0.3em;
             margin-top: 1.5em;
             line-height: 1.5em;
@@ -144,7 +154,7 @@ const { title, no_h1, emblem } = Astro.props;
 
         th,
         td {
-            border-bottom: 0.1em solid rgba(0, 0, 0, 0.25);
+            border-bottom: 0.1em solid rgba(255, 255, 255, 0.25);
             text-align: left;
             padding: 0.35em;
             padding-left: 0.5em;
@@ -152,7 +162,7 @@ const { title, no_h1, emblem } = Astro.props;
         }
 
         td:hover {
-            background-color: rgba(0, 0, 0, 0.05);
+            background-color: rgba(255, 255, 255, 0.05);
         }
 
         th {

@@ -5,7 +5,8 @@ const graphics = await Astro.glob("/src/pages/graphics/*.mdx");
 ---
 
 <style>
-    div.graphic-ul {
+    ul.graphic-ul {
+        padding-left: 0;
         padding-top: 1.25em;
         display: flex;
         flex-direction: column;
@@ -13,12 +14,14 @@ const graphics = await Astro.glob("/src/pages/graphics/*.mdx");
     }
 </style>
 
-<div class="graphic-ul">
-    {
-        graphics
-            .sort((a, b) => (a.frontmatter.date - b.frontmatter.date))
-            .map((art) => (
-                <GraphicLink ref={art.url} frontmatter={art.frontmatter} />
-            ))
-    }
+<div>
+    <ul class="graphic-ul">
+        {
+            graphics
+                .sort((a, b) => a.frontmatter.date - b.frontmatter.date)
+                .map((art) => (
+                    <GraphicLink ref={art.url} frontmatter={art.frontmatter} />
+                ))
+        }
+    </ul>
 </div>

@@ -7,8 +7,16 @@ const { frontmatter } = Astro.props;
 ---
 
 <style>
-    h3 {
+    li.playlist-li {
+        list-style-type: none;
+    }
+    li li {
+        list-style-type: square;
+    }
+    span.playlist-li-title {
+        font-size: larger;
         font-weight: 450;
+        line-height: 2.25em;
     }
     span.year {
         font-weight: 400;
@@ -30,13 +38,13 @@ const { frontmatter } = Astro.props;
     }
 </style>
 
-<div class="playlist-li">
+<li class="playlist-li">
     <details>
         <summary>
-            <h3>
+            <span class="playlist-li-title">
                 <span class="year">{frontmatter.year}</span>
                 {frontmatter.artist} – {frontmatter.album}
-            </h3>
+            </span>
         </summary>
         <div class="album-info">
             <h4>Links</h4>
@@ -55,4 +63,4 @@ const { frontmatter } = Astro.props;
             </ul>
         </div>
     </details>
-</div>
+</li>

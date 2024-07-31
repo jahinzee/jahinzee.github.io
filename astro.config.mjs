@@ -8,7 +8,7 @@ export default defineConfig({
   integrations: [mdx()],
   markdown: {
     shikiConfig: {
-      theme: 'light-plus'
+      theme: 'dark-plus'
     }
   },
   site: 'https://jahinzee.github.io'

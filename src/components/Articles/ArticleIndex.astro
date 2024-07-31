@@ -5,7 +5,8 @@ const articles = await Astro.glob("/src/pages/articles/*.mdx");
 ---
 
 <style>
-    div.article-ul {
+    ul.article-ul {
+        padding-left: 0;
         padding-top: 1.25em;
         display: flex;
         flex-direction: column;
@@ -13,19 +14,24 @@ const articles = await Astro.glob("/src/pages/articles/*.mdx");
     }
 </style>
 
-<div class="article-ul">
-    {
-        articles
-            .sort((a, b) => a.frontmatter.date - b.frontmatter.date)
-            .sort((a, b) =>
-                a.frontmatter.pinned === b.frontmatter.pinned
-                    ? 0
-                    : a.frontmatter.pinned
-                      ? -1
-                      : 1,
-            )
-            .map((art) => (
-                <ArticleLink ref={art.url} frontmatter={art.frontmatter} />
-            ))
-    }
+<div>
+    <ul class="article-ul">
+        {
+            articles
+                .sort((a, b) => a.frontmatter.date - b.frontmatter.date)
+                .filter((a) => a.frontmatter.pinned)
+                .map((art) => (
+                    <ArticleLink ref={art.url} frontmatter={art.frontmatter} />
+                ))
+        }
+        <hr />
+        {
+            articles
+                .sort((a, b) => a.frontmatter.date - b.frontmatter.date)
+                .filter((a) => !a.frontmatter.pinned)
+                .map((art) => (
+                    <ArticleLink ref={art.url} frontmatter={art.frontmatter} />
+                ))
+        }
+    </ul>
 </div>

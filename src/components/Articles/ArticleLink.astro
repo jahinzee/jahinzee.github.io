@@ -10,20 +10,23 @@ const { ref, frontmatter } = Astro.props;
 ---
 
 <style>
-    h3.photo-li-header {
+    li.article-li {
+        list-style-type: none;
+    }
+    span.article-li-header {
+        font-size: larger;
         font-weight: normal;
         margin-top: 0.5em;
         margin-bottom: 0.5em;
-        padding-top: 0em;
-        border-bottom: none;
+        line-height: 2em;
     }
 </style>
 
-<div class="photo-li">
-    <div class="photo-info">
-        <h3 class="photo-li-header">
+<li class="article-li">
+    <div class="article-info">
+        <span class="article-li-header">
             <a href={ref}>{frontmatter.title}</a>
-        </h3>
+        </span>
         <ArticleDetail frontmatter={frontmatter} />
     </div>
-</div>
+</li>
