@@ -17,7 +17,13 @@ const photos = await Astro.glob("/src/pages/photos/*.mdx");
 <div>
     <ul class="photo-ul">
         {
-            photos.map((img) => (
+            photos.filter(img => img.frontmatter.featured).map((img) => (
+                <PhotoLink ref={img.url} frontmatter={img.frontmatter} />
+            ))
+        }
+        <hr />
+        {
+            photos.filter(img => !img.frontmatter.featured).map((img) => (
                 <PhotoLink ref={img.url} frontmatter={img.frontmatter} />
             ))
         }
