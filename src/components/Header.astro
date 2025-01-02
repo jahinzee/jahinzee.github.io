@@ -5,66 +5,66 @@ const topLinks = await Astro.glob("/src/pages/*.mdx");
 ---
 
 <style>
+  header {
+    align-items: center;
+    padding: 0em;
+    margin: 0em;
+  }
+
+  @media only print {
     header {
-        align-items: center;
-        padding: 0em;
-        margin: 0em;
+      display: none;
     }
+  }
 
-    @media only print {
-        header {
-            display: none;
-        }
-    }
-
-    /* header nav {
+  /* header nav {
         display: flex;
         flex-wrap: wrap;
     } */
 
-    header ul {
-        display: flex;
-        overflow: scroll;
-        margin-top: 0;
-        padding: 1em 2.5em;
-        gap: 1em;
-    }
+  header ul {
+    display: flex;
+    overflow: scroll;
+    margin-top: 0;
+    padding: 1em 2.5em;
+    gap: 1em;
+  }
 
-    header li {
-        display: inline;
-    }
+  header li {
+    display: inline;
+  }
 
-    header li#home {
-        font-weight: bold;
-    }
+  header li#home {
+    font-weight: bold;
+  }
 
-    header a {
-        color: var(--main-fg);
-        opacity: 75%;
-    }
+  header a {
+    color: var(--main-fg);
+    opacity: 75%;
+  }
 </style>
 <header>
-    <nav>
-        <ul>
-            <li id="home"><a href="/">jahinzee</a></li>
-            <li><Decor>⠿</Decor></li>
-            {
-                topLinks
-                    .filter(
-                        (l) =>
-                            l.url !== "/contact" &&
-                            l.url !== "" &&
-                            l.url !== "/credits" &&
-                            l.url !== "/404",
-                    )
-                    .map((l) => (
-                        <li>
-                            <a href={l.url}>{l.frontmatter.title}</a>
-                        </li>
-                    ))
-            }
-            <li><Decor>⠿</Decor></li>
-            <li><a href="/contact">Contact</a></li>
-        </ul>
-    </nav>
+  <nav>
+    <ul>
+      <li id="home"><a href="/">jahinzee</a></li>
+      <li><Decor>⠿</Decor></li>
+      {
+        topLinks
+          .filter(
+            (l) =>
+              l.url !== "/contact" &&
+              l.url !== "" &&
+              l.url !== "/credits" &&
+              l.url !== "/404"
+          )
+          .map((l) => (
+            <li>
+              <a href={l.url}>{l.frontmatter.title}</a>
+            </li>
+          ))
+      }
+      <li><Decor>⠿</Decor></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+  </nav>
 </header>

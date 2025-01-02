@@ -2,3 +2,4 @@ node_modules
 .directory
 dist/
 .astro/
+bun.lockb
