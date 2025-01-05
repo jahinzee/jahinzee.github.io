@@ -23,7 +23,7 @@ const photos = await getCollection("darkroom");
       {
         photos.map((photo: any) => (
           <div>
-            <a href={`darkroom/${photo.id}.jpg`}>
+            <a href={`/darkroom/${photo.id}.jpg`}>
               <Image
                 src={photo.data.source}
                 alt={photo.data.title}

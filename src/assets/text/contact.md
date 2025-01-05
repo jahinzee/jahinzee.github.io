@@ -5,7 +5,7 @@
 You can reach out to me at the following address[^1]:
 
 <div style="min-height: 2.25rem;">
-<object data="email.svg"
+<object data="/email.svg"
         type="image/svg+xml"
         style="display: block;
                height: 2.25rem;
