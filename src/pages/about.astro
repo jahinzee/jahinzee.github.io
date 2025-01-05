@@ -1,0 +1,17 @@
+---
+import Root from "../layouts/root.astro";
+import Footer from "../components/footer.astro";
+import Logo from "../components/logo.astro";
+
+import { Content } from "../assets/text/about.md";
+---
+
+<Root title="About ­— jahinzee">
+	<header>
+		<Logo small={false} />
+	</header>
+	<main>
+		<Content />
+	</main>
+	<Footer />
+</Root>

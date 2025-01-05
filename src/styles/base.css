@@ -1,0 +1,181 @@
+/* @import url('/3p/katex.css'); */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply font-sans
+           tracking-wide
+           my-10 mx-auto
+           px-8
+           bg-background-light
+           text-foreground-light 
+           dark:text-foreground-dark
+           dark:bg-background-dark;
+}
+
+header {
+  @apply mb-8;
+}
+
+main {
+  @apply sm:w-full
+            md:w-128 mx-auto 
+            text-foreground-light 
+            dark:text-foreground-dark;
+}
+
+main > *:not(.no-pad),
+details > *:not(summary):not(.no-pad) {
+  @apply mb-4 mt-2;
+}
+
+h1 {
+  @apply text-2xl font-semibold;
+}
+
+h2 {
+  @apply text-xl font-medium;
+}
+
+h3 {
+  @apply text-lg font-bold;
+}
+
+a,
+details > summary {
+  @apply text-accent-light 
+         dark:text-accent-dark
+         hover:underline
+         cursor-pointer;
+}
+
+details {
+  summary {
+    @apply list-none
+           pt-0.5 pb-1.5 px-3
+           select-none;
+    p {
+      @apply inline;
+    }
+  }
+  summary:before {
+    @apply mr-2
+            text-xl
+            no-underline;
+    content: "»";
+  }
+}
+
+details[open] {
+  summary {
+    @apply bg-shadow-light 
+                dark:bg-accent-dark
+                bg-opacity-15
+                dark:bg-opacity-15
+                rounded-md
+                mb-2;
+  }
+  summary::before {
+    content: "«";
+  }
+}
+
+li {
+  @apply my-1
+            list-outside
+            ml-5 
+            pl-2
+            marker:text-shadow-light
+            dark:marker:text-shadow-dark
+            tracking-wide;
+  p {
+    @apply inline;
+  }
+}
+
+ul > li {
+  @apply list-disc;
+}
+
+ol > li {
+  @apply list-decimal;
+}
+
+pre,
+code:not(pre *),
+.astro-code,
+kbd {
+  @apply bg-shadow-light
+            dark:bg-shadow-dark
+            bg-opacity-25
+            dark:bg-opacity-10
+            text-sm
+            /* dark:bg-opacity-50 */
+            py-0.5 px-1
+            rounded-sm !important;
+}
+
+pre,
+.astro-code {
+  @apply px-4 py-2 rounded-md !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  .astro-code {
+    color: var(--shiki-dark) !important;
+  }
+}
+
+section.footnotes {
+  @apply border-t-shadow-dark 
+            dark:border-t-shadow-dark
+            border-t
+            border-opacity-75
+            dark:border-opacity-50
+            mt-6
+            pt-6
+            text-sm;
+  h2 {
+    @apply hidden;
+  }
+}
+
+img {
+  @apply mb-2
+            opacity-90
+            hover:opacity-100
+            rounded-md
+            text-opacity-0
+            bg-shadow-light
+            dark:bg-shadow-dark
+            bg-opacity-20
+            dark:bg-opacity-20;
+}
+
+table {
+  th,
+  td {
+    @apply px-1.5 pr-3 py-1
+               border
+               border-shadow-light 
+               dark:border-shadow-dark
+               border-opacity-40
+               dark:border-opacity-40;
+  }
+  th {
+    @apply bg-shadow-light
+               dark:bg-shadow-dark
+                bg-opacity-20
+                dark:bg-opacity-20
+                text-left;
+  }
+}
+
+hr {
+  @apply border-shadow-dark 
+            dark:border-shadow-dark
+            border-opacity-75
+            dark:border-opacity-50;
+}

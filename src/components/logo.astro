@@ -1,0 +1,24 @@
+---
+const { small, customHeader = "jahinzee" } = Astro.props;
+
+const text_size = small ? "text-2xl" : "text-4xl";
+const square_size = small ? "w-2 h-2" : "w-4 h-4";
+---
+
+<a
+    href="/"
+    id="logo"
+    class="flex justify-center select-none hover:no-underline"
+>
+    <!-- <img src="/hero.svg" alt="" /> -->
+    <span
+        id="square"
+        class={`${square_size} mr-2 relative top-2 bg-accent-light dark:bg-accent-dark`}
+    ></span>
+    <span
+        id="name"
+        class={`${text_size} font-semibold tracking-wide text-foreground-light dark:text-foreground-dark`}
+    >
+        {customHeader}
+    </span>
+</a>

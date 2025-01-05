@@ -1,0 +1,47 @@
+---
+const currentYear = new Date().getFullYear();
+
+const socials = [
+  {
+    title: "Bluesky",
+    icon: "bluesky",
+    link: "https://bsky.app/profile/jahinzee.bsky.social",
+  },
+  {
+    title: "GitHub",
+    icon: "github",
+    link: "https://github.com/jahinzee/",
+  },
+  {
+    title: "YouTube",
+    icon: "youtube",
+    link: "https://www.youtube.com/@jahinzee",
+  },
+];
+---
+
+<!-- <style>
+    p {
+        @apply;
+    }
+</style> -->
+<footer class="text-sm flex flex-col gap-y-2 mt-8 mb">
+  <div id="socials" class="text-xl flex gap-4 mb-2 justify-center">
+    {
+      socials.map((s) => (
+        <a title={s.title} href={s.link} class={`ri-${s.icon}-line`} />
+      ))
+    }
+  </div>
+  <p
+    id="copyright"
+    class="justify-center text-center no-pad text-foreground-light dark:text-foreground-dark"
+  >
+    &copy; Jahin Z. 2020 - {currentYear}. All rights reserved, except where
+    otherwise noted.
+  </p>
+  <p class="justify-center text-center flex flex-row gap-x-3 flex-wrap no-pad">
+    <a href="/contact">Contact</a>
+    <a href="/credits">Website credits</a>
+  </p>
+</footer>

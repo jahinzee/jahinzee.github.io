@@ -1,0 +1,67 @@
+---
+import Root from "../../layouts/root.astro";
+import Logo from "../../components/logo.astro";
+import Footer from "../../components/footer.astro";
+
+// @ts-ignore: because it doesn't think `render` exists for some reason.
+import { getCollection, render } from "astro:content";
+
+export async function getStaticPaths() {
+    return (await getCollection("garden")).map((page: any) => ({
+        params: { id: page.id },
+        props: { page },
+    }));
+}
+
+const { page } = Astro.props;
+const { Content } = await render(page);
+
+// @ts-ignore
+const pageTitle = page.body
+    .split("\n")
+    .find((line: string) => line.startsWith("# "))
+    .substring(2);
+
+// @ts-ignore: because it doesn't think `page` exists for some reason.
+const { published, updated, useKatex } = page.data;
+
+---
+
+<Root title={`${pageTitle} — jahinzee/Garden`} loadKatex={useKatex ?? false}>
+    <header class="flex md:w-256 mx-auto gap-2">
+        <Logo small={true} />
+        <a
+          href="/garden/home"
+          class="text-foreground-light dark:text-foreground-dark text-xl opacity-70 mt-1 select-none"
+          >/Garden</a
+        >
+      </header>
+
+    <main class="bg-red md:w-256">
+        <section id="details" class="text-sm text-shadow-light dark:text-shadow-dark flex gap-2">
+            {
+                // @ts-ignore: because it doesn't think `id` exists for some reason.
+                page.id !== "home" ?
+                <a href="/garden/home" class="ri-arrow-left-s-line">
+                    {/* <i ></i> */}
+                    <span class="font-sans">Home</span>
+                </a>
+                <span class="select-none ml-0.5">·</span>
+                : null
+            }
+            <span id="published">
+                Published: {published.toISOString().substring(0, 10)}
+            </span>
+            {
+                updated ? (
+                    <span class="select-none ml-0.5">·</span>
+                    <span id="updated">
+                        Updated: {updated.toISOString().substring(0, 10)}
+                    </span>
+                ) : null
+            }
+        </section>
+        <Content />
+    </main>
+    <Footer />
+</Root>

@@ -1,0 +1,53 @@
+---
+import Root from "../layouts/root.astro";
+import Footer from "../components/footer.astro";
+import Logo from "../components/logo.astro";
+
+const links = [
+  {
+    title: "About",
+    subtitle: "Some info about me.",
+    icon: "info-card",
+    link: "/about",
+  },
+  {
+    title: "Garden",
+    subtitle: "Long-form writ.",
+    icon: "plant",
+    link: "/garden/home",
+  },
+  {
+    title: "Darkroom",
+    subtitle: "Creative Commons photos.",
+    icon: "polaroid-2",
+    link: "/darkroom",
+  },
+];
+---
+
+<Root title="jahinzee">
+  <header class="w-auto">
+    <Logo small={false} />
+  </header>
+  <div class="flex flex-col gap-y-4 w-64 mx-auto my-12 justify-center">
+    {
+      links.map((l) => (
+        <a
+          href={l.link}
+          class="flex flex-row gap-x-4 max-w-xs hover:no-underline"
+        >
+          <div id="icon" class="text-xl">
+            <i class={`ri-${l.icon}-line`} />
+          </div>
+          <div>
+            <p class="font-medium text-lg no-pad hover:underline">{l.title}</p>
+            <p class="text-foreground-light dark:text-foreground-dark no-pad">
+              {l.subtitle}
+            </p>
+          </div>
+        </a>
+      ))
+    }
+  </div>
+  <Footer />
+</Root>

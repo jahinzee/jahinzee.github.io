@@ -1,0 +1,26 @@
+<svg viewBox="0 0 130 24" xmlns="http://www.w3.org/2000/svg">
+	<style>
+	@font-face {
+		font-family: 'Fira Mono';
+		src: url('/3p/fira-mono/FiraMono-Regular.ttf');
+	}
+
+	text {
+		dominant-baseline: middle;
+		background-color: red;
+		fill: #000;
+		@media (prefers-color-scheme: dark) {
+			fill: #fff;
+		}
+		letter-spacing: 0.025em;
+		display: inline;
+		font-family: 'Fira Mono';
+		font-size: 0.7rem;
+		text-anchor: middle;
+	}
+	</style>
+	
+	<a href="mailto:jahinzee@proton.me">
+		<text x="50%" y="50%">jahinzee@proton.me</text>
+	</a>
+</svg>

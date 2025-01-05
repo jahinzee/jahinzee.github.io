@@ -1,0 +1,166 @@
+---
+import Root from "../layouts/root.astro";
+import Footer from "../components/footer.astro";
+import Logo from "../components/logo.astro";
+
+import { getCollection } from "astro:content";
+
+const redirs = [
+  { from: "/photos", to: "/darkroom" },
+  { from: "/articles", to: "/garden/home" },
+  { from: "/graphics", to: "/garden/home#graphics" },
+  { from: "/articles/playlist", to: "/garden/irec-audio" },
+  { from: "/articles/bannotation", to: "/garden/bannotation" },
+  { from: "/articles/barangaroo", to: "/garden/barangaroo" },
+  { from: "/photos/about-time", to: "/darkroom#about-time" },
+  { from: "/photos/arbor", to: "/darkroom#arbor" },
+  { from: "/photos/a-road-to-a-place", to: "/darkroom#a-road-to-a-place" },
+  { from: "/photos/ashore-again", to: "/darkroom#ashore-again" },
+  { from: "/photos/avionic-dreams", to: "/darkroom#avionic-dreams" },
+  { from: "/photos/barrier", to: "/darkroom#barrier" },
+  { from: "/photos/blue", to: "/darkroom#blue" },
+  { from: "/photos/by-rail-and-sea", to: "/darkroom#by-rail-and-sea" },
+  { from: "/photos/canvas", to: "/darkroom#canvas" },
+  { from: "/photos/coral-iii", to: "/darkroom#coral-iii" },
+  { from: "/photos/coral-ii", to: "/darkroom#coral-ii" },
+  { from: "/photos/coral-i", to: "/darkroom#coral-i" },
+  { from: "/photos/destination", to: "/darkroom#destination" },
+  { from: "/photos/end", to: "/darkroom#end" },
+  { from: "/photos/falls", to: "/darkroom#falls" },
+  { from: "/photos/flagstaff", to: "/darkroom#flagstaff" },
+  { from: "/photos/fountain-of-youth", to: "/darkroom#fountain-of-youth" },
+  { from: "/photos/from-below", to: "/darkroom#from-below" },
+  { from: "/photos/gold-rays", to: "/darkroom#gold-rays" },
+  { from: "/photos/green", to: "/darkroom#green" },
+  { from: "/photos/horizon", to: "/darkroom#horizon" },
+  { from: "/photos/inquisitive", to: "/darkroom#inquisitive" },
+  { from: "/photos/lavenders", to: "/darkroom#lavenders" },
+  { from: "/photos/look-no-further", to: "/darkroom#look-no-further" },
+  { from: "/photos/meander", to: "/darkroom#meander" },
+  { from: "/photos/merino", to: "/darkroom#merino" },
+  { from: "/photos/oasis-ii", to: "/darkroom#oasis-ii" },
+  { from: "/photos/oasis-i", to: "/darkroom#oasis-i" },
+  { from: "/photos/over-the-hills", to: "/darkroom#over-the-hills" },
+  { from: "/photos/over-the-kingdom", to: "/darkroom#over-the-kingdom" },
+  { from: "/photos/peeking-out", to: "/darkroom#peeking-out" },
+  { from: "/photos/pristine", to: "/darkroom#pristine" },
+  { from: "/photos/pufferfish", to: "/darkroom#pufferfish" },
+  { from: "/photos/python", to: "/darkroom#python" },
+  { from: "/photos/refuge", to: "/darkroom#refuge" },
+  { from: "/photos/regatta", to: "/darkroom#regatta" },
+  { from: "/photos/riverfall", to: "/darkroom#riverfall" },
+  { from: "/photos/skysegment", to: "/darkroom#skysegment" },
+  { from: "/photos/stirring-the-skies", to: "/darkroom#stirring-the-skies" },
+  { from: "/photos/stranded", to: "/darkroom#stranded" },
+  { from: "/photos/summer-lake", to: "/darkroom#summer-lake" },
+  { from: "/photos/sundown", to: "/darkroom#sundown" },
+  { from: "/photos/tranquility", to: "/darkroom#tranquility" },
+  { from: "/photos/up-above", to: "/darkroom#up-above" },
+  { from: "/photos/urban-swans", to: "/darkroom#urban-swans" },
+  { from: "/photos/watergarden", to: "/darkroom#watergarden" },
+  { from: "/photos/windswept", to: "/darkroom#windswept" },
+  { from: "/photos/wishful-thinking", to: "/darkroom#wishful-thinking" },
+  { from: "/photos/yarra", to: "/darkroom#yarra" },
+].sort((a, b) => a.from.localeCompare(b.from));
+---
+
+<Root title="404 Not Found ­— jahinzee">
+  <header>
+    <Logo small={false} />
+  </header>
+  <main>
+    <h1>404 Not Found</h1>
+    <p>The page you requested cannot be found. Or.. can it?</p>
+    <div
+      class="bg-shadow-light
+                   dark:bg-shadow-dark
+                   py-3 px-4 pb-4
+                   rounded-md
+                   bg-opacity-15
+                   dark:bg-opacity-15
+                   flex flex-col gap-3"
+      id="auto-redir"
+    >
+      <h2 class="text-lg">
+        <i id="auto-redir-emblem" class="mr-3"></i><span id="auto-redir-header"
+        ></span>
+      </h2>
+      <p class="ml-8" id="auto-redir-body"></p>
+      <p class="text-sm ml-8">
+        If you still can't find what you're looking for,
+        <a href="/contact">reach out</a> and let me know what you're trying to access.
+      </p>
+    </div>
+    <noscript>
+      <style>
+        #auto-redir {
+          display: none;
+        }
+      </style>
+      <details>
+        <summary>Recently moved things</summary>
+        <table class="w-full">
+          <tr>
+            <th>If you're looking for...</th>
+            <th>It might now be at...</th>
+          </tr>
+          {
+            redirs.map((r) => (
+              <tr>
+                <td>{r.from}</td>
+                <td>
+                  <a href={r.to}>{r.to}</a>
+                </td>
+              </tr>
+            ))
+          }
+        </table>
+      </details>
+    </noscript>
+  </main>
+  <script defer define:vars={{ redirs: redirs }}>
+    const update = (emblem, heading, body) => {
+      document
+        .getElementById("auto-redir-emblem")
+        .classList.add(`ri-${emblem}-line`);
+      document.getElementById("auto-redir-header").innerHTML = heading;
+      document.getElementById("auto-redir-body").innerHTML = body;
+    };
+
+    const currentLocation = window.location.pathname.replace(/\/$/, "");
+    console.log(currentLocation);
+    if (currentLocation.startsWith("/v2")) {
+      update(
+        "information",
+        "Please wait...",
+        "Due to technical restrictions, internal links on archived versions of the site requires client-side redirects."
+      );
+      if (currentLocation === "/v2") {
+        window.location.replace("/v2/index.html");
+        return;
+      }
+      if (!currentLocation.endsWith(".html")) {
+        window.location.replace(currentLocation + ".html");
+        return;
+      }
+    }
+
+    const target = redirs.find((r) => r.from == currentLocation);
+
+    if (target === undefined) {
+      update(
+        "error-warning",
+        "No known redirect found.",
+        "Check that you've got the URL correct."
+      );
+    } else {
+      update(
+        "question",
+        `You might be looking for: <a href="${target.to}">${target.to}</a>`,
+        `If this is right, be sure to update your bookmarks and any
+         external links you may have to the old URL.`
+      );
+    }
+  </script>
+  <Footer />
+</Root>

@@ -1,0 +1,30 @@
+---
+import "../styles/base.css";
+import "@fontsource-variable/noto-sans/wdth.css";
+import "@fontsource-variable/noto-sans/wdth-italic.css";
+import "remixicon/fonts/remixicon.css";
+import "@fontsource/fira-mono";
+import "@fontsource-variable/noto-sans-bengali";
+
+const { title, loadKatex = false } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    {
+      loadKatex ? (
+        <link rel="stylesheet" href="/3p/katex/katex.min.css" />
+      ) : null
+    }
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <style></style>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
