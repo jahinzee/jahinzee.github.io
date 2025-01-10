@@ -31,6 +31,10 @@ details > *:not(summary):not(.no-pad) {
   @apply mb-4 mt-2;
 }
 
+div.new-li {
+  @apply -mb-1 -mt-3 marker:text-accent-light dark:marker:text-accent-dark;
+}
+
 h1 {
   @apply text-2xl font-semibold;
 }
@@ -87,8 +91,8 @@ li {
             list-outside
             ml-5 
             pl-2
-            marker:text-shadow-light
-            dark:marker:text-shadow-dark
+            marker:text-shadow2-light
+            dark:marker:text-shadow2-dark
             tracking-wide;
   p {
     @apply inline;
@@ -178,4 +182,14 @@ hr {
             dark:border-shadow-dark
             border-opacity-75
             dark:border-opacity-50;
+}
+
+mark {
+  @apply text-foreground-light
+         dark:text-foreground-dark
+         bg-accent-light
+         dark:bg-accent-dark
+         rounded-sm
+         bg-opacity-30
+         dark:bg-opacity-30;
 }

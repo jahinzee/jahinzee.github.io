@@ -15,6 +15,10 @@ export default {
         light: "#a2a2a2",
         dark: "#9f9f9f",
       },
+      shadow2: {
+        light: "#bababa",
+        dark: "#676767",
+      },
       background: {
         light: "#ffffff",
         dark: "#070707",
