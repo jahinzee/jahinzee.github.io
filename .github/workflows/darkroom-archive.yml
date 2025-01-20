@@ -11,4 +11,5 @@ jobs:
           type: "zip"
           filename: "darkroom.zip"
           exclusions: "*.git* /*node_modules/* .editorconfig"
-          directory: "public/darkroom"
+          directory: "public/"
+          path: "darkroom"
