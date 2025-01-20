@@ -11,5 +11,9 @@ jobs:
           type: "zip"
           filename: "darkroom.zip"
           exclusions: "*.git* /*node_modules/* .editorconfig"
-          directory: "public/"
-          path: "darkroom"
+          path: "public/darkroom"
+      - name: Upload Release
+        uses: ncipollo/release-action@v1
+          with:
+              artifacts: "darkroom.zip"
+              token: ${{ secrets.GITHUB_TOKEN }}
