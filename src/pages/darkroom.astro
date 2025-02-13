@@ -3,10 +3,15 @@ import Root from "../layouts/root.astro";
 import Logo from "../components/logo.astro";
 import Footer from "../components/footer.astro";
 
+import { Content } from "../assets/text/darkroom-download.md";
+
 import { getCollection } from "astro:content";
 import { Image } from "astro:assets";
 
 const photos = await getCollection("darkroom");
+
+const downloadURL =
+  "https://download-directory.github.io?url=https://github.com/jahinzee/jahinzee.github.io/tree/main/public/darkroom";
 ---
 
 <Root title="jahinzee/Darkroom">
@@ -21,60 +26,66 @@ const photos = await getCollection("darkroom");
   <main class="md:w-256">
     <section class="grid gap-4 grid-cols-2 md:grid-cols-3">
       {
-        photos.map((photo: any) => (
-          <div>
-            <a href={`/darkroom/${photo.id}.jpg`}>
-              <Image
-                src={photo.data.source}
-                alt={photo.data.title}
-                id={photo.id}
-                class="aspect-square object-cover target:border-2"
-                format="jpeg"
-              />
-            </a>
-            <h2 class="font-medium text-base">{photo.data.title}</h2>
-            <span class="text-sm text-shadow-light dark:text-shadow-dark flex flex-wrap gap-x-2 leading-0">
-              <span id="published">
-                {photo.data.published.toISOString().substring(0, 10)}
+        photos
+          .sort((a: any, b: any) => b.data.published - a.data.published)
+          .map((photo: any) => (
+            <div>
+              <a href={`/darkroom/${photo.id}.jpg`}>
+                <Image
+                  src={photo.data.source}
+                  alt={photo.data.title}
+                  id={photo.id}
+                  class="aspect-square object-cover target:border-2"
+                  format="jpeg"
+                />
+              </a>
+              <h2 class="font-medium text-base">{photo.data.title}</h2>
+              <span class="text-sm text-shadow-light dark:text-shadow-dark flex flex-wrap gap-x-2 leading-0">
+                <span id="published">
+                  {photo.data.published.toISOString().substring(0, 10)}
+                </span>
+                <span class="select-none">·</span>
+                <span
+                  title={photo.data.location}
+                  id="location"
+                  class={
+                    photo.data.location
+                      ? "cursor-help underline decoration-dotted"
+                      : null
+                  }
+                >
+                  {photo.data.macrolocation}
+                </span>
               </span>
-              <span class="select-none">·</span>
-              <span
-                title={photo.data.location}
-                id="location"
-                class={
-                  photo.data.location
-                    ? "cursor-help underline decoration-dotted"
-                    : null
+              <a
+                href={
+                  "https://creativecommons.org/licenses/by" +
+                  (photo.data.noncommercial ? "-nc" : "") +
+                  "-sa/4.0"
                 }
+                title={
+                  photo.data.title +
+                  " is available under CC-BY" +
+                  (photo.data.noncommercial ? "-NC" : "") +
+                  "-SA 4.0."
+                }
+                class="mt-2 text-sm"
+                target="_blank"
               >
-                {photo.data.macrolocation}
-              </span>
-            </span>
-            <a
-              href={
-                "https://creativecommons.org/licenses/by" +
-                (photo.data.noncommercial ? "-nc" : "") +
-                "-sa/4.0"
-              }
-              title={
-                photo.data.title +
-                " is available under CC-BY" +
-                (photo.data.noncommercial ? "-NC" : "") +
-                "-SA 4.0."
-              }
-              class="mt-2 text-sm"
-              target="_blank"
-            >
-              <i class="ri-creative-commons-line" />
-              <i class="ri-creative-commons-by-line" />
-              {photo.data.noncommercial ? (
-                <i class="ri-creative-commons-nc-line" />
-              ) : null}
-              <i class="ri-creative-commons-sa-line" />
-            </a>
-          </div>
-        ))
+                <i class="ri-creative-commons-line" />
+                <i class="ri-creative-commons-by-line" />
+                {photo.data.noncommercial ? (
+                  <i class="ri-creative-commons-nc-line" />
+                ) : null}
+                <i class="ri-creative-commons-sa-line" />
+              </a>
+            </div>
+          ))
       }
+    </section>
+    <div class="py-2"><hr /></div>
+    <section id="downloads" class="md-block">
+      <Content />
     </section>
   </main>
   <Footer />

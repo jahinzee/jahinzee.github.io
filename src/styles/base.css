@@ -27,6 +27,7 @@ main {
 }
 
 main > *:not(.no-pad),
+section.md-block > *,
 details > *:not(summary):not(.no-pad) {
   @apply mb-4 mt-2;
 }
@@ -48,14 +49,31 @@ h3 {
 }
 
 a,
-details > summary {
+details > summary,
+.button {
   @apply text-accent-light 
          dark:text-accent-dark
          hover:underline
          cursor-pointer;
 }
 
+.button-bg {
+  @apply bg-shadow-light 
+  dark:bg-shadow-dark
+  bg-opacity-15
+  dark:bg-opacity-15
+  rounded-md
+  mb-2;
+}
+
+.buttonish {
+  @apply button-bg px-2 py-1 select-none;
+}
+
 details {
+  summary {
+    @apply list-none;
+  }
   summary {
     @apply list-none
            pt-0.5 pb-1.5 px-3
@@ -72,18 +90,38 @@ details {
   }
 }
 
+details.toc summary {
+  @apply px-0.5;
+}
+
+details.toc > * {
+  @apply relative bottom-4;
+  margin-bottom: -1rem;
+}
+
 details[open] {
-  summary {
-    @apply bg-shadow-light 
-                dark:bg-accent-dark
-                bg-opacity-15
-                dark:bg-opacity-15
-                rounded-md
-                mb-2;
+  summary:not(.toc-heading) {
+    @apply button-bg;
   }
-  summary::before {
+  summary.toc-heading {
+    @apply mb-1;
+  }
+  summary:before {
     content: "«";
   }
+}
+
+.button {
+  @apply px-2 py-1;
+}
+
+.button.selected {
+  @apply bg-shadow-light 
+  dark:bg-accent-dark
+  bg-opacity-15
+  dark:bg-opacity-15
+  rounded-md
+  mb-2;
 }
 
 li {
@@ -119,6 +157,11 @@ kbd {
             /* dark:bg-opacity-50 */
             py-0.5 px-1
             rounded-sm !important;
+}
+
+.astro-code {
+  color: var(--shiki-dark) !important;
+  @apply bg-[#151515] !important;
 }
 
 pre,
@@ -192,4 +235,21 @@ mark {
          rounded-sm
          bg-opacity-30
          dark:bg-opacity-30;
+}
+
+span.hovertext {
+  @apply decoration-dotted underline cursor-help;
+}
+
+li:target,
+a:target {
+  @apply bg-accent-light bg-opacity-20 dark:bg-accent-dark dark:bg-opacity-20 rounded-sm;
+}
+
+a:target {
+  @apply bg-opacity-40 dark:bg-opacity-40;
+}
+
+input {
+  @apply rounded-sm px-2 py-1 bg-shadow-light dark:bg-shadow-dark bg-opacity-20 dark:bg-opacity-20;
 }

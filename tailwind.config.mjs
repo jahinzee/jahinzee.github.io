@@ -12,7 +12,7 @@ export default {
         dark: "#ffffff",
       },
       shadow: {
-        light: "#a2a2a2",
+        light: "#7f7f7f",
         dark: "#9f9f9f",
       },
       shadow2: {

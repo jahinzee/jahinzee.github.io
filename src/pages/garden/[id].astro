@@ -6,15 +6,18 @@ import Footer from "../../components/footer.astro";
 // @ts-ignore: because it doesn't think `render` exists for some reason.
 import { getCollection, render } from "astro:content";
 
+
 export async function getStaticPaths() {
-    return (await getCollection("garden")).map((page: any) => ({
+    const pages = await getCollection("garden");
+
+    return pages.map((page: any) => ({
         params: { id: page.id },
         props: { page },
     }));
 }
 
 const { page } = Astro.props;
-const { Content } = await render(page);
+const { Content, headings } = await render(page);
 
 // @ts-ignore
 const pageTitle = page.body
@@ -23,8 +26,9 @@ const pageTitle = page.body
     .substring(2);
 
 // @ts-ignore: because it doesn't think `page` exists for some reason.
-const { published, updated, useKatex } = page.data;
+const { published, updated, useToc, useKatex } = page.data;
 
+console.log(useToc)
 ---
 
 <Root title={`${pageTitle} — jahinzee/Garden`} loadKatex={useKatex ?? false}>
@@ -32,10 +36,27 @@ const { published, updated, useKatex } = page.data;
         <Logo small={true} />
         <a
           href="/garden/home"
-          class="text-foreground-light dark:text-foreground-dark text-xl opacity-70 mt-1 select-none"
+          class="text-foreground-light dark:text-foreground-dark text-xl opacity-70 mt-1 select-none flex-grow"
           >/Garden</a
         >
-      </header>
+    </header>
+
+    <div class="bg-shadow-light
+                dark:bg-shadow-dark
+                py-3 px-4 pb-4
+                rounded-md
+                bg-opacity-15
+                dark:bg-opacity-15
+                flex-col gap-3
+                hidden -mt-6 mb-4
+                md:w-256 mx-auto
+                text-sm"
+         id="searchModal"
+    >
+        <input class="w-full bg-opacity-0" type="text" placeholder="Search garden..."/>
+        <hr />
+        <span>No results</span>
+    </div>
 
     <main class="bg-red md:w-256">
         <section id="details" class="text-sm text-shadow-light dark:text-shadow-dark flex gap-2">
@@ -43,7 +64,6 @@ const { published, updated, useKatex } = page.data;
                 // @ts-ignore: because it doesn't think `id` exists for some reason.
                 page.id !== "home" ?
                 <a href="/garden/home" class="ri-arrow-left-s-line">
-                    {/* <i ></i> */}
                     <span class="font-sans">Home</span>
                 </a>
                 <span class="select-none ml-0.5">·</span>
@@ -61,6 +81,20 @@ const { published, updated, useKatex } = page.data;
                 ) : null
             }
         </section>
+        { useToc ?
+        <section id="table-of-contents" class="text-sm">
+            <details class="toc">
+                <summary class="toc-heading open:text-500">Table of contents</summary>
+                <ul class="button-bg bg-opacity-10 dark:bg-opacity-10 px-4 py-2" style="margin-top: -0.25rem; margin-bottom: -0.5rem">
+                    {headings
+                        .filter((h: any) => h.depth != 1 && h.slug !== "footnote-label")
+                        .map((h: any) =>
+                            <li style={`margin-left: ${(h.depth-1)}em`}>
+                                <a href={`#${h.slug}`}>{h.text}</a>
+                            </li>)}
+                </ul>
+            </details>
+        </section> : null}
         <Content />
     </main>
     <Footer />

@@ -1,0 +1,323 @@
+---
+published: 2025-02-13
+useKatex: false
+useToc: true
+---
+
+# A Simple Fedora Post-Install Guide
+
+This guide contains some commands to help set up [Fedora Linux](https://fedoraproject.org/)
+with some essential necessities and enhancements. I mainly wrote this guide
+for my own convenience as a quick reference guide[^1] to set up a machine, and maybe
+you'll find it useful too.
+
+If you have any questions, suggestions, or other feedback, [do let me know](/contact)!
+
+---
+
+## Preamble
+
+- This guide is provided with no warranty. Always exercise caution
+  when running commands, especially anything that requires `sudo`, and especially
+  anything you find on a random guide on the Internet – this one is no exception.
+
+- This guide should work for Fedora 41. I may update this guide if and when
+  crucial things change.
+  - Note the **Published** or **Updated** fields at the top of this page.
+    If it's been a while since the last update (more than 6 months), you should
+    look through the source links in each section for more up-to-date instructions.
+
+- You will need Internet access on your Fedora installation. If you don't have
+  Internet access, see [Appendix/No Internet access](#no-internet-access).
+
+- This guide is **not** intended for:
+  - Fedora remixes or derivatives, such as Nobara, Ultramarine, QubesOS, Red
+    Star OS, etc., nor
+  - **immutable** versions of Fedora Linux or any derivatives, such as Silverblue,
+    Kinoite, Bazzite, Bluefin, Aurora, etc.
+
+- This guide assumes you're following along right after you've been first
+  dropped into your desktop environment following a fresh install.
+
+- Most commands will have comments (beginning with a hash `#` character) to
+  explain their purpose. You may copy the command with or without the comments,
+  the shell will ignore these comments anyway.
+
+---
+
+## Repositories
+
+### System update
+
+Before we begin, it is important we do a full system upgrade and ensure we're on
+the latest versions of packages. This is to avoid dependency issues, and also
+because it's just good practice.
+
+```bash
+# Upgrades all system packages, and also reload all repository caches.
+sudo dnf upgrade --refresh
+```
+
+**🔁 Restart your computer after finishing this step.**
+
+### RPM Fusion
+
+RPM Fusion is a repository of packages that aren't shipped with Fedora by
+default. It contains many drivers, multimedia codecs, and some additional
+software that we will need. We will be installing both the *free* and *nonfree*
+repositories.
+
+```bash
+# Install RPM Fusion free and nonfree repositories for the current Fedora
+# release.
+PREFIX="https://mirrors.rpmfusion.org"
+RELEASE=$(rpm -E %fedora)
+sudo dnf install \
+    $PREFIX/free/fedora/rpmfusion-free-release-$RELEASE.noarch.rpm \
+    $PREFIX/nonfree/fedora/rpmfusion-nonfree-release-$RELEASE.noarch.rpm
+
+# Enable the Cisco openh264 repositories for better compatibility with
+# multimedia packages.
+sudo dnf config-manager setopt fedora-cisco-openh264.enabled=1
+
+# Update AppStream data to allow installing RPM Fusion packages from
+# graphical stores (e.g. Discover, GNOME Software).
+sudo dnf update @core
+```
+
+*Source: [RPM Fusion](https://rpmfusion.org/Configuration)*
+
+
+### Flathub
+
+By default, Fedora ships its own Flatpak remote, which contains only a subset
+of applications found on the main Flathub remote. We can install the full
+Flathub remote with this command:
+
+```sh
+# Install the Flathub remote.
+flatpak remote-add --if-not-exists flathub \
+    https://dl.flathub.org/repo/flathub.flatpakrepo
+```
+
+*Source: [Flathub](https://flathub.org/setup/Fedora)*
+
+You can optionally also remove the existing Fedora remote, which can be useful
+to avoid duplicate listings and to speed up searching/querying (the Fedora
+Flatpak remotes can be slow at times.)
+
+```sh
+# Remove the Fedora Flatpak remote, leaving only Flathub.
+flatpak remote-delete fedora
+```
+
+### Terra
+
+Terra is another repository that contains some extra packages. It's not as
+essential as RPM Fusion, but it contains some applications that you may
+find useful to have available, such as [VSCodium](https://vscodium.com/) and 
+[Ghostty](https://ghostty.org/),
+
+```sh
+# Install Terra repositories for the current Fedora release.
+dnf install --nogpgcheck --repofrompath \
+    'terra,https://repos.fyralabs.com/terra$releasever' terra-release
+```
+*Source: [Terra](https://terra.fyralabs.com/)*
+
+---
+
+## Hardware
+
+### Broadcom wireless cards
+
+To check if you have any Broadcom cards, run this command:
+
+```bash
+# List all internal hardware devices, and filter only for lines
+# mentioning "Broadcom".
+lspci | grep Broadcom
+```
+
+**ℹ️ If the command does not output any lines, you can skip this section.**
+
+If the command outputs lines with any instance of the word "Broadcom"
+highlighted, install the Broadcom drivers:
+
+*Running Secure Boot? See [the Secure Boot appendix](#secure-boot).*
+
+```bash
+# Install the Broadcom wireless drivers.
+sudo dnf install broadcom-wl
+```
+
+**🔁 Restart your computer after running this command.**
+
+### Video codecs
+
+Install additional video codecs to allow playback and streaming of common
+multimedia formats.
+
+```bash
+# Replace the stock FFmpeg libraries with the full FFmpeg libraries with
+# RPM Fusion.
+sudo dnf swap ffmpeg-free ffmpeg --allowerasing
+
+# Install additional codecs for GStreamer applications.
+sudo dnf update @multimedia \
+    --setopt="install_weak_deps=False" \
+    --exclude=PackageKit-gstreamer-plugin
+```
+
+**🔁 Restart your computer after running this command.**
+
+*Source: [RPM Fusion](https://rpmfusion.org/Howto/Multimedia)*
+
+### Intel: hardware-accelerated video
+
+If you are running on Intel graphics (either HD integrated graphics or Arc),
+you should install the media codecs for hardware-accelerated video playback.
+
+There are two drivers available:
+
+- `intel-media-driver` - newer; compatible with Broadwell (2014) or later, and
+- `libva-intel-driver` - older; compatible with GMA-4500 (2007) up to Coffee
+                         Lake (2017).
+
+If there is overlap, try `intel-media-driver` first.
+
+```bash
+# Install the newer Intel media drivers (Broadwell and later)
+sudo dnf install intel-media-driver
+```
+
+```bash
+# Install the older Intel media drivers (GMA-2500 - Coffee Lake)
+sudo dnf install libva-intel-driver
+```
+**🔁 Restart your computer after running this command.**
+
+*Sources: [RPM Fusion](https://rpmfusion.org/Howto/Multimedia), [ArchWiki](https://wiki.archlinux.org/title/Hardware_video_acceleration)*
+
+### AMD: hardware-accelerated video
+
+For AMD GPUs, hardware-accelerated video also requires additional packages.
+
+```bash
+# Replace the stock Mesa video acceleration drivers with the full versions.
+sudo dnf swap mesa-va-drivers mesa-va-drivers-freeworld
+sudo dnf swap mesa-vdpau-drivers mesa-vdpau-drivers-freeworld
+
+# Same thing, but for 32-bit compatibility, recommended for Steam.
+# (you can skip this if you don't need it)
+sudo dnf swap mesa-va-drivers.i686 mesa-va-drivers-freeworld.i686
+sudo dnf swap mesa-vdpau-drivers.i686 mesa-vdpau-drivers-freeworld.i686
+```
+
+### NVIDIA
+
+RPM Fusion has extensive documentation on installing NVIDIA drivers, as well as
+setting up CUDA and NVENC.
+
+- [RPM Fusion - NVIDIA](https://rpmfusion.org/Howto/NVIDIA)
+- [RPM Fusion - CUDA](https://rpmfusion.org/Howto/CUDA)
+- [RPM Fusion - Multimedia, NVENC](https://rpmfusion.org/Howto/Multimedia#Hardware_codecs_with_NVIDIA)
+
+---
+
+## Extras
+
+These are some optional goodies you may want to set up, but aren't completely
+necessary.
+
+### Homebrew
+
+Homebrew is a package manager for Linux and macOS. This allows you to install
+many command-line utilities that Fedora, Terra, nor RPM Fusion ship.
+
+Note that Homebrew casks are not supported on Linux.
+
+- [Install Homebrew](https://brew.sh/)
+
+### GNOME extensions
+
+If you're using GNOME as your desktop environment, you may consider installing
+these extensions for a more complete and enhanced experience. These extensions
+are well-maintained and available from Fedora repositories, and are less likely
+to break between major GNOME releases.
+
+You can install any of the following extensions with
+`sudo dnf install <insert-package-name-here>`.
+
+- `gnome-shell-extension-appindicator`:
+   System tray icons for apps that need them.
+- `gnome-shell-extension-appmenu-is-back`:
+   The app menu from GNOME 44 and earlier.
+- `gnome-shell-extension-auto-move-windows`:
+   Assign different apps to workspaces on launch.
+- `gnome-shell-extension-caffeine`:
+   Toggle to temporarily disable/enable automatic sleep and display blanking.
+- `gnome-shell-extension-dash-to-dock`:
+   Turn the dash into a dock, plus some extra customisation options.
+- `gnome-shell-extension-drive-menu`:
+   Manage connected storage drives from the panel.
+- `gnome-shell-extension-forge`:
+   Advanced auto-tiling, similar to Pop Shell or COSMIC's tiling features.
+- `gnome-shell-extension-gsconnect`:
+   KDE Connect compatibility with GNOME:
+   - This may also require installing `openssl`.
+- `gnome-shell-extension-just-perfection`:
+   Fine-tune GNOME behaviour, such as animations and hiding certain components.
+
+**🔁 You may need to logout and login again to use these extensions.**
+
+To manage GNOME extensions, you can install
+[Extension Manager](https://flathub.org/apps/com.mattjakeman.ExtensionManager)
+from Flathub:
+
+```sh
+# Install Extension Manager from Flathub.
+flatpak install com.mattjakeman.ExtensionManager 
+```
+
+You can find more extensions by running `dnf search gnome-shell-extension`,
+or on the [GNOME Shell Extensions](https://extensions.gnome.org/) website.
+
+---
+
+## Appendix
+
+### Secure Boot
+
+Installing some custom drivers, such as for NVIDIA and Broadcom devices,
+require some modifications to the kernel that can cause issues with Secure
+Boot. This can result in these drivers not loading, or your Fedora installation
+to be unable to boot.
+
+- You can follow [these instructions on the RPM Fusion knowledge base](https://rpmfusion.org/Howto/Secure%20Boot?highlight=%28%5CbCategoryHowto%5Cb%29)
+  to self-sign your kernel after driver installs.
+
+- Alternatively, you can disable Secure Boot in your system's UEFI menu if you
+  have access.
+
+**NOTE:** You should **not** disable Secure Boot if you are dual-booting with
+          Windows, as this may cause issues with Windows Update or BitLocker.
+
+### No Internet access
+
+Depending on your hardware, you may not be able to use certain network devices
+by default due to missing drivers. This can occur namely with Broadcom wireless
+cards.
+
+This guide will show you [how to get Broadcom Wi-Fi working](#broadcom-wireless-cards), but in the meantime, you
+can try:
+
+- running an wired Ethernet connection to your computer, if possible, or
+- using [USB tethering with an Android device](https://www.tomsguide.com/how-to/how-to-share-wi-fi-on-android-using-usb-tethering)
+  to share its Wi-Fi connection to your computer.
+
+After you've installed the necessary drivers and you can confirm that the Wi-Fi
+card is working properly, you can disconnect your Android device or ethernet
+cable and proceed with Wi-Fi if you want.
+
+[^1]: "Why not a script?", you may ask, and that's a very good question.

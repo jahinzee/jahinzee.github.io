@@ -58,16 +58,19 @@ I post about various topic on there relatively often.
 
 ## Elsewhere
 
-I have a presence on other social media platforms, with varying levels of
-activity on there. Please don't private message me on these platforms.
+I have a presence on other platforms with varying levels of activity. Please
+don't private message me on these platforms.
 
 - [Reddit](https://reddit.com/u/jahinzee) – semi-active
+- [Hacker News](https://news.ycombinator.com/user?id=jahinzee) – semi-active
 - [Mastodon (@mastodon.online)](https://mastodon.online/@jahinzee) – semi-active
-- [Pixelfed (@pixelfed.social)](https://pixelfed.social/@jahinzee) — inactive
+- [Pixelfed (@pixelfed.social)](https://pixelfed.social/@jahinzee) – inactive
 - [X (formerly Twitter)](https://x.com/jahinzee) – inactive
 - [Tumblr](https://jahinzee.tumblr.com) – inactive
-- [Cohost](https://cohost.org/jahinzee) – inactive <span class="decoration-dotted underline cursor-help" title="rip eggbug">†</span>
+- [Cohost](https://cohost.org/jahinzee) – inactive <span class="hovertext" title="rip eggbug">†</span>
+- [Newgrounds](https://jahinzee.newgrounds.com/) – inactive
 - [Instagram](https://www.instagram.com/jahinzee) – inactive
+- [ニコニコ動画 (Niconico)](https://www.nicovideo.jp/user/118790455) – inactive
 
 [^1]: If you aren't able to see the address, that means you might be in some
       simplified reading view, or your browser can't render SVGs.
