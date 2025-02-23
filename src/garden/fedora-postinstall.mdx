@@ -1,5 +1,6 @@
 ---
 published: 2025-02-13
+updated: 2025-02-23
 useKatex: false
 useToc: true
 ---
@@ -239,6 +240,59 @@ Note that Homebrew casks are not supported on Linux.
 
 - [Install Homebrew](https://brew.sh/)
 
+### Enabling legacy certificate to connect to enterprise/university networks
+
+If you are unable to connect to your workplace or university Wi-Fi network on
+Fedora (including Eduroam), then you may need to enable some legacy certificates
+on your network that may be required to connect to the network.
+
+Enabling these certificates can be done with one command:
+
+```sh
+# Enable legacy certificates required for connecting to some enterprise
+# networks.
+sudo update-crypto-policies --set LEGACY
+```
+
+**🔁 Restart your computer after running this command.**
+
+
+### Japanese IME for KDE Plasma Spin (Fcitx5/Mozc)
+
+To type in Japanese on KDE Plasma using [Fcitx5](https://fcitx-im.org/wiki/Fcitx_5)
+and [Mozc](https://github.com/google/mozc), first install the required packages:
+
+```sh
+# Install Fcitx5, Mozc, and the linking packages.
+sudo dnf install fcitx5 mozc fcitx5-mozc
+```
+
+Now we need to register Fcitx5 to run on startup and act as the virtual keyboard
+manager.
+
+1. Open the **System Settings** app.
+2. Under *Input and Output*, select **Keyboard** and then **Virtual Keyboard**
+3. On the sidebar, select **Fcitx 5 Wayland Launcher** or **Fcitx 5**, depending
+   on if you're using the X or Wayland session.
+4. On the sidebar, return to the top-level settings menu, then scroll down to
+   *System* and select **Autostart**
+5. Select **Add New** on the top-right corner, then **Application...** and find
+   and select *Fcitx 5* from the dialog (it should be under *System* or
+   *Utilities*, or you can just search for it.)
+
+**🔁 Logout and login again to enable the IME.**
+
+6. After logging in, you should see an **en** symbol (or something else
+   representing your current keyboard language) in the system tray.
+   Right-click it and select **Configure**.
+7. Find or search for *Mozc* in the right box, and double click it to add
+   it to the left box. Then, click **Apply**.
+
+You should now be able to type in Japanese. Press `Meta` + `Space` to switch
+between Japanese and your default layout. This shortcut can be changed in the
+*Global Settings* tab in the configuration window.
+
+
 ### GNOME extensions
 
 If you're using GNOME as your desktop environment, you may consider installing
@@ -256,7 +310,7 @@ You can install any of the following extensions with
 - `gnome-shell-extension-auto-move-windows`:
    Assign different apps to workspaces on launch.
 - `gnome-shell-extension-caffeine`:
-   Toggle to temporarily disable/enable automatic sleep and display blanking.
+   Toggle to temporarily disable automatic sleep and display blanking.
 - `gnome-shell-extension-dash-to-dock`:
    Turn the dash into a dock, plus some extra customisation options.
 - `gnome-shell-extension-drive-menu`:
@@ -282,6 +336,7 @@ flatpak install com.mattjakeman.ExtensionManager
 
 You can find more extensions by running `dnf search gnome-shell-extension`,
 or on the [GNOME Shell Extensions](https://extensions.gnome.org/) website.
+
 
 ---
 
