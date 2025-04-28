@@ -5,14 +5,7 @@
 @tailwind utilities;
 
 body {
-  @apply font-sans
-           tracking-wide
-           my-10 mx-auto
-           px-8
-           bg-background-light
-           text-foreground-light 
-           dark:text-foreground-dark
-           dark:bg-background-dark;
+  @apply font-sans tracking-wide my-10 mx-auto px-8 bg-background-light text-foreground-light dark:text-foreground-dark dark:bg-background-dark;
 }
 
 header {
@@ -20,15 +13,12 @@ header {
 }
 
 main {
-  @apply sm:w-full
-            md:w-128 mx-auto 
-            text-foreground-light 
-            dark:text-foreground-dark;
+  @apply sm:w-full md:w-128 mx-auto text-foreground-light dark:text-foreground-dark;
 }
 
-main > *:not(.no-pad),
-section.md-block > *,
-details > *:not(summary):not(.no-pad) {
+main>*:not(.no-pad),
+section.md-block>*,
+details>*:not(summary):not(.no-pad) {
   @apply mb-4 mt-2;
 }
 
@@ -49,21 +39,13 @@ h3 {
 }
 
 a,
-details > summary,
+details>summary,
 .button {
-  @apply text-accent-light 
-         dark:text-accent-dark
-         hover:underline
-         cursor-pointer;
+  @apply text-accent-light dark:text-accent-dark hover:underline cursor-pointer;
 }
 
 .button-bg {
-  @apply bg-shadow-light 
-  dark:bg-shadow-dark
-  bg-opacity-15
-  dark:bg-opacity-15
-  rounded-md
-  mb-2;
+  @apply bg-shadow-light dark:bg-shadow-dark bg-opacity-15 dark:bg-opacity-15 rounded-md mb-2;
 }
 
 .buttonish {
@@ -74,18 +56,17 @@ details {
   summary {
     @apply list-none;
   }
+
   summary {
-    @apply list-none
-           pt-0.5 pb-1.5 px-3
-           select-none;
+    @apply list-none pt-0.5 pb-1.5 px-3 select-none;
+
     p {
       @apply inline;
     }
   }
+
   summary:before {
-    @apply mr-2
-            text-xl
-            no-underline;
+    @apply mr-2 text-xl no-underline;
     content: "»";
   }
 }
@@ -94,7 +75,7 @@ details.toc summary {
   @apply px-0.5;
 }
 
-details.toc > * {
+details.toc>* {
   @apply relative bottom-4;
   margin-bottom: -1rem;
 }
@@ -103,9 +84,11 @@ details[open] {
   summary:not(.toc-heading) {
     @apply button-bg;
   }
+
   summary.toc-heading {
     @apply mb-1;
   }
+
   summary:before {
     content: "«";
   }
@@ -116,32 +99,22 @@ details[open] {
 }
 
 .button.selected {
-  @apply bg-shadow-light 
-  dark:bg-accent-dark
-  bg-opacity-15
-  dark:bg-opacity-15
-  rounded-md
-  mb-2;
+  @apply bg-shadow-light dark:bg-accent-dark bg-opacity-15 dark:bg-opacity-15 rounded-md mb-2;
 }
 
 li {
-  @apply my-1
-            list-outside
-            ml-5 
-            pl-2
-            marker:text-shadow2-light
-            dark:marker:text-shadow2-dark
-            tracking-wide;
+  @apply my-1 list-outside ml-5 pl-2 marker:text-shadow2-light dark:marker:text-shadow2-dark tracking-wide;
+
   p {
     @apply inline;
   }
 }
 
-ul > li {
+ul>li {
   @apply list-disc;
 }
 
-ol > li {
+ol>li {
   @apply list-decimal;
 }
 
@@ -149,14 +122,9 @@ pre,
 code:not(pre *),
 .astro-code,
 kbd {
-  @apply bg-shadow-light
-            dark:bg-shadow-dark
-            bg-opacity-25
-            dark:bg-opacity-10
-            text-sm
-            /* dark:bg-opacity-50 */
-            py-0.5 px-1
-            rounded-sm !important;
+  @apply bg-shadow-light dark:bg-shadow-dark bg-opacity-25 dark:bg-opacity-10 text-sm
+  /* dark:bg-opacity-50 */
+  py-0.5 px-1 rounded-sm !important;
 }
 
 .astro-code {
@@ -176,65 +144,35 @@ pre,
 }
 
 section.footnotes {
-  @apply border-t-shadow-dark 
-            dark:border-t-shadow-dark
-            border-t
-            border-opacity-75
-            dark:border-opacity-50
-            mt-6
-            pt-6
-            text-sm;
+  @apply border-t-shadow-dark dark:border-t-shadow-dark border-t border-opacity-75 dark:border-opacity-50 mt-6 pt-6 text-sm;
+
   h2 {
     @apply hidden;
   }
 }
 
 img {
-  @apply mb-2
-            opacity-90
-            hover:opacity-100
-            rounded-md
-            text-opacity-0
-            bg-shadow-light
-            dark:bg-shadow-dark
-            bg-opacity-20
-            dark:bg-opacity-20;
+  @apply mb-2 opacity-90 hover:opacity-100 rounded-md text-opacity-0 bg-shadow-light dark:bg-shadow-dark bg-opacity-20 dark:bg-opacity-20;
 }
 
 table {
+
   th,
   td {
-    @apply px-1.5 pr-3 py-1
-               border
-               border-shadow-light 
-               dark:border-shadow-dark
-               border-opacity-40
-               dark:border-opacity-40;
+    @apply px-1.5 pr-3 py-1 border border-shadow-light dark:border-shadow-dark border-opacity-40 dark:border-opacity-40;
   }
+
   th {
-    @apply bg-shadow-light
-               dark:bg-shadow-dark
-                bg-opacity-20
-                dark:bg-opacity-20
-                text-left;
+    @apply bg-shadow-light dark:bg-shadow-dark bg-opacity-20 dark:bg-opacity-20 text-left;
   }
 }
 
 hr {
-  @apply border-shadow-dark 
-            dark:border-shadow-dark
-            border-opacity-75
-            dark:border-opacity-50;
+  @apply border-shadow-dark dark:border-shadow-dark border-opacity-75 dark:border-opacity-50;
 }
 
 mark {
-  @apply text-foreground-light
-         dark:text-foreground-dark
-         bg-accent-light
-         dark:bg-accent-dark
-         rounded-sm
-         bg-opacity-30
-         dark:bg-opacity-30;
+  @apply text-foreground-light dark:text-foreground-dark bg-accent-light dark:bg-accent-dark rounded-sm bg-opacity-30 dark:bg-opacity-30;
 }
 
 span.hovertext {
@@ -252,4 +190,14 @@ a:target {
 
 input {
   @apply rounded-sm px-2 py-1 bg-shadow-light dark:bg-shadow-dark bg-opacity-20 dark:bg-opacity-20;
+}
+
+@font-face {
+  font-family: nasin-nanpa;
+  font-weight: 400;
+  src: url("/3p/nasin-nanpa/nasin-nanpa-4.0.2.otf")
+}
+
+span.lang-tok {
+  font-family: "nasin-nanpa"
 }

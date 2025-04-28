@@ -1,5 +1,7 @@
 # Contact
 
+<!-- markdownlint-disable MD033 -->
+
 ## Email
 
 You can reach out to me at the following address[^1]:
