@@ -1,0 +1,84 @@
+---
+import Root from "../layouts/root.astro";
+import Footer from "../components/footer.astro";
+import Logo from "../components/logo.astro";
+
+import { Content } from "../assets/text/badges.md";
+
+const buttons = [
+	{
+		name: "he-him",
+		alt: "HE/HIM",
+		source: "https://cyber.dabamos.de",
+	},
+	{
+		name: "ab-white",
+		alt: "Best Viewed With Any Browser",
+		source: "https://cyber.dabamos.de",
+	},
+	{
+		name: "blog",
+		alt: "not a damn blog",
+		source: "https://cyber.dabamos.de",
+	},
+	{
+		name: "firefoxnow",
+		alt: "Firefox Now! NEW",
+		source: "https://cyber.dabamos.de",
+	},
+	{
+		name: "linuxnow2",
+		alt: "LinuX Now! 2.0",
+		source: "https://cyber.dabamos.de",
+	},
+	{
+		name: "github",
+		alt: "GitHub",
+		source: "https://cyber.dabamos.de",
+	},
+	{
+		name: "hasmile",
+		alt: "Have a smile!",
+		source: "https://cyber.dabamos.de",
+	},
+	{
+		name: "miku",
+		alt: "this site is MIKU APPROVED",
+		source: "https://cyber.dabamos.de",
+	},
+	{
+		name: "stop",
+		alt: "Stop",
+		source: "https://cyber.dabamos.de",
+	},
+	{
+		name: "thanks-for-looking",
+		alt: "Thanks for looking!",
+		source: "https://cyber.dabamos.de",
+	},
+];
+---
+
+<Root title="Badges ­— jahinzee">
+	<header>
+		<Logo small={false} />
+	</header>
+	<main>
+		<Content />
+		<div
+			id="buttons"
+			class="md:w-128 mx-auto flex flex-wrap gap-2 gap-y-0.5 align-center justify-center pt-3"
+		>
+			{
+				buttons.map((button) => (
+					<img
+						class="badge"
+						src={`/badges/${button.name}.gif`}
+						alt={button.alt}
+					/>
+				))
+			}
+		</div>
+	</main>
+	<Footer />
+</Root>

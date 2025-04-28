@@ -155,6 +155,11 @@ img {
   @apply mb-2 opacity-90 hover:opacity-100 rounded-md text-opacity-0 bg-shadow-light dark:bg-shadow-dark bg-opacity-20 dark:bg-opacity-20;
 }
 
+img.badge {
+  image-rendering: pixelated;
+  @apply rounded-none opacity-100 hover:opacity-100;
+}
+
 table {
 
   th,
