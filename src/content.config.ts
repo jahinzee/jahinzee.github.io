@@ -1,5 +1,5 @@
 import { defineCollection, z } from "astro:content";
-import { glob } from "astro/loaders";
+import { glob, file } from "astro/loaders";
 
 const garden = defineCollection({
   loader: glob({ pattern: "**/*.mdx", base: "src/garden" }),
@@ -24,4 +24,15 @@ const darkroom = defineCollection({
     }),
 });
 
-export const collections = { garden, darkroom };
+const irec_audio_item = defineCollection({
+  loader: file("src/assets/data/irec-audio.yaml"),
+  schema: z.object({
+    type: z.enum(["album", "single"]),
+    title: z.string(),
+    artist: z.string(),
+    year: z.number(),
+    links: z.array(z.object({ id: z.string(), link: z.string() })),
+  }),
+});
+
+export const collections = { garden, darkroom, irec_audio_item };

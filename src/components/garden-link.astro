@@ -1,0 +1,27 @@
+---
+import { render } from "astro:content";
+import { getEntry } from "astro:content";
+import { getCollection } from "astro:content";
+const { ref, date = false } = Astro.props;
+
+const page = await getEntry("garden", ref);
+//@ts-ignore
+const { headings } = await render(page);
+const pageName = headings.filter((h) => h.depth == 1).map((h) => h.text);
+//@ts-ignore
+const { published, updated } = page?.data;
+---
+
+<span>
+    <a href={`/garden/${page?.id}`}>{pageName} </a>
+    {
+        !date ? null : (
+            <span class="text-shadow dark:text-shadow-dark text-sm">
+                <span>
+                    {updated ? <span class="select-none">*</span> : null}
+                    {(updated ?? published).toISOString().substring(0, 10)}
+                </span>
+            </span>
+        )
+    }
+</span>

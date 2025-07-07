@@ -1,0 +1,744 @@
+- id: awkward-dance-music
+  type: album
+  title: Awkward Dance Music
+  artist: Windows96
+  year: 2025
+  links:
+    - id: YouTube
+      link: https://youtube.com/playlist?list=OLAK5uy_lWxjPUOL33Xu6QEyidZrYVUHX4GyU5SHY
+    - id: Bandcamp
+      link: https://windows96.bandcamp.com/album/awkward-dance-music
+
+- id: sanctuary-os
+  type: album
+  title: Sanctuary OS
+  artist: Dusqk
+  year: 2025
+  links:
+    - id: Bandcamp
+      link: https://dusqk.bandcamp.com/album/sanctuary-os
+
+- id: if-you-scratch
+  type: album
+  title: If you scratch my back I'll scratch yours
+  artist: GeneractionXmusic
+  year: 2024
+  links:
+    - id: Bandcamp
+      link: https://generactionxmusic.bandcamp.com/album/if-you-scratch-my-back-i-ll-scratch-yours
+
+- id: dated-new
+  type: album
+  title: Dated New Aesthetic
+  artist: Windows96
+  year: 2024
+  links:
+    - id: Bandcamp
+      link: https://windows96.bandcamp.com/album/dated-new-aesthetic
+
+- id: frostbearer
+  type: single
+  title: frostbearer's waltz
+  artist: AZALI
+  year: 2023
+  links:
+    - id: Bandcamp
+      link: https://azali.bandcamp.com/track/frostbearers-waltz
+    - id: YouTube
+      link: https://www.youtube.com/watch?v=5lgPAWXj7Ik
+
+- id: im-shy-and-broke
+  type: single
+  title: THERE'S GIRLS AT THE MALL BUT I'M SHY AND BROKE 
+  artist: QB9
+  year: 2023
+  links:
+    - id: YouTube
+      link: https://www.youtube.com/watch?v=OfB-psICSNo
+
+- id: deepdive
+  type: album
+  title: w w w . d e e p d i v e . c o m
+  artist: Webinar™
+  year: 2023
+  links:
+    - id: Bandcamp
+      link: https://fullmetalrecords.bandcamp.com/album/w-w-w-d-e-e-p-d-i-v-e-c-o-m
+
+- id: in-the-worlde
+  type: album
+  title: In the Worlde
+  artist: Gavriel
+  year: 2020
+  links:
+    - id: YouTube
+      link: https://youtube.com/playlist?list=OLAK5uy_kT8XLO2-_46L_CvssfJ8WIN1WmtIoGfWM
+    - id: Bandcamp
+      link: https://windows96.bandcamp.com/album/in-the-worlde
+
+- id: nostalgic-pink
+  type: single
+  title: Nostalgic Pink
+  artist: Props
+  year: 2020
+  links:
+    - id: Bandcamp
+      link: https://propsmusic.bandcamp.com/track/nostalgic-pink
+
+- id: rock-it-on
+  type: single
+  title: Rock It On (D.S. Remix)
+  artist: Hideki Naganuma
+  year: 2000
+  links:
+    - id: YouTube
+      link: https://www.youtube.com/watch?v=QIzYQOh0QWg
+
+- id: teknopathetic
+  type: single
+  title: Teknopathetic
+  artist: Hideki Naganuma
+  year: 2002
+  links:
+    - id: YouTube
+      link: https://www.youtube.com/watch?v=btqdXGjtXn4
+
+- id: concept-of-love
+  type: single
+  title: The Concept of Love
+  artist: Hideki Naganuma
+  year: 2002
+  links:
+    - id: YouTube
+      link: https://www.youtube.com/watch?v=HNy_retSME0
+
+- id: wavetable
+  type: album
+  title: Wavetable
+  artist: Patricia Taxxon
+  year: 2019
+  links:
+    - id: Bandcamp
+      link: https://patriciataxxon.bandcamp.com/album/wavetable
+
+- id: illusion-of-perfection
+  type: album
+  title: Illusion of Perfection
+  artist: Spencer Brown
+  year: 2018
+  links:
+    - id: Anjunabeats
+      link: https://music.anjunabeats.com/release/96654-spencer-brown-illusion-of-perfection
+    - id: YouTube
+      link: https://www.youtube.com/playlist?list=OLAK5uy_mhjT72cqFDYW5DvPB0LzDhD8dHU1RdRLQ
+
+- id: gradient-horizont
+  type: album
+  title: Gradient Horizont
+  artist: Windows96
+  year: 2017
+  links:
+    - id: Bandcamp
+      link: https://windows96.bandcamp.com/album/gradient-horizont
+
+- id: reflections
+  type: album
+  title: Reflections
+  artist: Windows96
+  year: 2017
+  links:
+    - id: Bandcamp
+      link: https://windows96.bandcamp.com/album/reflections
+
+- id: vintage-powered
+  type: album
+  title: Vintage Powered
+  artist: Zanzlanz
+  year: 2016
+  links:
+    - id: Bandcamp
+      link: https://zanzlanz.bandcamp.com/album/vintage-powered
+    - id: YouTube
+      link: https://youtube.com/playlist?list=OLAK5uy_niaIfCbHaA29A5uh-8mmxZ920DAACXgtY
+
+- id: my-love
+  type: single
+  title: My Love
+  artist: Shur-i-kan
+  year: 2015
+  links:
+    - id: YouTube
+      link: https://www.youtube.com/watch?v=my_fObW6Fvs
+
+- id: counting-down
+  type: single
+  title: Counting Down The Days (Shur-i-kan Remix)
+  artist: Above & Beyond feat. Gemma Hayes
+  year: 2015
+  links:
+    - id: YouTube
+      link: https://www.youtube.com/watch?v=ORf1ZmM4Jyk
+
+- id: lifeformed
+  type: album
+  title: Fastfall
+  artist: Lifeformed
+  year: 2012
+  links:
+    - id: Bandcamp
+      link: https://lifeformed.bandcamp.com/album/fastfall
+
+- id: hexophilia
+  type: album
+  title: Hexophilia
+  artist: Urbex
+  year: 2011
+  links:
+    - id: Bandcamp
+      link: https://urbex.bandcamp.com/album/hexophilia
+
+- id: just-a-dream
+  type: single
+  title: Just A Dream
+  artist: Delerium
+  year: 2003
+  links:
+    - id: YouTube
+      link: https://www.youtube.com/watch?v=amTfJHPW4vo
+
+- id: between-here-and-now
+  type: album
+  title: Between Here And Now
+  artist: Projections
+  year: 2002
+  links:
+    - id: Discogs
+      link: https://www.discogs.com/master/100333-Projections-Between-Here-And-Now
+
+- id: bbc-world
+  type: album
+  title: "BBC World: The Music"
+  artist: David Lowe
+  year: 2001
+  links:
+    - id: Discogs
+      link: https://www.discogs.com/release/14648968-David-Lowe-BBC-World-The-Music
+
+- id: private
+  type: album
+  title: PRIVATE
+  artist: speedometer.
+  year: 2000
+  links:
+    - id: YouTube
+      link: https://www.youtube.com/watch?v=hzQfzxu08TQ
+
+- id: flatlands
+  type: single
+  title: Flatlands
+  artist: Delerium
+  year: 1994
+  links:
+    - id: YouTube
+      link: https://www.youtube.com/watch?v=JUUlKfdhoQ4
+
+- id: intermix
+  type: album
+  title: Intermix
+  artist: Intermix
+  year: 1992
+  links:
+    - id: Discogs
+      link: https://www.discogs.com/release/74109-InterMix-Intermix
+
+- id: animal-fred-falke
+  type: single
+  title: Animal (Fred Falke Remix)
+  artist: Miike Snow
+  year: 2009
+  links:
+    - id: YouTube
+      link: https://www.youtube.com/watch?v=RqOp4rCMaAs
+
+- id: sky-falls-down
+  type: single
+  title: Sky Falls Down
+  artist: Above & Beyond pres. OceanLab feat. Justine Suissa
+  year: 2003
+  links:
+    - id: YouTube
+      link: https://www.youtube.com/watch?v=tHpWfTMKjpk
+
+- id: spineless
+  type: single
+  title: spineless_
+  artist: falcon/pulse+tdr
+  year: 1998
+  links:
+    - id: YouTube (unofficial)
+      link: https://www.youtube.com/watch?v=SY3km9QuQRI
+    - id: Mod Archive
+      link: https://modarchive.org/index.php?request=view_by_moduleid&query=134188
+
+- id: forest-reggae
+  type: single
+  title: Forest Reggae
+  artist: ThinkOneMoreTime
+  year: 2011
+  links:
+    - id: YouTube (unofficial)
+      link: https://www.youtube.com/watch?v=VhxtMJzNplY
+    - id: SMW Central
+      link: https://www.smwcentral.net/?p=section&a=details&id=7996
+
+- id: distant-shore
+  type: single
+  title: Distant Shore
+  artist: Alexandra Hampton
+  year: 2011
+  links:
+    - id: YouTube
+      link: https://www.youtube.com/watch?v=8pxRQfaAaRw
+
+- id: my-world
+  type: single
+  title: My World
+  artist: Luminary
+  year: 2005
+  links:
+    - id: Discogs
+      link: https://www.discogs.com/master/25969-Luminary-My-World
+
+- id: shona
+  type: single
+  title: Shona
+  artist: Jake Chudnow
+  year: 2013
+  links:
+    - id: YouTube
+      link: https://www.youtube.com/watch?v=WBAIyY9y3HM
+
+- id: caterpillar
+  type: single
+  title: song that plays when you encounter a caterpillar
+  artist: Solaris
+  year: 2024
+  links:
+    - id: YouTube
+      link: https://www.youtube.com/watch?v=3LGdFKIXr9I
+
+- id: synthetic
+  type: single
+  title: Synthetic Landscape
+  artist: ax14
+  year: 2024
+  links:
+    - id: Bandcamp
+      link: https://ax14.bandcamp.com/album/synthetic-landscape-slowed-and-reverb
+    - id: YouTube
+      link: https://www.youtube.com/watch?v=fqeqXNQ0gSw
+
+- id: fiji-eddie-murray
+  type: single
+  title: Fiji (Eddie Murray Extended Remix)
+  artist: Atlantis
+  year: 2022
+  links:
+    - id: YouTube
+      link: https://www.youtube.com/watch?v=jokoafc0mvE
+
+- id: moar-ghosts
+  type: single
+  title: Moar Ghosts N Stuff
+  artist: deadmau5
+  year: 2009
+  links:
+    - id: YouTube
+      link: https://www.youtube.com/watch?v=bXWk-aInsow
+
+- id: cafe-del-mar-deadmau5
+  type: single
+  title: Café Del Mar (deadmau5 Remix)
+  artist: Energy 52
+  year: 2023
+  links:
+    - id: YouTube
+      link: https://www.youtube.com/watch?v=lke4mfpqV4Q
+
+- id: hai-yorokonde
+  type: single
+  title: Hai Yorokonde
+  artist: こっちのけんと / Kocchi no Kento
+  year: 2024
+  links:
+    - id: YouTube
+      link: https://www.youtube.com/watch?v=jzi6RNVEOtA
+
+- id: kalimba
+  type: single
+  title: Kalimba
+  artist: Mr Scruff
+  year: 2009
+  links:
+    - id: YouTube
+      link: https://www.youtube.com/watch?v=jZHAb92E31E
+
+- id: blue-sky-action-meramek
+  type: single
+  title: Blue Sky Action (Meramek Remix)
+  artist: Above & Beyond feat. Alex Vargas
+  year: 2014
+  links:
+    - id: YouTube
+      link: https://www.youtube.com/watch?v=vrfYxSbERKU
+
+- id: turn-it-around
+  type: single
+  title: Turn It Around
+  artist: Yotto
+  year: 2019
+  links:
+    - id: YouTube
+      link: https://www.youtube.com/watch?v=uHAtUCPzDp
+
+- id: amsterdam
+  type: single
+  title: Amsterdam
+  artist: Luminary
+  year: 2006
+  links:
+    - id: YouTube
+      link: https://www.youtube.com/watch?v=aoqIdKnRJ1Y
+
+- id: first-encounters
+  type: single
+  title: First Encounters
+  artist: Quazar & Phandral / Sanxion
+  year: 1996
+  links:
+    - id: YouTube (unofficial)
+      link: https://www.youtube.com/watch?v=pUtJYKeuRDY
+
+- id: heva
+  type: single
+  title: HEVA
+  artist: Tom Middleton
+  year: 2015
+  links:
+    - id: YouTube
+      link: https://www.youtube.com/watch?v=4Gd_hZTyF8g
+
+- id: aperture
+  type: single
+  title: Aperture
+  artist: System96
+  year: 2019
+  links:
+    - id: YouTube
+      link: https://www.youtube.com/watch?v=ZAxSZzP6lYY
+
+- id: allure
+  type: single
+  title: Allure
+  artist: System96
+  year: 2020
+  links:
+    - id: YouTube
+      link: https://www.youtube.com/watch?v=XQGb6Ipzl3o
+
+- id: neon-feel
+  type: single
+  title: Neon Feel
+  artist: Suspect 44
+  year: 2012
+  links:
+    - id: YouTube
+      link: https://www.youtube.com/watch?v=l4gT3yVwkCc
+
+- id: red-skies
+  type: single
+  title: Red Skies
+  artist: Syrsa
+  year: 2011
+  links:
+    - id: YouTube (unofficial)
+      link: https://www.youtube.com/watch?v=bB7K4dWBkOA
+
+- id: safeway-sushi
+  type: single
+  title: Safeway Sushi
+  artist: Spencer Brown & Qrion
+  year: 2019
+  links:
+    - id: YouTube
+      link: https://www.youtube.com/watch?v=HEDYtzne6ok
+
+- id: six-forty-seven
+  type: single
+  title: Six Forty Seven
+  artist: Instupendo
+  year: 2016
+  links:
+    - id: YouTube
+      link: https://www.youtube.com/watch?v=YHlcmmkiwbU
+
+- id: know-me
+  type: single
+  title: Know Me
+  artist: Meramek
+  year: 2015
+  links: 
+    - id: YouTube
+      link: https://www.youtube.com/watch?v=BfxO1-Rhgpc
+
+- id: perception
+  type: single
+  title: Perception
+  artist: Shingo Nakamura
+  year: 2015
+  links:
+    - id: YouTube
+      link: https://www.youtube.com/watch?v=RHZgJHgFAOs
+
+- id: summer-dub
+  type: single
+  title: Summer (Dub Mix)
+  artist: Michael Casette
+  year: 2009
+  links:
+    - id: YouTube
+      link: https://www.youtube.com/watch?v=hhv_BYK7nk8
+
+- id: sapporo
+  type: single
+  title: Sapporo
+  artist: Shingo Nakamura
+  year: 2016
+  links:
+    - id: YouTube
+      link: https://www.youtube.com/watch?v=OS6j6pmXx4w
+
+- id: whither-mitiska
+  type: single
+  title: Whither (Shawn Mitiska Remix)
+  artist: Shingo Nakamura
+  year: 2016
+  links:
+    - id: YouTube
+      link: https://www.youtube.com/watch?v=DZTXfTXGWzY
+
+- id: el-house
+  type: single
+  title: El House Es Tu Idioma (Dave Dk Remix)
+  artist: Bufi
+  year: 2017
+  links:
+    - id: YouTube
+      link: https://www.youtube.com/watch?v=brf_wPtOr6A
+
+- id: in-your-heart
+  type: single
+  title: In Your Heart
+  artist: Kinderman
+  year: 2011
+  links:
+    - id: YouTube
+      link: https://www.youtube.com/watch?v=Au6RySFPWUg
+
+- id: comes-home
+  type: single
+  title: Comes Home
+  artist: Pale Blue
+  year: 2019
+  links:
+    - id: YouTube
+      link: https://www.youtube.com/watch?v=r8h0HLv8Tuw
+  
+- id: lady
+  type: single
+  title: Lady (Hear Me Tonight)
+  artist: Modjo
+  year: 2001
+  links:
+    - id: YouTube
+      link: https://www.youtube.com/watch?v=35LrV-V-ORY
+
+- id: fiji-lange
+  type: single
+  title: Fiji (Lange Remix)
+  artist: Atlantis vs. Avatar feat. Miriam Stockley
+  year: 2000
+  links:
+    - id: YouTube
+      link: https://www.youtube.com/watch?v=H1yQZIUEo5E
+
+- id: ransumaasta
+  type: single
+  title: Ransumaasta Kajahtaa
+  artist: "!Cube / Trauma"
+  year: 1998
+  links:
+    - id: YouTube (unofficial)
+      link: https://www.youtube.com/watch?v=9iIieRcDeYs
+
+- id: only-you
+  type: single
+  title: Only You
+  artist: Intense
+  year: 1996
+  links:
+    - id: YouTube
+      link: https://www.youtube.com/watch?v=OqhNndVrOxI
+
+- id: loveparade
+  type: single
+  title: Meet Her At The Loveparade (Nalin & Kane Remix)
+  artist: Da Hool
+  year: 1997
+  links:
+    - id: YouTube
+      link: https://www.youtube.com/watch?v=U70SgSqbU6M
+
+- id: hanging-lanterns
+  type: single
+  title: hanging lanterns
+  artist: kalaido
+  year: 2018
+  links:
+    - id: YouTube
+      link: https://www.youtube.com/watch?v=pduHLli6NnA
+
+- id: everywhere-true-identity
+  type: single
+  title: Everywhere (True Identity & Phillip Young love the festivals Remix)
+  artist: Fleetwood Mac
+  year: 2012
+  links:
+    - id: YouTube
+      link: https://www.youtube.com/watch?v=PeYtyCrhNqQ
+
+- id: bombom
+  type: single
+  title: BomBom (feat. The Teaching)
+  artist: Macklemore & Ryan Lewis
+  year: 2012
+  links:
+    - id: YouTube
+      link: https://www.youtube.com/watch?v=5clT_mazf2g
+
+- id: eple-bjorn
+  type: single
+  title: Eple (Bjorn Torske Remix)
+  artist: Röyksopp
+  year: 2001
+  links:
+    - id: YouTube
+      link: https://www.youtube.com/watch?v=ViWG7Po22h8
+
+- id: eple
+  type: single
+  title: Eple
+  artist: Röyksopp
+  year: 2001
+  links:
+    - id: YouTube
+      link: https://www.youtube.com/watch?v=KkD7a82mTvY
+
+- id: caligula
+  type: single
+  title: Caligula
+  artist: Windows96
+  year: 2018
+  links:
+    - id: YouTube
+      link: https://www.youtube.com/watch?v=q7v9zazGZ9Q
+
+- id: city-lights
+  type: single
+  title: City Lights (Matt Fax Remix)
+  artist: Justin OH & Jonny Rose
+  year: 2014
+  links:
+    - id: YouTube
+      link: https://www.youtube.com/watch?v=iQ5IgsR_Cy0
+
+- id: proximity
+  type: single
+  title: Proximity
+  artist: System96
+  year: 2019
+  links:
+    - id: YouTube
+      link: https://www.youtube.com/watch?v=LZ8xJQYHvyw
+
+- id: medium
+  type: single
+  title: Medium
+  artist: Jakey
+  year: 2017
+  links:
+    - id: YouTube
+      link: https://www.youtube.com/watch?v=2XIMj7VF1RU
+
+- id: united-colors
+  type: single
+  title: United Colors of Scrapyard
+  artist: C418
+  year: 2014
+  links:
+    - id: YouTube
+      link: https://www.youtube.com/watch?v=qUR5hn5pb8g
+
+- id: memories
+  type: single
+  title: Memories
+  artist: Michael Casette
+  year: 2011
+  links:
+    - id: YouTube
+      link: https://www.youtube.com/watch?v=dCl6JwrZiOI
+
+- id: exhale
+  type: single
+  title: Exhale
+  artist: Ben Murray-Smith
+  year: 2016
+  links:
+    - id: YouTube
+      link: https://www.youtube.com/watch?v=8H1s7TSL9s4
+
+- id: bloom
+  type: single
+  title: Bloom
+  artist: Not the King
+  year: 2020
+  links:
+    - id: YouTube
+      link: https://www.youtube.com/watch?v=P8DQOvDzz-o
+
+- id: the-end-moon
+  type: single
+  title: The End (Robert Moon Remix)
+  artist: Suspect 44
+  year: 2014
+  links:
+    - id: YouTube
+      link: https://www.youtube.com/watch?v=ecc7Ibt7q7s
+
+- id: action-hero-progressive
+  type: single
+  title: Action Hero (Progressive Mix)
+  artist: EDU
+  year: 2014
+  links:
+    - id: YouTube
+      link: https://www.youtube.com/watch?v=CA8ke1NZpPw
+
+- id: teardrop
+  type: single
+  title: Teardrop
+  artist: Massive Attack
+  year: 1998
+  links:
+    - id: YouTube
+      link: https://www.youtube.com/watch?v=3h-JYx76QNM

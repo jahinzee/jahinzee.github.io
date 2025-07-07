@@ -1,0 +1,45 @@
+---
+import { getCollection } from "astro:content";
+
+const entries = await getCollection("irec_audio_item");
+
+// // ---
+// console.log("total entries:", entries.length)
+// console.log("  singles:", entries.filter((s) => s.data.type === "single").length)
+// console.log("  albums: ", entries.filter((s) => s.data.type === "album").length)
+// // ---
+
+---
+
+<div class="flex flex-col gap-4 pt-4">
+    <hr class="border-dashed" />
+    {
+        entries
+            .sort((a, b) => b.data.year - a.data.year)
+            .map((e) => (
+                <div id={e.id} class="flex flex-col pl--4">
+                    <span id="title" class="text-xl font-medium">
+                        {e.data.title}
+                        {e.data.type === "single" ? (
+                            <span class="text-shadow dark:text-shadow-dark text-lg font-regular">
+                                (single)
+                            </span>
+                        ) : null}
+                    </span>
+                    <div class="flex flex-col ml-4 mt-1">
+                        <span>
+                            <span id="artist">{e.data.artist}</span> ·{" "}
+                            <span id="year">{e.data.year}</span>
+                        </span>
+                        <span class="mt-1 text-shadow dark:text-shadow-dark flex gap-2">
+                            Available on:{" "}
+                            {e.data.links
+                                .sort((a, b) => a.id.localeCompare(b.id))
+                                .map((l) => <a href={l.link}>{l.id}</a>)}
+                        </span>
+                    </div>
+                </div>
+                <hr class="border-dashed" />
+            ))
+    }
+</div>

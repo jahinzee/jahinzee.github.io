@@ -24,7 +24,12 @@ const socials = [
   <div id="socials" class="text-xl flex gap-4 mb-2 justify-center">
     {
       socials.map((s) => (
-        <a title={s.title} href={s.link} class={`ri-${s.icon}-line`} />
+        <a
+          aria-label={s.title}
+          title={s.title}
+          href={s.link}
+          class={`ri-${s.icon}-line`}
+        />
       ))
     }
   </div>

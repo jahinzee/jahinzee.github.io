@@ -27,8 +27,6 @@ const pageTitle = page.body
 
 // @ts-ignore: because it doesn't think `page` exists for some reason.
 const { published, updated, useToc, useKatex } = page.data;
-
-console.log(useToc)
 ---
 
 <Root title={`${pageTitle} — jahinzee/Garden`} loadKatex={useKatex ?? false}>
