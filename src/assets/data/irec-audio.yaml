@@ -742,3 +742,12 @@
   links:
     - id: YouTube
       link: https://www.youtube.com/watch?v=3h-JYx76QNM
+
+- id: sunny-days
+  type: single
+  title: Sunny Days (Fred Falke Remix)
+  artist: Patterns
+  year: 2013
+  links:
+    - id: YouTube
+      link: https://www.youtube.com/watch?v=h99xhTogJpQ
