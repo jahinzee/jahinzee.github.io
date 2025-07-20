@@ -751,3 +751,34 @@
   links:
     - id: YouTube
       link: https://www.youtube.com/watch?v=h99xhTogJpQ
+
+- id: emomomo
+  type: single
+  title: EMOMOMO
+  artist: yama_ko
+  year: 2019
+  links:
+    - id: YouTube
+      link: https://www.youtube.com/watch?v=F5GjEwI8wEA
+
+- id: romcom
+  type: album
+  title: ROMCOM
+  artist: Jakey
+  year: 2022
+  links:
+    - id: YouTube
+      link: https://www.youtube.com/watch?v=cDCybkVgL84
+
+- id: race-around-the-world
+  type: single
+  title: The Race Around the World
+  artist: Waterflame
+  year: 2007
+  links:
+    - id: Bandcamp
+      link: https://waterflame.bandcamp.com/track/the-race-around-the-world
+    - id: YouTube
+      link: https://www.youtube.com/watch?v=0X2OpQAR4xY
+    - id: Newgrounds
+      link: https://www.newgrounds.com/audio/listen/110798
