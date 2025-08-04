@@ -1,0 +1,45 @@
+---
+interface Props {
+    license: string;
+    label: string;
+    labelplural: boolean;
+}
+
+const { license, label, labelplural } = Astro.props;
+
+import Infocard from "../components/infocard.astro";
+
+const licenses = [
+    {
+        id: "cc-by-sa",
+        icon: "creative-commons",
+        label: "CC BY-SA 4.0",
+        link: "https://creativecommons.org/licenses/by-sa/4.0/",
+    },
+    {
+        id: "cc-by-nc-sa",
+        icon: "creative-commons",
+        label: "CC BY-NC-SA 4.0",
+        link: "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    },
+];
+
+const selectedLicense = licenses.find((l) => l.id == license) ?? {
+    id: "",
+    icon: "",
+    label: "none",
+    link: "",
+};
+
+const copula = labelplural ? "are" : "is";
+---
+
+<Infocard logo={selectedLicense.icon}>
+    <p>
+        {label}
+        {copula} available under
+        <a href={selectedLicense.link}>
+            {selectedLicense.label}.
+        </a>
+    </p>
+</Infocard>

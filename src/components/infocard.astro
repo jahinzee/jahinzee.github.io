@@ -1,0 +1,12 @@
+---
+const { logo } = Astro.props;
+---
+
+<div class="flex flex-row gap-2 align-middle buttonish">
+    <div class="text-xl p-1 my-1">
+        <span class={`ri-${logo}-line`}></span>
+    </div>
+    <div class="select-text align-middle my-auto py-1 my-1">
+        <slot />
+    </div>
+</div>

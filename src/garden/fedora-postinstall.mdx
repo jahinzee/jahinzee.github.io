@@ -1,16 +1,26 @@
 ---
 published: 2025-02-13
-updated: 2025-02-23
+updated: 2025-08-04
 useKatex: false
 useToc: true
 ---
 
+import Infocard from "../components/infocard.astro"
+
 # A Simple Fedora Post-Install Guide
 
+<Infocard logo="error-warning">
+
+**This guide is no longer maintained!**
+
+It remains up for historical reasons, and on the off chance
+something here is still relevant.
+
+</Infocard>
+
 This guide contains some commands to help set up [Fedora Linux](https://fedoraproject.org/)
-with some essential necessities and enhancements. I mainly wrote this guide
-for my own convenience as a quick reference guide[^1] to set up a machine, and maybe
-you'll find it useful too.
+with some essential necessities and enhancements. I mainly wrote this guide for my own convenience
+as a quick reference guide[^1] to set up a machine, and maybe you'll find it useful too.
 
 If you have any questions, suggestions, or other feedback, [do let me know](/contact)!
 
@@ -18,31 +28,29 @@ If you have any questions, suggestions, or other feedback, [do let me know](/con
 
 ## Preamble
 
-- This guide is provided with no warranty. Always exercise caution
-  when running commands, especially anything that requires `sudo`, and especially
-  anything you find on a random guide on the Internet – this one is no exception.
+- This guide is provided with no warranty. Always exercise caution when running commands, especially
+  anything that requires `sudo`, and especially anything you find on a random guide on the Internet
+  – this one is no exception.
 
-- This guide should work for Fedora 41. I may update this guide if and when
-  crucial things change.
-  - Note the **Published** or **Updated** fields at the top of this page.
-    If it's been a while since the last update (more than 6 months), you should
-    look through the source links in each section for more up-to-date instructions.
+- This guide should work for Fedora 41. I may update this guide if and when crucial things change.
+  - Note the **Published** or **Updated** fields at the top of this page. If it's been a while since
+    the last update (more than 6 months), you should look through the source links in each section
+    for more up-to-date instructions.
 
-- You will need Internet access on your Fedora installation. If you don't have
-  Internet access, see [Appendix/No Internet access](#no-internet-access).
+- You will need Internet access on your Fedora installation. If you don't have Internet access, see
+  [Appendix/No Internet access](#no-internet-access).
 
 - This guide is **not** intended for:
-  - Fedora remixes or derivatives, such as Nobara, Ultramarine, QubesOS, Red
-    Star OS, etc., nor
-  - **immutable** versions of Fedora Linux or any derivatives, such as Silverblue,
-    Kinoite, Bazzite, Bluefin, Aurora, etc.
+  - Fedora remixes or derivatives, such as Nobara, Ultramarine, QubesOS, Red Star OS, etc., nor
+  - **immutable** versions of Fedora Linux or any derivatives, such as Silverblue, Kinoite, Bazzite,
+    Bluefin, Aurora, etc.
 
-- This guide assumes you're following along right after you've been first
-  dropped into your desktop environment following a fresh install.
+- This guide assumes you're following along right after you've been first dropped into your desktop
+  environment following a fresh install.
 
-- Most commands will have comments (beginning with a hash `#` character) to
-  explain their purpose. You may copy the command with or without the comments,
-  the shell will ignore these comments anyway.
+- Most commands will have comments (beginning with a hash `#` character) to explain their purpose.
+  You may copy the command with or without the comments, the shell will ignore these comments
+  anyway.
 
 ---
 
@@ -50,9 +58,8 @@ If you have any questions, suggestions, or other feedback, [do let me know](/con
 
 ### System update
 
-Before we begin, it is important we do a full system upgrade and ensure we're on
-the latest versions of packages. This is to avoid dependency issues, and also
-because it's just good practice.
+Before we begin, it is important we do a full system upgrade and ensure we're on the latest versions
+of packages. This is to avoid dependency issues, and also because it's just good practice.
 
 ```bash
 # Upgrades all system packages, and also reload all repository caches.
@@ -63,10 +70,9 @@ sudo dnf upgrade --refresh
 
 ### RPM Fusion
 
-RPM Fusion is a repository of packages that aren't shipped with Fedora by
-default. It contains many drivers, multimedia codecs, and some additional
-software that we will need. We will be installing both the *free* and *nonfree*
-repositories.
+RPM Fusion is a repository of packages that aren't shipped with Fedora by default. It contains many
+drivers, multimedia codecs, and some additional software that we will need. We will be installing
+both the *free* and *nonfree* repositories.
 
 ```bash
 # Install RPM Fusion free and nonfree repositories for the current Fedora
@@ -91,9 +97,8 @@ sudo dnf update @core
 
 ### Flathub
 
-By default, Fedora ships its own Flatpak remote, which contains only a subset
-of applications found on the main Flathub remote. We can install the full
-Flathub remote with this command:
+By default, Fedora ships its own Flatpak remote, which contains only a subset of applications found
+on the main Flathub remote. We can install the full Flathub remote with this command:
 
 ```sh
 # Install the Flathub remote.
@@ -103,9 +108,8 @@ flatpak remote-add --if-not-exists flathub \
 
 *Source: [Flathub](https://flathub.org/setup/Fedora)*
 
-You can optionally also remove the existing Fedora remote, which can be useful
-to avoid duplicate listings and to speed up searching/querying (the Fedora
-Flatpak remotes can be slow at times.)
+You can optionally also remove the existing Fedora remote, which can be useful to avoid duplicate
+listings and to speed up searching/querying (the Fedora Flatpak remotes can be slow at times.)
 
 ```sh
 # Remove the Fedora Flatpak remote, leaving only Flathub.
@@ -114,14 +118,13 @@ flatpak remote-delete fedora
 
 ### Terra
 
-Terra is another repository that contains some extra packages. It's not as
-essential as RPM Fusion, but it contains some applications that you may
-find useful to have available, such as [VSCodium](https://vscodium.com/) and 
-[Ghostty](https://ghostty.org/),
+Terra is another repository that contains some extra packages. It's not as essential as RPM Fusion,
+but it contains some applications that you may find useful to have available, such as
+[VSCodium](https://vscodium.com/) and [Ghostty](https://ghostty.org/),
 
 ```sh
 # Install Terra repositories for the current Fedora release.
-dnf install --nogpgcheck --repofrompath \
+sudo dnf install --nogpgcheck --repofrompath \
     'terra,https://repos.fyralabs.com/terra$releasever' terra-release
 ```
 *Source: [Terra](https://terra.fyralabs.com/)*
@@ -142,8 +145,8 @@ lspci | grep Broadcom
 
 **ℹ️ If the command does not output any lines, you can skip this section.**
 
-If the command outputs lines with any instance of the word "Broadcom"
-highlighted, install the Broadcom drivers:
+If the command outputs lines with any instance of the word "Broadcom" highlighted, install the
+Broadcom drivers:
 
 *Running Secure Boot? See [the Secure Boot appendix](#secure-boot).*
 
@@ -156,8 +159,7 @@ sudo dnf install broadcom-wl
 
 ### Video codecs
 
-Install additional video codecs to allow playback and streaming of common
-multimedia formats.
+Install additional video codecs to allow playback and streaming of common multimedia formats.
 
 ```bash
 # Replace the stock FFmpeg libraries with the full FFmpeg libraries with
@@ -176,14 +178,13 @@ sudo dnf update @multimedia \
 
 ### Intel: hardware-accelerated video
 
-If you are running on Intel graphics (either HD integrated graphics or Arc),
-you should install the media codecs for hardware-accelerated video playback.
+If you are running on Intel graphics (either HD integrated graphics or Arc), you should install the
+media codecs for hardware-accelerated video playback.
 
 There are two drivers available:
 
 - `intel-media-driver` - newer; compatible with Broadwell (2014) or later, and
-- `libva-intel-driver` - older; compatible with GMA-4500 (2007) up to Coffee
-                         Lake (2017).
+- `libva-intel-driver` - older; compatible with GMA-4500 (2007) up to Coffee Lake (2017).
 
 If there is overlap, try `intel-media-driver` first.
 
@@ -198,7 +199,8 @@ sudo dnf install libva-intel-driver
 ```
 **🔁 Restart your computer after running this command.**
 
-*Sources: [RPM Fusion](https://rpmfusion.org/Howto/Multimedia), [ArchWiki](https://wiki.archlinux.org/title/Hardware_video_acceleration)*
+*Sources: [RPM Fusion](https://rpmfusion.org/Howto/Multimedia),*
+*[ArchWiki](https://wiki.archlinux.org/title/Hardware_video_acceleration)*
 
 ### AMD: hardware-accelerated video
 
@@ -228,13 +230,12 @@ setting up CUDA and NVENC.
 
 ## Extras
 
-These are some optional goodies you may want to set up, but aren't completely
-necessary.
+These are some optional goodies you may want to set up, but aren't completely necessary.
 
 ### Homebrew
 
-Homebrew is a package manager for Linux and macOS. This allows you to install
-many command-line utilities that Fedora, Terra, nor RPM Fusion ship.
+Homebrew is a package manager for Linux and macOS. This allows you to install many command-line
+utilities that Fedora, Terra, nor RPM Fusion ship.
 
 Note that Homebrew casks are not supported on Linux.
 
@@ -242,9 +243,9 @@ Note that Homebrew casks are not supported on Linux.
 
 ### Enabling legacy certificate to connect to enterprise/university networks
 
-If you are unable to connect to your workplace or university Wi-Fi network on
-Fedora (including Eduroam), then you may need to enable some legacy certificates
-on your network that may be required to connect to the network.
+If you are unable to connect to your workplace or university Wi-Fi network on Fedora (including
+Eduroam), then you may need to enable some legacy certificates on your network that may be required
+to connect to the network.
 
 Enabling these certificates can be done with one command:
 
@@ -259,8 +260,8 @@ sudo update-crypto-policies --set LEGACY
 
 ### Japanese IME for KDE Plasma Spin (Fcitx5/Mozc)
 
-To type in Japanese on KDE Plasma using [Fcitx5](https://fcitx-im.org/wiki/Fcitx_5)
-and [Mozc](https://github.com/google/mozc), first install the required packages:
+To type in Japanese on KDE Plasma using [Fcitx5](https://fcitx-im.org/wiki/Fcitx_5) and
+[Mozc](https://github.com/google/mozc), first install the required packages:
 
 ```sh
 # Install Fcitx5, Mozc, and the linking packages.
@@ -272,36 +273,31 @@ manager.
 
 1. Open the **System Settings** app.
 2. Under *Input and Output*, select **Keyboard** and then **Virtual Keyboard**
-3. On the sidebar, select **Fcitx 5 Wayland Launcher** or **Fcitx 5**, depending
-   on if you're using the X or Wayland session.
-4. On the sidebar, return to the top-level settings menu, then scroll down to
-   *System* and select **Autostart**
-5. Select **Add New** on the top-right corner, then **Application...** and find
-   and select *Fcitx 5* from the dialog (it should be under *System* or
-   *Utilities*, or you can just search for it.)
+3. On the sidebar, select **Fcitx 5 Wayland Launcher** or **Fcitx 5**, depending on if you're using
+   the X or Wayland session.
+4. On the sidebar, return to the top-level settings menu, then scroll down to *System* and select
+   **Autostart**
+5. Select **Add New** on the top-right corner, then **Application...** and find and select *Fcitx 5*
+   from the dialog (it should be under *System* or *Utilities*, or you can just search for it.)
 
 **🔁 Logout and login again to enable the IME.**
 
-6. After logging in, you should see an **en** symbol (or something else
-   representing your current keyboard language) in the system tray.
-   Right-click it and select **Configure**.
-7. Find or search for *Mozc* in the right box, and double click it to add
-   it to the left box. Then, click **Apply**.
+6. After logging in, you should see an **en** symbol (or something else representing your current
+   keyboard language) in the system tray. Right-click it and select **Configure**.
+7. Find or search for *Mozc* in the right box, and double click it to add it to the left box. Then,
+   click **Apply**.
 
-You should now be able to type in Japanese. Press `Meta` + `Space` to switch
-between Japanese and your default layout. This shortcut can be changed in the
-*Global Settings* tab in the configuration window.
+You should now be able to type in Japanese. Press `Meta` + `Space` to switch between Japanese and
+your default layout. This shortcut can be changed in the *Global Settings* tab in the configuration window.
 
 
 ### GNOME extensions
 
-If you're using GNOME as your desktop environment, you may consider installing
-these extensions for a more complete and enhanced experience. These extensions
-are well-maintained and available from Fedora repositories, and are less likely
-to break between major GNOME releases.
+If you're using GNOME as your desktop environment, you may consider installing these extensions for
+a more complete and enhanced experience. These extensions are well-maintained and available from
+Fedora repositories, and are less likely to break between major GNOME releases.
 
-You can install any of the following extensions with
-`sudo dnf install <insert-package-name-here>`.
+You can install any of the following extensions with `sudo dnf install <insert-package-name-here>`.
 
 - `gnome-shell-extension-appindicator`:
    System tray icons for apps that need them.
@@ -326,16 +322,15 @@ You can install any of the following extensions with
 **🔁 You may need to logout and login again to use these extensions.**
 
 To manage GNOME extensions, you can install
-[Extension Manager](https://flathub.org/apps/com.mattjakeman.ExtensionManager)
-from Flathub:
+[Extension Manager](https://flathub.org/apps/com.mattjakeman.ExtensionManager) from Flathub:
 
 ```sh
 # Install Extension Manager from Flathub.
 flatpak install com.mattjakeman.ExtensionManager 
 ```
 
-You can find more extensions by running `dnf search gnome-shell-extension`,
-or on the [GNOME Shell Extensions](https://extensions.gnome.org/) website.
+You can find more extensions by running `dnf search gnome-shell-extension`, or on the
+[GNOME Shell Extensions](https://extensions.gnome.org/) website.
 
 
 ---
@@ -344,19 +339,18 @@ or on the [GNOME Shell Extensions](https://extensions.gnome.org/) website.
 
 ### Secure Boot
 
-Installing some custom drivers, such as for NVIDIA and Broadcom devices,
-require some modifications to the kernel that can cause issues with Secure
-Boot. This can result in these drivers not loading, or your Fedora installation
-to be unable to boot.
+Installing some custom drivers, such as for NVIDIA and Broadcom devices, require some modifications
+to the kernel that can cause issues with Secure Boot. This can result in these drivers not loading,
+or your Fedora installation to be unable to boot.
 
-- You can follow [these instructions on the RPM Fusion knowledge base](https://rpmfusion.org/Howto/Secure%20Boot?highlight=%28%5CbCategoryHowto%5Cb%29)
+- You can follow
+  [these instructions on the RPM Fusion knowledge base](https://rpmfusion.org/Howto/Secure%20Boot?highlight=%28%5CbCategoryHowto%5Cb%29)
   to self-sign your kernel after driver installs.
 
-- Alternatively, you can disable Secure Boot in your system's UEFI menu if you
-  have access.
+- Alternatively, you can disable Secure Boot in your system's UEFI menu if you have access.
 
-**NOTE:** You should **not** disable Secure Boot if you are dual-booting with
-          Windows, as this may cause issues with Windows Update or BitLocker.
+**NOTE:** You should **not** disable Secure Boot if you are dual-booting with Windows, as this may
+cause issues with Windows Update or BitLocker.
 
 ### No Internet access
 
@@ -364,15 +358,15 @@ Depending on your hardware, you may not be able to use certain network devices
 by default due to missing drivers. This can occur namely with Broadcom wireless
 cards.
 
-This guide will show you [how to get Broadcom Wi-Fi working](#broadcom-wireless-cards), but in the meantime, you
-can try:
+This guide will show you [how to get Broadcom Wi-Fi working](#broadcom-wireless-cards), but in the
+meantime, you can try:
 
 - running an wired Ethernet connection to your computer, if possible, or
 - using [USB tethering with an Android device](https://www.tomsguide.com/how-to/how-to-share-wi-fi-on-android-using-usb-tethering)
   to share its Wi-Fi connection to your computer.
 
-After you've installed the necessary drivers and you can confirm that the Wi-Fi
-card is working properly, you can disconnect your Android device or ethernet
-cable and proceed with Wi-Fi if you want.
+After you've installed the necessary drivers and you can confirm that the Wi-Fi card is working
+properly, you can disconnect your Android device or ethernet cable and proceed with Wi-Fi if you
+want.
 
 [^1]: "Why not a script?", you may ask, and that's a very good question.
