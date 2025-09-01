@@ -27,10 +27,10 @@ integrates better with my Linux environment, be it a native Linux app or even so
 under Wine. So, off I went looking for some alternatives.
 
 For this post, I'll be demonstrating my process with the very first file I tried this with, one that
-I call '*shrimp got drimp*' – an old meme edit I made of [Goku Drip](https://knowyourmeme.com/memes/goku-drip)[^1]
-and a shrimp:
+I call '*shrimp got drimp*' – an old meme edit I made of [Goku Drip][][^1] and a shrimp:
 
-![A screenshot of a Paint.NET window, with an image of a shrimp wearing Goku Drip.](media/digital-dongles/paint-dot-net.png)
+![A screenshot of a Paint.NET window, with an image of a shrimp wearing Goku
+Drip.](media/digital-dongles/paint-dot-net.png)
 
 For my purposes, I needed to convert the file into something that would atleast preserve layer
 information, so something like exporting it to a generic image format wasn't gonna cut it.
@@ -49,32 +49,35 @@ But for now, Pinta it is. When I installed it, it looks rather nice on my KDE Pl
 with well-structured menus and toolbars that are very similar to Paint.NET – totally not
 foreshadowing for anything, haha.
 
-![A screenshot of a Pinta window, with an empty canvas with the text "...where shrimp?".](media/digital-dongles/pinta-noshrimp.png)
+![A screenshot of a Pinta window, with an empty canvas with the text "...where
+shrimp?".](media/digital-dongles/pinta-noshrimp.png)
 
 Except, now we have another problem, **how do we read Paint.NET files in Pinta?**
 
 ## Step 2: Migrating the file formats
 
-Pinta doesn't support Paint.NET files[^2], nor does Paint.NET support the
-[OpenRaster format](https://en.wikipedia.org/wiki/OpenRaster) that Pinta uses. In the abstract, this
-problem has a very simple solution - find some way to convert one to the other!
+Pinta doesn't support Paint.NET files[^2], nor does Paint.NET support the [OpenRaster format][] that
+Pinta uses. In the abstract, this problem has a very simple solution - find some way to convert one
+to the other!
 
 For whatever reason at the time, I could hardly find any utility that could convert Paint.NET to
 OpenRaster, and the ones I did find seemed to be in various states of abandoned, working on older
-versions of the Paint.NET format. Given all of this, I thought I would have to try my hand at reverse
-engineering the Paint.NET format – something which I have no experience with.
+versions of the Paint.NET format. Given all of this, I thought I would have to try my hand at
+reverse engineering the Paint.NET format – something which I have no experience with.
 
-But eventually, I found something very interesting: [LazPaint](https://lazpaint.github.io/).
+But eventually, I found something very interesting: [LazPaint][].
 
 It's a very interesting image editing application: it's got a very ancient looking user interface,
 it's written in Pascal, and crucially, supports reading Paint.NET files *and* writing to OpenRaster!
 
-![A screenshot of a LazPaint window, with the Goku Drip shrimp image.](media/digital-dongles/lazpaint.png)
+![A screenshot of a LazPaint window, with the Goku Drip shrimp
+image.](media/digital-dongles/lazpaint.png)
 
 From here, all we have to do is load in the original file, click `File › Save as...`, select
 OpenRaster from the dropdown, and there we have it, a `.ora` file that can be read by Paint.NET!
 
-![A screenshot of a Pinta window, with the Goku Drip shrimp image.](media/digital-dongles/pinta-shrimp.png)
+![A screenshot of a Pinta window, with the Goku Drip shrimp
+image.](media/digital-dongles/pinta-shrimp.png)
 
 And so, I have my original Paint.NET file in an open format, which I can now view with Pinta. Now
 time to rinse and repeat for all my other `.pdn` files.
@@ -82,8 +85,8 @@ time to rinse and repeat for all my other `.pdn` files.
 It's worth noting here that since my original search, there appears to now be a lot of options for
 modern converters from Paint.NET to OpenRaster. I don't know if they've always been here and I just
 couldn't find it back then. If you just want a simple converter without a separate full-blown editor
-as a stopgap, Coca162's [PdnBatchConverter](https://github.com/Coca162/PdnBatchConverter) might be
-worth looking at, although I haven't tried it.
+as a stopgap, Coca162's [PdnBatchConverter][] might be worth looking at, although I haven't tried
+it.
 
 But in any case, I can now rest easy, and use Paint.NET for all my image editing needs forever
 more...
@@ -98,17 +101,18 @@ more...
 - the merging of the toolbar and menubar[^3], which in my opinion is a terrible way to structure a
   multi-functional app, but that's a story for another day.
 
-![A screenshot of a newer Pinta window with a unified headerbar and no menubar.](media/digital-dongles/pinta-new.png)
+![A screenshot of a newer Pinta window with a unified headerbar and no
+menubar.](media/digital-dongles/pinta-new.png)
 
 So once again, it was time to migrate to another app! But.. where to? I didn't really feel like
 using LazPaint, and GIMP still has its own issues, or atleast, it did.
 
 With the release of GIMP 3 and the migration to GTK 3, the UI now looks a lot more nicer (and
 crucially, I could now use the Breeze theme instead of the default GTK2 skins). It was also around
-the same time I discovered [PhotoGIMP](https://github.com/Diolinux/PhotoGIMP), which is a set of
-config files and plugins that make GIMP's UX closer to Photoshop. But as someone who's only used
-Photoshop very infrequently (and is allergic to SaaS), PhotoGIMP was a lot more approachable to me.
-It wasn't quite Paint.NET, but it's much better than stock GIMP.
+the same time I discovered [PhotoGIMP][], which is a set of config files and plugins that make
+GIMP's UX closer to Photoshop. But as someone who's only used Photoshop very infrequently (and is
+allergic to SaaS), PhotoGIMP was a lot more approachable to me. It wasn't quite Paint.NET, but it's
+much better than stock GIMP.
 
 Now, do I need to convert my files again? Nope! Since I now had the files in an open-source format,
 it can now be opened by wider range of applications, including of course, GIMP.
@@ -138,17 +142,26 @@ offline use (underrated until you find yourself on an airplane), a USB stick, or
 And that's why I love files: they're flexible, platform and service agnostic, and give me control
 over my data.
 
-If you haven't already, consider checking out [Local-First software](https://www.inkandswitch.com/essay/local-first/),
-and converting your stuff to open formats if you can – be it OpenRaster,
-[OpenDocument](https://www.libreoffice.org/discover/what-is-opendocument/), Markdown, Vorbis, or
-whatever suits you. It might take some time and a bit of creativity, but it'll be worth it for the
-power and freedom you have over your own data. 
+If you haven't already, consider checking out [Local-First software][], and converting your stuff to
+open formats if you can – be it OpenRaster, [OpenDocument][], Markdown, Vorbis, or whatever suits
+you. It might take some time and a bit of creativity, but it'll be worth it for the power and
+freedom you have over your own data. 
 
 [^1]: Yes, I used a Know Your Meme link, deal with it.
 
 [^2]: There was a third-party plugin that let you import Paint.NET files, but it wasn't compatible
-      with Pinta 2.0. See [the GitHub discussion about it](https://github.com/PintaProject/Pinta/discussions/827#discussioncomment-9612027).
+      with Pinta 2.0. See [the GitHub discussion about it][pdn-pinta-discussion].
 
-[^3]: The menu bar and the ability to run w/o the unified header bar did return in
-      [a future update](https://github.com/PintaProject/Pinta/issues/781), but by then I'd already
-      moved on (womp womp).
+[^3]: The menu bar and the ability to run w/o the unified header bar did return in [a future
+      update][pdn-menubar-update], but by then I'd already moved on (womp womp).
+
+[Goku Drip]: https://knowyourmeme.com/memes/goku-drip
+[OpenRaster format]: https://en.wikipedia.org/wiki/OpenRaster
+[LazPaint]: https://lazpaint.github.io/
+[PdnBatchConverter]: https://github.com/Coca162/PdnBatchConverter
+[PhotoGIMP]: https://github.com/Diolinux/PhotoGIMP
+[Local-First software]: https://www.inkandswitch.com/essay/local-first/
+[OpenDocument]: https://www.libreoffice.org/discover/what-is-opendocument/
+[pdn-pinta-discussion]:
+    https://github.com/PintaProject/Pinta/discussions/827#discussioncomment-9612027
+[pdn-menubar-update]: https://github.com/PintaProject/Pinta/issues/781

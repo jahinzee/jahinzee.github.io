@@ -7,22 +7,18 @@ useToc: true
 
 # BANNotation
 
-The **B**anner **A**lgebraic[^1] and **N**ormalised **Notation** (*BANNotation*)
-is a notation system that I devised for communicating banner designs in
-*Minecraft* (Mojang, 2011). This page will describe this system, and provide
-some examples of its use.
+The **B**anner **A**lgebraic[^1] and **N**ormalised **Notation** (*BANNotation*) is a notation
+system that I devised for communicating banner designs in *Minecraft* (Mojang, 2011). This page
+will describe this system, and provide some examples of its use.
 
 ## Colours
 
-The standard banner colours, and their notated forms, are defined in this
-collapsed table.
+The standard banner colours, and their notated forms, are defined in this collapsed table.
 
 <details>
-<summary>
-Table of Colours
-</summary>
+<summary>Table of Colours</summary>
 
-*Colours sourced from [Minecraft Wiki](https://minecraft.wiki/w/Dye#Color_values)*.
+> *Colours sourced from [Minecraft Wiki][mc-wiki-colours]*.
 
 | Colour             | Notated |
 | ------------------ | ------- |
@@ -47,16 +43,13 @@ Table of Colours
 
 ## Patterns
 
-The standard banner patterns (as displayed in-game on *Minecraft: Java Edition*[^2]),
-and their notated forms, are defined in the collapsed table, along with their
-expanded meanings.
+The standard banner patterns (as displayed in-game on *Minecraft: Java Edition*[^2]), and their
+notated forms, are defined in the collapsed table, along with their expanded meanings.
 
 <details>
-<summary>
-Table of Patterns
-</summary>
+<summary>Table of Patterns</summary>
 
-*Pattern names sourced from [Minecraft Wiki](https://minecraft.wiki/w/Banner/Patterns).*
+> *Pattern names sourced from [Minecraft Wiki][mc-wiki-patterns].*
 
 | Pattern                         | Notated | Meaning                  |
 | ------------------------------- | ------- | ------------------------ |
@@ -106,30 +99,27 @@ Table of Patterns
 
 ## Syntax
 
-A banner notation starts with a base, and then any number of patterns, in order
-of their application.
+A banner notation starts with a base, and then any number of patterns, in order of their
+application.
 
 ### Base
 
-*For a more formal syntax definition, see  [Formal Specs](#formal-specs).*
+> *For a more formal syntax definition, see [Formal Specs](#formal-specs).*
 
 A base banner is simply defined as $B$, where $B$ is the base colour.
 
 ### Simple Patterns
 
-A colour-pattern combination is defined as $C$-$P$, where $C$ is a colour, and
-$P$ is a pattern. For example, a Blue Chevron would be **Bl-Tb**
-*(blue triangle bottom)*.
+A colour-pattern combination is defined as $C$-$P$, where $C$ is a colour, and $P$ is a pattern.
+For example, a Blue Chevron would be **Bl-Tb** *(blue triangle bottom)*.
 
 ### Combined Gradient Base
 
-For simple gradient bases, instead of notating a base $C_A$ and a gradient
-bottom $C_B$ (or the other way with a gradient top), you can use the shorthand
-**$C_A$+$C_B$-Gx.**, where **Gx** is the combined gradient pseudo-pattern,
-$C_A$ is the top colour, and $C_B$ is the bottom colour.
+For simple gradient bases, instead of notating a base $C_A$ and a gradient bottom $C_B$ (or the
+other way with a gradient top), you can use the shorthand **$C_A$+$C_B$-Gx.**, where **Gx** is the
+combined gradient pseudo-pattern, $C_A$ is the top colour, and $C_B$ is the bottom colour.
 
-For example, a gradient that goes from blue at the top and red at the bottom
-would can be either:
+For example, a gradient that goes from blue at the top and red at the bottom would can be either:
 
 - **Rd. Bl-Gt.**, or
 - **Bl. Rd-Gb.**
@@ -138,21 +128,17 @@ But with the combined gradient syntax, it would be:
 
 - **Bl+Rd-Gx.**
 
-Note that this only works if the gradient is applied immediately after the base.
-If there are any patterns that are applied in between, the normal gradient
-top/bottom should be used instead.
+Note that this only works if the gradient is applied immediately after the base. If there are any
+patterns that are applied in between, the normal gradient top/bottom should be used instead.
 
 ### Formal Specs
 
-A formal specification of the syntax is available in Extended Bachus-Naur (EBNF)
-form.
+A formal specification of the syntax is available in Extended Bachus-Naur (EBNF) form.
 
 <details>
-<summary>
-Syntax in EBNF
-</summary>
+<summary>Syntax in EBNF</summary>
 
-```ebnf
+```
 colour = "Wh" | "Lg" | "Gr" | "Bk" | "Br" | "Rd" | "Or" | "Ye"
        | "Li" | "Gn" | "Cy" | "Lb" | "Bl" | "Pu" | "Ma" | "Pi"
 
@@ -176,10 +162,9 @@ banner = base, { " ", layer }
 
 ## Examples
 
-This example will define all of the banners on the stone brick wall in
-[this screenshot](https://i.imgur.com/FZJJFHV.png), posted by Jeb on Twitter/X.
-Only the first row will be notated, as I hope the notations for the bottom row
-are obvious enough.
+This example will define all of the banners on the stone brick wall in [this screenshot][jeb-banners],
+posted by Jeb on Twitter/X. Only the first row will be notated, as I hope the notations for the
+bottom row are obvious enough.
 
 Going left-to-right:
 
@@ -223,8 +208,15 @@ Going left-to-right:
    - Yellow Base Dexter Canton
    - Red Roundel
 
-[^1]: "algebraic", as in
-      [Algebraic Notation](https://en.wikipedia.org/wiki/Algebraic_notation_(chess))
-      in chess.
+
+[^1]: "algebraic", as in [Algebraic Notation][algebraic-notation] in chess.
 [^2]: This is a crucial point, as there are some naming conflicts between
       Bedrock and Java Edition, mainly in the Per Bends.
+
+[algebraic-notation]: https://en.wikipedia.org/wiki/Algebraic_notation_(chess)
+
+[mc-wiki-colours]: https://minecraft.wiki/w/Dye#Color_values
+
+[mc-wiki-patterns]: https://minecraft.wiki/w/Banner/Patterns
+
+[jeb-banners]: https://i.imgur.com/FZJJFHV.png

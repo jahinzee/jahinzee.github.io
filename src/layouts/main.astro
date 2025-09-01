@@ -1,0 +1,33 @@
+---
+import Root from "./root.astro";
+import Logo from "../components/logo.astro";
+import Footer from "../components/footer.astro";
+
+const {
+    title,
+    loadKatex = false,
+    subsection = null,
+    subsectionAnchor = "",
+    frontmatter,
+} = Astro.props;
+---
+
+<Root title={frontmatter?.title ?? title} loadKatex={loadKatex}>
+    <header class="flex md:w-256 mx-auto gap-2">
+        <Logo small={true} />
+        {
+            (frontmatter?.subsection ?? subsection) === null ? null : (
+                <a
+                    href={frontmatter?.subsectionAnchor ?? subsectionAnchor}
+                    class="text-foreground-light dark:text-foreground-dark text-xl opacity-70 mt-1 select-none flex-grow"
+                >
+                    /{frontmatter?.subsection ?? subsection}
+                </a>
+            )
+        }
+    </header>
+    <main>
+        <slot />
+    </main>
+    <Footer />
+</Root>

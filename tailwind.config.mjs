@@ -4,7 +4,7 @@ export default {
   theme: {
     colors: {
       accent: {
-        light: "#5E755E",
+        light: "#415141",
         dark: "#9bc19b",
       },
       foreground: {
@@ -26,7 +26,7 @@ export default {
     },
     fontFamily: {
       sans: ["Noto Sans Variable", "Noto Sans Bengali Variable", "system-ui"],
-      mono: ["Fira Mono", "monospace"],
+      mono: ["Iosevka Extended", "monospace"],
     },
     extend: {
       spacing: {

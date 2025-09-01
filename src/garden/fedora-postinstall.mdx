@@ -13,14 +13,13 @@ import Infocard from "../components/infocard.astro"
 
 **This guide is no longer maintained!**
 
-It remains up for historical reasons, and on the off chance
-something here is still relevant.
+It remains up for historical reasons, and on the off chance something here is still relevant.
 
 </Infocard>
 
-This guide contains some commands to help set up [Fedora Linux](https://fedoraproject.org/)
-with some essential necessities and enhancements. I mainly wrote this guide for my own convenience
-as a quick reference guide[^1] to set up a machine, and maybe you'll find it useful too.
+This guide contains some commands to help set up [Fedora Linux](https://fedoraproject.org/) with
+some essential necessities and enhancements. I mainly wrote this guide for my own convenience as a
+quick reference guide[^1] to set up a machine, and maybe you'll find it useful too.
 
 If you have any questions, suggestions, or other feedback, [do let me know](/contact)!
 
@@ -219,12 +218,13 @@ sudo dnf swap mesa-vdpau-drivers.i686 mesa-vdpau-drivers-freeworld.i686
 
 ### NVIDIA
 
-RPM Fusion has extensive documentation on installing NVIDIA drivers, as well as
-setting up CUDA and NVENC.
+RPM Fusion has extensive documentation on installing NVIDIA drivers, as well as setting up CUDA and
+NVENC.
 
 - [RPM Fusion - NVIDIA](https://rpmfusion.org/Howto/NVIDIA)
 - [RPM Fusion - CUDA](https://rpmfusion.org/Howto/CUDA)
-- [RPM Fusion - Multimedia, NVENC](https://rpmfusion.org/Howto/Multimedia#Hardware_codecs_with_NVIDIA)
+- [RPM Fusion - Multimedia,
+  NVENC](https://rpmfusion.org/Howto/Multimedia#Hardware_codecs_with_NVIDIA)
 
 ---
 
@@ -268,8 +268,7 @@ To type in Japanese on KDE Plasma using [Fcitx5](https://fcitx-im.org/wiki/Fcitx
 sudo dnf install fcitx5 mozc fcitx5-mozc
 ```
 
-Now we need to register Fcitx5 to run on startup and act as the virtual keyboard
-manager.
+Now we need to register Fcitx5 to run on startup and act as the virtual keyboard manager.
 
 1. Open the **System Settings** app.
 2. Under *Input and Output*, select **Keyboard** and then **Virtual Keyboard**
@@ -288,7 +287,8 @@ manager.
    click **Apply**.
 
 You should now be able to type in Japanese. Press `Meta` + `Space` to switch between Japanese and
-your default layout. This shortcut can be changed in the *Global Settings* tab in the configuration window.
+your default layout. This shortcut can be changed in the *Global Settings* tab in the configuration
+window.
 
 
 ### GNOME extensions
@@ -299,38 +299,33 @@ Fedora repositories, and are less likely to break between major GNOME releases.
 
 You can install any of the following extensions with `sudo dnf install <insert-package-name-here>`.
 
-- `gnome-shell-extension-appindicator`:
-   System tray icons for apps that need them.
-- `gnome-shell-extension-appmenu-is-back`:
-   The app menu from GNOME 44 and earlier.
-- `gnome-shell-extension-auto-move-windows`:
-   Assign different apps to workspaces on launch.
-- `gnome-shell-extension-caffeine`:
-   Toggle to temporarily disable automatic sleep and display blanking.
-- `gnome-shell-extension-dash-to-dock`:
-   Turn the dash into a dock, plus some extra customisation options.
-- `gnome-shell-extension-drive-menu`:
-   Manage connected storage drives from the panel.
-- `gnome-shell-extension-forge`:
-   Advanced auto-tiling, similar to Pop Shell or COSMIC's tiling features.
-- `gnome-shell-extension-gsconnect`:
-   KDE Connect compatibility with GNOME:
+- `gnome-shell-extension-appindicator`: System tray icons for apps that need them.
+- `gnome-shell-extension-appmenu-is-back`: The app menu from GNOME 44 and earlier.
+- `gnome-shell-extension-auto-move-windows`: Assign different apps to workspaces on launch.
+- `gnome-shell-extension-caffeine`: Toggle to temporarily disable automatic sleep and display
+   blanking.
+- `gnome-shell-extension-dash-to-dock`: Turn the dash into a dock, plus some extra customisation
+   options.
+- `gnome-shell-extension-drive-menu`: Manage connected storage drives from the panel.
+- `gnome-shell-extension-forge`: Advanced auto-tiling, similar to Pop Shell or COSMIC's tiling
+   features.
+- `gnome-shell-extension-gsconnect`: KDE Connect compatibility with GNOME:
    - This may also require installing `openssl`.
-- `gnome-shell-extension-just-perfection`:
-   Fine-tune GNOME behaviour, such as animations and hiding certain components.
+- `gnome-shell-extension-just-perfection`: Fine-tune GNOME behaviour, such as animations and hiding
+   certain components.
 
 **🔁 You may need to logout and login again to use these extensions.**
 
-To manage GNOME extensions, you can install
-[Extension Manager](https://flathub.org/apps/com.mattjakeman.ExtensionManager) from Flathub:
+To manage GNOME extensions, you can install [Extension
+Manager](https://flathub.org/apps/com.mattjakeman.ExtensionManager) from Flathub:
 
 ```sh
 # Install Extension Manager from Flathub.
 flatpak install com.mattjakeman.ExtensionManager 
 ```
 
-You can find more extensions by running `dnf search gnome-shell-extension`, or on the
-[GNOME Shell Extensions](https://extensions.gnome.org/) website.
+You can find more extensions by running `dnf search gnome-shell-extension`, or on the [GNOME Shell
+Extensions](https://extensions.gnome.org/) website.
 
 
 ---
@@ -343,9 +338,9 @@ Installing some custom drivers, such as for NVIDIA and Broadcom devices, require
 to the kernel that can cause issues with Secure Boot. This can result in these drivers not loading,
 or your Fedora installation to be unable to boot.
 
-- You can follow
-  [these instructions on the RPM Fusion knowledge base](https://rpmfusion.org/Howto/Secure%20Boot?highlight=%28%5CbCategoryHowto%5Cb%29)
-  to self-sign your kernel after driver installs.
+- You can follow [these instructions on the RPM Fusion knowledge
+  base](https://rpmfusion.org/Howto/Secure%20Boot?highlight=%28%5CbCategoryHowto%5Cb%29) to
+  self-sign your kernel after driver installs.
 
 - Alternatively, you can disable Secure Boot in your system's UEFI menu if you have access.
 
@@ -354,16 +349,16 @@ cause issues with Windows Update or BitLocker.
 
 ### No Internet access
 
-Depending on your hardware, you may not be able to use certain network devices
-by default due to missing drivers. This can occur namely with Broadcom wireless
-cards.
+Depending on your hardware, you may not be able to use certain network devices by default due to
+missing drivers. This can occur namely with Broadcom wireless cards.
 
 This guide will show you [how to get Broadcom Wi-Fi working](#broadcom-wireless-cards), but in the
 meantime, you can try:
 
 - running an wired Ethernet connection to your computer, if possible, or
-- using [USB tethering with an Android device](https://www.tomsguide.com/how-to/how-to-share-wi-fi-on-android-using-usb-tethering)
-  to share its Wi-Fi connection to your computer.
+- using [USB tethering with an Android
+  device](https://www.tomsguide.com/how-to/how-to-share-wi-fi-on-android-using-usb-tethering) to
+  share its Wi-Fi connection to your computer.
 
 After you've installed the necessary drivers and you can confirm that the Wi-Fi card is working
 properly, you can disconnect your Android device or ethernet cable and proceed with Wi-Fi if you

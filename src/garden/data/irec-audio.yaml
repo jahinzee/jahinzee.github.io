@@ -1,3 +1,23 @@
+- id: going-down
+  type: single
+  title: Going Down
+  artist: Jake Chudnow
+  year: 2006
+  links:
+    - id: YouTube
+      link: https://www.youtube.com/watch?v=_Q_47b507vg&pp=ygUXamFrZSBjaHVkbm93IGdvaW5nIGRvd24%3D
+
+- id: yes-da-da-da
+  type: album
+  title: Yes Da Da Da
+  artist: Windows96
+  year: 2024
+  links:
+    - id: YouTube
+      link: https://www.youtube.com/playlist?list=OLAK5uy_k7xDp0Yd4XZPWAtqcS8TYznfXngtjM9bM
+    - id: Bandcamp
+      link: https://windows96.bandcamp.com/album/yes-da-da-da
+
 - id: awkward-dance-music
   type: album
   title: Awkward Dance Music

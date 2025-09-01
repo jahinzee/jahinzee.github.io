@@ -25,7 +25,7 @@ const darkroom = defineCollection({
 });
 
 const irec_audio_item = defineCollection({
-  loader: file("src/assets/data/irec-audio.yaml"),
+  loader: file("src/garden/data/irec-audio.yaml"),
   schema: z.object({
     type: z.enum(["album", "single"]),
     title: z.string(),

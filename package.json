@@ -15,6 +15,7 @@
     "@fontsource-variable/noto-sans": "^5.1.0",
     "@fontsource-variable/noto-sans-bengali": "^5.1.0",
     "@fontsource/fira-mono": "^5.1.1",
+    "@fontsource/iosevka": "^5.2.5",
     "@types/alpinejs": "^3.13.11",
     "@types/react": "^19.0.1",
     "alpinejs": "^3.14.8",

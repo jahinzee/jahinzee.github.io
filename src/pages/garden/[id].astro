@@ -1,11 +1,7 @@
 ---
-import Root from "../../layouts/root.astro";
-import Logo from "../../components/logo.astro";
-import Footer from "../../components/footer.astro";
+import Main from "../../layouts/main.astro";
 
-// @ts-ignore: because it doesn't think `render` exists for some reason.
 import { getCollection, render } from "astro:content";
-
 
 export async function getStaticPaths() {
     const pages = await getCollection("garden");
@@ -19,81 +15,53 @@ export async function getStaticPaths() {
 const { page } = Astro.props;
 const { Content, headings } = await render(page);
 
-// @ts-ignore
 const pageTitle = page.body
     .split("\n")
     .find((line: string) => line.startsWith("# "))
     .substring(2);
 
-// @ts-ignore: because it doesn't think `page` exists for some reason.
 const { published, updated, useToc, useKatex } = page.data;
 ---
 
-<Root title={`${pageTitle} — jahinzee/Garden`} loadKatex={useKatex ?? false}>
-    <header class="flex md:w-256 mx-auto gap-2">
-        <Logo small={true} />
-        <a
-          href="/garden/home"
-          class="text-foreground-light dark:text-foreground-dark text-xl opacity-70 mt-1 select-none flex-grow"
-          >/Garden</a
-        >
-    </header>
+<Main title={`${pageTitle} — jahinzee/Garden`} 
+      loadKatex={useKatex ?? false}
+      subsection="Garden"
+      subsectionAnchor="/garden/home">
 
-    <div class="bg-shadow-light
-                dark:bg-shadow-dark
-                py-3 px-4 pb-4
-                rounded-md
-                bg-opacity-15
-                dark:bg-opacity-15
-                flex-col gap-3
-                hidden -mt-6 mb-4
-                md:w-256 mx-auto
-                text-sm"
-         id="searchModal"
-    >
-        <input class="w-full bg-opacity-0" type="text" placeholder="Search garden..."/>
-        <hr />
-        <span>No results</span>
-    </div>
-
-    <main class="bg-red md:w-256 text-base/[1.6em]">
-        <section id="details" class="text-sm text-shadow-light dark:text-shadow-dark flex gap-2">
-            {
-                // @ts-ignore: because it doesn't think `id` exists for some reason.
-                page.id !== "home" ?
-                <a href="/garden/home" class="ri-arrow-left-s-line">
-                    <span class="font-sans">Home</span>
-                </a>
+    <section id="details" class="text-sm text-shadow-light dark:text-shadow-dark flex flex-wrap gap-2">
+        {
+            page.id !== "home" ?
+            <a href="/garden/home" class="ri-arrow-left-s-line whitespace-nowrap">
+                <span class="font-sans">Home</span>
+            </a>
+            <span class="select-none ml-0.5">·</span>
+            : null
+        }
+        <span id="published">
+            Published: {published.toISOString().substring(0, 10)}
+        </span>
+        {
+            updated ? (
                 <span class="select-none ml-0.5">·</span>
-                : null
-            }
-            <span id="published">
-                Published: {published.toISOString().substring(0, 10)}
-            </span>
-            {
-                updated ? (
-                    <span class="select-none ml-0.5">·</span>
-                    <span id="updated">
-                        Updated: {updated.toISOString().substring(0, 10)}
-                    </span>
-                ) : null
-            }
-        </section>
-        { useToc ?
-        <section id="table-of-contents" class="text-sm">
-            <details class="toc">
-                <summary class="toc-heading open:text-500">Table of contents</summary>
-                <ul class="button-bg bg-opacity-10 dark:bg-opacity-10 px-4 py-2" style="margin-top: -0.25rem; margin-bottom: -0.5rem">
-                    {headings
-                        .filter((h: any) => h.depth != 1 && h.slug !== "footnote-label")
-                        .map((h: any) =>
-                            <li style={`margin-left: ${(h.depth-1)}em`}>
-                                <a href={`#${h.slug}`}>{h.text}</a>
-                            </li>)}
-                </ul>
-            </details>
-        </section> : null}
-        <Content />
-    </main>
-    <Footer />
-</Root>
+                <span id="updated">
+                    Updated: {updated.toISOString().substring(0, 10)}
+                </span>
+            ) : null
+        }
+    </section>
+    { useToc ?
+    <section id="table-of-contents" class="text-sm">
+        <details class="toc">
+            <summary class="toc-heading open:text-500">Table of contents</summary>
+            <ul class="button-bg bg-opacity-10 dark:bg-opacity-10 px-4 py-2" style="margin-top: -0.25rem; margin-bottom: -0.5rem">
+                {headings
+                    .filter((h: any) => h.depth != 1 && h.slug !== "footnote-label")
+                    .map((h: any) =>
+                        <li style={`margin-left: ${(h.depth-1)}em`}>
+                            <a href={`#${h.slug}`}>{h.text}</a>
+                        </li>)}
+            </ul>
+        </details>
+    </section> : null}
+    <Content />
+</Main>

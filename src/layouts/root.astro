@@ -3,10 +3,13 @@ import "../styles/base.css";
 import "@fontsource-variable/noto-sans/wdth.css";
 import "@fontsource-variable/noto-sans/wdth-italic.css";
 import "remixicon/fonts/remixicon.css";
-import "@fontsource/fira-mono";
+import "@fontsource/iosevka";
+// import "@fontsource/fira-mono";
 import "@fontsource-variable/noto-sans-bengali";
 
 const { title, loadKatex = false } = Astro.props;
+
+const pageTitle = title !== undefined ? `${title} — jahinzee` : `jahinzee`;
 ---
 
 <!doctype html>
@@ -21,7 +24,7 @@ const { title, loadKatex = false } = Astro.props;
       ) : null
     }
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+    <title>{pageTitle}</title>
     <style></style>
   </head>
   <body>

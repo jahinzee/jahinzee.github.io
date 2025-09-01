@@ -1,9 +1,5 @@
 ---
-import Root from "../layouts/root.astro";
-import Footer from "../components/footer.astro";
-import Logo from "../components/logo.astro";
-
-import { getCollection } from "astro:content";
+import Main from "../layouts/main.astro";
 
 const redirs = [
   { from: "/photos", to: "/darkroom" },
@@ -64,60 +60,55 @@ const redirs = [
 ].sort((a, b) => a.from.localeCompare(b.from));
 ---
 
-<Root title="404 Not Found ­— jahinzee">
-  <header>
-    <Logo small={false} />
-  </header>
-  <main>
-    <h1>404 Not Found</h1>
-    <p>The page you requested cannot be found. Or.. can it?</p>
-    <div
-      class="bg-shadow-light
+<Main title="404 Not Found">
+  <h1>404 Not Found</h1>
+  <p>The page you requested cannot be found. Or.. can it?</p>
+  <div
+    class="bg-shadow-light
                    dark:bg-shadow-dark
                    py-3 px-4 pb-4
                    rounded-md
                    bg-opacity-15
                    dark:bg-opacity-15
                    flex flex-col gap-3"
-      id="auto-redir"
-    >
-      <h2 class="text-lg">
-        <i id="auto-redir-emblem" class="mr-3"></i><span id="auto-redir-header"
-        ></span>
-      </h2>
-      <p class="ml-8" id="auto-redir-body"></p>
-      <p class="text-sm ml-8">
-        If you still can't find what you're looking for,
-        <a href="/contact">reach out</a> and let me know what you're trying to access.
-      </p>
-    </div>
-    <noscript>
-      <style>
-        #auto-redir {
-          display: none;
+    id="auto-redir"
+  >
+    <h2 class="text-lg">
+      <i id="auto-redir-emblem" class="mr-3"></i><span id="auto-redir-header"
+      ></span>
+    </h2>
+    <p class="ml-8" id="auto-redir-body"></p>
+    <p class="text-sm ml-8">
+      If you still can't find what you're looking for,
+      <a href="/contact">reach out</a> and let me know what you're trying to access.
+    </p>
+  </div>
+  <noscript>
+    <style>
+      #auto-redir {
+        display: none;
+      }
+    </style>
+    <details>
+      <summary>Recently moved things</summary>
+      <table class="w-full">
+        <tr>
+          <th>If you're looking for...</th>
+          <th>It might now be at...</th>
+        </tr>
+        {
+          redirs.map((r) => (
+            <tr>
+              <td>{r.from}</td>
+              <td>
+                <a href={r.to}>{r.to}</a>
+              </td>
+            </tr>
+          ))
         }
-      </style>
-      <details>
-        <summary>Recently moved things</summary>
-        <table class="w-full">
-          <tr>
-            <th>If you're looking for...</th>
-            <th>It might now be at...</th>
-          </tr>
-          {
-            redirs.map((r) => (
-              <tr>
-                <td>{r.from}</td>
-                <td>
-                  <a href={r.to}>{r.to}</a>
-                </td>
-              </tr>
-            ))
-          }
-        </table>
-      </details>
-    </noscript>
-  </main>
+      </table>
+    </details>
+  </noscript>
   <script defer define:vars={{ redirs: redirs }}>
     const update = (emblem, heading, body) => {
       document
@@ -133,7 +124,7 @@ const redirs = [
       update(
         "information",
         "Please wait...",
-        "Due to technical restrictions, internal links on archived versions of the site requires client-side redirects."
+        "Due to technical restrictions, internal links on archived versions of the site requires client-side redirects.",
       );
       if (currentLocation === "/v2") {
         window.location.replace("/v2/index.html");
@@ -151,16 +142,15 @@ const redirs = [
       update(
         "error-warning",
         "No known redirect found.",
-        "Check that you've got the URL correct."
+        "Check that you've got the URL correct.",
       );
     } else {
       update(
         "question",
         `You might be looking for: <a href="${target.to}">${target.to}</a>`,
         `If this is right, be sure to update your bookmarks and any
-         external links you may have to the old URL.`
+         external links you may have to the old URL.`,
       );
     }
   </script>
-  <Footer />
-</Root>
+</Main>

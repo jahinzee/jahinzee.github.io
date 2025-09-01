@@ -1,5 +1,3 @@
-/* @import url('/3p/katex.css'); */
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -13,7 +11,7 @@ header {
 }
 
 main {
-  @apply sm:w-full md:w-128 mx-auto text-foreground-light dark:text-foreground-dark;
+  @apply sm:w-full md:w-256 mx-auto text-foreground-light dark:text-foreground-dark;
 }
 
 main>*:not(.no-pad),
@@ -129,7 +127,7 @@ kbd {
 
 .astro-code {
   color: var(--shiki-dark) !important;
-  @apply bg-[#151515] !important;
+  /* @apply bg-[#151515] !important; */
 }
 
 pre,
@@ -173,7 +171,7 @@ table {
 }
 
 hr {
-  @apply border-shadow-dark dark:border-shadow-dark border-opacity-75 dark:border-opacity-50;
+  @apply border-shadow-dark dark:border-shadow-dark border-opacity-75 dark:border-opacity-50 py-1;
 }
 
 mark {
@@ -205,4 +203,8 @@ input {
 
 span.lang-tok {
   font-family: "nasin-nanpa"
+}
+
+blockquote {
+  @apply ml-4 font-normal
 }

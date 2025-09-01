@@ -1,0 +1,72 @@
+---
+const links = [
+    {
+        title: "About",
+        subtitle: "Some more detailed info about me.",
+        icon: "info-card",
+        link: "/about",
+    },
+
+    {
+        title: "Garden",
+        subtitle: "Long-form written content.",
+        icon: "plant",
+        link: "/garden/home",
+    },
+    {
+        title: "Darkroom",
+        subtitle: "Creative Commons photos.",
+        icon: "polaroid-2",
+        link: "/darkroom",
+    },
+    {
+        title: "Artboard",
+        subtitle: "Coming soon…",
+        icon: "artboard-2",
+        link: null,
+        underConstruction: true,
+    },
+    {
+        title: "Software",
+        subtitle: "Coming soon...",
+        icon: "install",
+        link: null,
+        underConstruction: true,
+    },
+    {
+        title: "Contact",
+        subtitle: "Questions? Statements?",
+        icon: "mail-send",
+        link: "/contact",
+    },
+];
+---
+
+<div class="flex flex-col gap-y-4 my-12 py-4">
+    {
+        links.map((l) =>
+            l === null ? (
+                <hr />
+            ) : (
+                <a
+                    href={l.link}
+                    class={`flex flex-row gap-x-4 max-w-xs hover:no-underline ${(l.underConstruction ?? false) ? "text-shadow-light dark:text-shadow2-dark cursor-not-allowed" : ""}`}
+                >
+                    <div id="icon" class="text-xl">
+                        <i class={`ri-${l.icon}-line`} />
+                    </div>
+                    <div>
+                        <p
+                            class={`font-medium text-lg no-pad ${(l.underConstruction ?? false) ? "" : "hover:underline"}`}
+                        >
+                            {l.title}
+                        </p>
+                        <p class="text-foreground-light dark:text-foreground-dark no-pad w-auto">
+                            {l.subtitle}
+                        </p>
+                    </div>
+                </a>
+            ),
+        )
+    }
+</div>

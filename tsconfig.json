@@ -1,9 +1,19 @@
 {
   "extends": "astro/tsconfigs/strict",
-  "include": [".astro/types.d.ts", "**/*"],
-  "exclude": ["dist"],
+  "include": [
+    ".astro/types.d.ts",
+    "**/*"
+  ],
+  "exclude": [
+    "dist"
+  ],
   "compilerOptions": {
     "strictNullChecks": true, // add if using `base` template
-    "allowJs": true // required, and included with all Astro templates
+    "allowJs": true, // required, and included with all Astro templates
+    "paths": {
+      "@layouts": [
+        "./src/layouts"
+      ]
+    }
   }
 }

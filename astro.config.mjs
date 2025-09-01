@@ -25,4 +25,7 @@ export default defineConfig({
       theme: "ayu-dark",
     },
   },
+  redirects: {
+    "/garden": "/garden/home"
+  }
 });
