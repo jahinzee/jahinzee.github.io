@@ -1,5 +1,5 @@
 <a href="https://jahinzee.github.io">
     <img alt="jahinzee's Web badge"
-         src="https://jahinzee.github.io/88x31.gif"/
+         src="https://jahinzee.github.io/88x31.gif"
          height="31" />
 </a>

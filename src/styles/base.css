@@ -195,16 +195,6 @@ input {
   @apply rounded-sm px-2 py-1 bg-shadow-light dark:bg-shadow-dark bg-opacity-20 dark:bg-opacity-20;
 }
 
-@font-face {
-  font-family: nasin-nanpa;
-  font-weight: 400;
-  src: url("/3p/nasin-nanpa/nasin-nanpa-4.0.2.otf")
-}
-
-span.lang-tok {
-  font-family: "nasin-nanpa"
-}
-
 blockquote {
   @apply ml-4 font-normal
 }

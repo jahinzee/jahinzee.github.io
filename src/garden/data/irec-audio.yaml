@@ -1,3 +1,12 @@
+- id: ozone
+  type: single
+  title: Ozone
+  artist: Bygone Breaks
+  year: 2025
+  links:
+    - id: YouTube
+      link: https://www.youtube.com/watch?v=Xjv_u2KJuRc
+
 - id: going-down
   type: single
   title: Going Down
@@ -69,7 +78,7 @@
 
 - id: im-shy-and-broke
   type: single
-  title: THERE'S GIRLS AT THE MALL BUT I'M SHY AND BROKE 
+  title: THERE'S GIRLS AT THE MALL BUT I'M SHY AND BROKE
   artist: QB9
   year: 2023
   links:
@@ -507,7 +516,7 @@
   title: Know Me
   artist: Meramek
   year: 2015
-  links: 
+  links:
     - id: YouTube
       link: https://www.youtube.com/watch?v=BfxO1-Rhgpc
 
@@ -573,7 +582,7 @@
   links:
     - id: YouTube
       link: https://www.youtube.com/watch?v=r8h0HLv8Tuw
-  
+
 - id: lady
   type: single
   title: Lady (Hear Me Tonight)

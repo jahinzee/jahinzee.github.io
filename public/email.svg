@@ -1,8 +1,8 @@
 <svg viewBox="0 0 130 24" xmlns="http://www.w3.org/2000/svg">
 	<style>
 	@font-face {
-		font-family: 'Fira Mono';
-		src: url('/3p/fira-mono/FiraMono-Regular.ttf');
+		font-family: 'Iosevka';
+		src: url('/3p/iosevka/Iosevka-Regular.ttc');
 	}
 
 	text {
@@ -14,8 +14,8 @@
 		}
 		letter-spacing: 0.025em;
 		display: inline;
-		font-family: 'Fira Mono';
-		font-size: 0.7rem;
+		font-family: 'Iosevka Extended';
+		font-size: 0.65rem;
 		text-anchor: middle;
 	}
 	</style>
