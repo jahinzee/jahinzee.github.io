@@ -30,8 +30,10 @@ const irec_audio_item = defineCollection({
     type: z.enum(["album", "single"]),
     title: z.string(),
     artist: z.string(),
-    year: z.number(),
+    year: z.union([z.string(), z.number()]),
     links: z.array(z.object({ id: z.string(), link: z.string() })),
+    notes: z.optional(z.string()),
+    "newly-added": z.optional(z.boolean()),
   }),
 });
 

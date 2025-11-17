@@ -1,3 +1,52 @@
+- id: dil-ki-doya
+  type: single
+  title: Dil Ki Doya Hoy Na
+  artist: Paban Das Baul, Sam Mills
+  year: 1997
+  links:
+    - id: YouTube
+      link: https://www.youtube.com/watch?v=xbkX3tc3ZKU
+  notes: >
+    Rough translation of title: "Do you have mercy in your heart?"
+  newly-added: true
+
+- id: double-o
+  type: single
+  title: Double O
+  artist: Kevin MacLeod
+  year: 2008
+  links:
+    - id: Incompetech
+      link: https://www.incompetech.com/music/royalty-free/index.html?isrc=USUAN1100503
+    - id: YouTube
+      link: https://www.youtube.com/watch?v=nQ2KtvVSKl8
+  notes: >
+    "hit the record button" 🗣️🗣️🔥🔥
+  newly-added: true
+
+- id: come-back-down
+  type: single
+  title: Come Back Down
+  artist: HOME
+  year: 2014
+  links:
+    - id: YouTube
+      link: https://www.youtube.com/watch?v=_T909ISxSnM
+  newly-added: true
+
+- id: avril-14-santiago-nino
+  type: single
+  title: Avril 14th (Santiago Niño Remix)
+  artist: Aphex Twin
+  year: 2011*
+  links:
+    - id: YouTube (unofficial)
+      link: https://www.youtube.com/watch?v=GSGUsyyOm-8
+  notes: >
+    Contemporary classic turned into Frutiger Aero banger.
+    *: Exact release year unknown, using best guess from earliest known YouTube upload.
+  newly-added: true
+
 - id: ozone
   type: single
   title: Ozone
@@ -14,7 +63,7 @@
   year: 2006
   links:
     - id: YouTube
-      link: https://www.youtube.com/watch?v=_Q_47b507vg&pp=ygUXamFrZSBjaHVkbm93IGdvaW5nIGRvd24%3D
+      link: https://www.youtube.com/watch?v=_Q_47b507vg
 
 - id: yes-da-da-da
   type: album
@@ -26,6 +75,8 @@
       link: https://www.youtube.com/playlist?list=OLAK5uy_k7xDp0Yd4XZPWAtqcS8TYznfXngtjM9bM
     - id: Bandcamp
       link: https://windows96.bandcamp.com/album/yes-da-da-da
+  notes: >
+    Top picks: Sleeping Chambers, Apartments
 
 - id: awkward-dance-music
   type: album
@@ -55,6 +106,8 @@
   links:
     - id: Bandcamp
       link: https://generactionxmusic.bandcamp.com/album/if-you-scratch-my-back-i-ll-scratch-yours
+  notes: >
+    Top picks: Non dubium est de illo, Quo vadis?
 
 - id: dated-new
   type: album
@@ -64,6 +117,8 @@
   links:
     - id: Bandcamp
       link: https://windows96.bandcamp.com/album/dated-new-aesthetic
+  notes: >
+    Top picks: Takeaguess, Lightsleeper
 
 - id: frostbearer
   type: single
@@ -122,6 +177,8 @@
   links:
     - id: YouTube
       link: https://www.youtube.com/watch?v=QIzYQOh0QWg
+  notes: >
+    "BACK AT YA, HOMIE!" 😎
 
 - id: teknopathetic
   type: single
@@ -140,6 +197,8 @@
   links:
     - id: YouTube
       link: https://www.youtube.com/watch?v=HNy_retSME0
+  notes: >
+    "UNDERSTAND UNDERSTAND"
 
 - id: wavetable
   type: album
@@ -149,6 +208,8 @@
   links:
     - id: Bandcamp
       link: https://patriciataxxon.bandcamp.com/album/wavetable
+  notes: >
+    Top picks: Ordeal Day, Nothing is Lost
 
 - id: illusion-of-perfection
   type: album
@@ -160,6 +221,8 @@
       link: https://music.anjunabeats.com/release/96654-spencer-brown-illusion-of-perfection
     - id: YouTube
       link: https://www.youtube.com/playlist?list=OLAK5uy_mhjT72cqFDYW5DvPB0LzDhD8dHU1RdRLQ
+  notes: >
+    Top picks: I'll Never, Nightwalk, J2, No Going Back
 
 - id: gradient-horizont
   type: album
@@ -169,6 +232,8 @@
   links:
     - id: Bandcamp
       link: https://windows96.bandcamp.com/album/gradient-horizont
+  notes: >
+    Top picks: Youthful Waters, Earthbound
 
 - id: reflections
   type: album
@@ -178,6 +243,8 @@
   links:
     - id: Bandcamp
       link: https://windows96.bandcamp.com/album/reflections
+  notes: >
+    Top picks: Are you sad enough? Drive Slow, Sharpest Knives, Crystal Clear
 
 - id: vintage-powered
   type: album
@@ -189,6 +256,8 @@
       link: https://zanzlanz.bandcamp.com/album/vintage-powered
     - id: YouTube
       link: https://youtube.com/playlist?list=OLAK5uy_niaIfCbHaA29A5uh-8mmxZ920DAACXgtY
+  notes: >
+    Top picks: Everybody Growl, Car Horn, Vintage Powered, Trinketmonger
 
 - id: my-love
   type: single
@@ -216,6 +285,8 @@
   links:
     - id: Bandcamp
       link: https://lifeformed.bandcamp.com/album/fastfall
+  notes: >
+    OST for Dustforce (2012); Top picks: Cider Time, Swimming While It Rains, Frozen Hot Sauce (☝️🧑‍⚕️)
 
 - id: hexophilia
   type: album
@@ -225,6 +296,8 @@
   links:
     - id: Bandcamp
       link: https://urbex.bandcamp.com/album/hexophilia
+  notes: >
+    OST for Hexic HD (2005); Top picks: Underlow, Slartisfgh
 
 - id: just-a-dream
   type: single
@@ -243,6 +316,8 @@
   links:
     - id: Discogs
       link: https://www.discogs.com/master/100333-Projections-Between-Here-And-Now
+  notes: >
+    Top picks: Rival Cruise, Backbone (& Reprise), Luminate (& Part 2), The Nutcracker
 
 - id: bbc-world
   type: album
@@ -261,6 +336,8 @@
   links:
     - id: YouTube
       link: https://www.youtube.com/watch?v=hzQfzxu08TQ
+  notes: >
+    Top picks: Nightboat from Alaska, Sky, Wake Up Afternoon, New Hawaii
 
 - id: flatlands
   type: single
@@ -337,6 +414,8 @@
   links:
     - id: Discogs
       link: https://www.discogs.com/master/25969-Luminary-My-World
+  notes: >
+    Honorable mention: the Andy Moor remix.
 
 - id: shona
   type: single
@@ -402,6 +481,8 @@
   links:
     - id: YouTube
       link: https://www.youtube.com/watch?v=jzi6RNVEOtA
+  notes: >
+    Rough translation of title: "Of course, I'd be happy to"
 
 - id: kalimba
   type: single
@@ -411,6 +492,8 @@
   links:
     - id: YouTube
       link: https://www.youtube.com/watch?v=jZHAb92E31E
+  notes: >
+    Arguably the best and most iconic of the Windows 7 sample music.
 
 - id: blue-sky-action-meramek
   type: single
@@ -438,6 +521,8 @@
   links:
     - id: YouTube
       link: https://www.youtube.com/watch?v=aoqIdKnRJ1Y
+  notes: >
+    Honorable mentions: the Smith and Pledger, and Grum remixes.
 
 - id: first-encounters
   type: single
@@ -456,6 +541,8 @@
   links:
     - id: YouTube
       link: https://www.youtube.com/watch?v=4Gd_hZTyF8g
+  notes: >
+    Honorable mentions: the Two-Step and Ambient mixes, and the Vincenzo remix.
 
 - id: aperture
   type: single
@@ -519,6 +606,8 @@
   links:
     - id: YouTube
       link: https://www.youtube.com/watch?v=BfxO1-Rhgpc
+  notes: >
+    Honorable mentions: the Thomas Schwartz & Fausto Fanizza remix.
 
 - id: perception
   type: single
@@ -573,6 +662,8 @@
   links:
     - id: YouTube
       link: https://www.youtube.com/watch?v=Au6RySFPWUg
+  notes: >
+    You might recognise this from a pretty old Skyrim meme.
 
 - id: comes-home
   type: single
@@ -582,6 +673,8 @@
   links:
     - id: YouTube
       link: https://www.youtube.com/watch?v=r8h0HLv8Tuw
+  notes: >
+    Honorable mention: the Pional remix.
 
 - id: lady
   type: single
@@ -591,6 +684,8 @@
   links:
     - id: YouTube
       link: https://www.youtube.com/watch?v=35LrV-V-ORY
+  notes: >
+    Honorable mention: the Blake remix.
 
 - id: fiji-lange
   type: single
@@ -609,6 +704,8 @@
   links:
     - id: YouTube (unofficial)
       link: https://www.youtube.com/watch?v=9iIieRcDeYs
+  notes: >
+    Rough translation of title: "Echoes from Ransumaasta" (?)
 
 - id: only-you
   type: single
@@ -708,6 +805,8 @@
   links:
     - id: YouTube
       link: https://www.youtube.com/watch?v=2XIMj7VF1RU
+  notes: >
+    I had this on repeat for a whole month at one point 💀
 
 - id: united-colors
   type: single
@@ -789,6 +888,8 @@
   links:
     - id: YouTube
       link: https://www.youtube.com/watch?v=F5GjEwI8wEA
+  notes: >
+    The music video is a masterpiece.
 
 - id: romcom
   type: album

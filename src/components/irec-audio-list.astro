@@ -10,22 +10,32 @@ const entries = await getCollection("irec_audio_item");
 // // ---
 
 ---
+<div id="newest-entries">
+    <h2 class="mb-3">Newest additions</h2>
+    <ul>
+        {entries
+            .filter(e => e.data["newly-added"])
+            .map(e => <li>
+                <a href={`#${e.id}`}>{e.data.artist} – {e.data.title} ({e.data.year})</a>
+            </li>)}
+    </ul>
+</div>
 
 <div class="flex flex-col gap-4 pt-4">
     <hr class="border-dashed" />
     {
         entries
-            .sort((a, b) => b.data.year - a.data.year)
+            .sort((a, b) => b.data.year.toString().localeCompare(a.data.year.toString()))
             .map((e) => (
                 <div id={e.id} class="flex flex-col pl--4">
-                    <span id="title" class="text-xl font-medium">
+                    <h2 id="title" class="text-xl font-medium">
                         {e.data.title}
                         {e.data.type === "single" ? (
                             <span class="text-shadow dark:text-shadow-dark text-lg font-regular">
                                 (single)
                             </span>
                         ) : null}
-                    </span>
+                    </h2>
                     <div class="flex flex-col ml-4 mt-1">
                         <span>
                             <span id="artist">{e.data.artist}</span> ·{" "}
@@ -37,6 +47,10 @@ const entries = await getCollection("irec_audio_item");
                                 .sort((a, b) => a.id.localeCompare(b.id))
                                 .map((l) => <a href={l.link}>{l.id}</a>)}
                         </span>
+                        {e.data.notes ? 
+                            <span class="mt-1 text-shadow dark:text-shadow-dark flex gap-2">
+                                <strong>Notes:</strong>{e.data.notes}
+                            </span> : null}
                     </div>
                 </div>
                 <hr class="border-dashed" />
