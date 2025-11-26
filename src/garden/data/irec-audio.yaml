@@ -1,3 +1,27 @@
+- id: yuugureni
+  type: single
+  title: 夕暮れに
+  artist: S O A R E R
+  year: 2022
+  links:
+    - id: Bandcamp
+      link: https://soarer1983.bandcamp.com/track/--163
+  newly-added: true
+
+- id: floor-122
+  type: album
+  title: FLOOR—122
+  artist: 沙漠里的沙子晚上很温暖
+  year: 2021
+  links:
+    - id: Bandcamp
+      link: https://desertsand.bandcamp.com/album/floor-122
+    - id: YouTube (unofficial)
+      link: https://www.youtube.com/watch?v=wmA933H2AtU
+  notes: >
+    Artist also known as 'desert sand feels warm at night'
+  newly-added: true
+
 - id: dil-ki-doya
   type: single
   title: Dil Ki Doya Hoy Na
@@ -8,7 +32,6 @@
       link: https://www.youtube.com/watch?v=xbkX3tc3ZKU
   notes: >
     Rough translation of title: "Do you have mercy in your heart?"
-  newly-added: true
 
 - id: double-o
   type: single
@@ -22,7 +45,6 @@
       link: https://www.youtube.com/watch?v=nQ2KtvVSKl8
   notes: >
     "hit the record button" 🗣️🗣️🔥🔥
-  newly-added: true
 
 - id: come-back-down
   type: single
@@ -32,7 +54,6 @@
   links:
     - id: YouTube
       link: https://www.youtube.com/watch?v=_T909ISxSnM
-  newly-added: true
 
 - id: avril-14-santiago-nino
   type: single
@@ -45,7 +66,6 @@
   notes: >
     Contemporary classic turned into Frutiger Aero banger.
     *: Exact release year unknown, using best guess from earliest known YouTube upload.
-  newly-added: true
 
 - id: ozone
   type: single
